@@ -1,150 +1,247 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SHOP | gotti21sv</title>
+<title>Shop | gotti21sv</title>
 
-<style>
-
-body{
-margin:0;
-padding:25px;
-font-family:Arial,sans-serif;
-background:#f7f7f7;
-}
-
-h1{
-text-align:center;
-font-size:42px;
-margin-bottom:40px;
-}
-
-.card{
-background:white;
-border-radius:30px;
-padding:25px;
-margin-bottom:25px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.name{
-font-size:28px;
-font-weight:bold;
-}
-
-.price{
-font-size:22px;
-margin:10px 0 20px;
-}
-
-select{
-width:100%;
-padding:15px;
-font-size:18px;
-border-radius:15px;
-border:1px solid #ddd;
-margin-bottom:15px;
-}
-
-button{
-width:100%;
-padding:18px;
-border:none;
-border-radius:18px;
-background:black;
-color:white;
-font-size:20px;
-font-weight:bold;
-cursor:pointer;
-}
-
-button:hover{
-background:#333;
-}
-
-.back{
-display:block;
-text-align:center;
-margin-top:40px;
-font-size:18px;
-text-decoration:none;
-color:black;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<h1>SHOP</h1>
+<div class="shop-page">
 
-<div id="shop"></div>
+<h1 class="shop-title">GOTTI21SV STORE</h1>
 
-<a href="index.html" class="back">← Назад</a>
+<p class="shop-subtitle">Выберите товар и размер</p>
 
-<script>
+<div class="catalog">
 
-const products=[
-["Hoodie 1","1700 грн"],
-["Hoodie 2","2000 грн"],
-["Hoodie 3","1800 грн"],
-["T-Shirt","1000 грн"],
-["Shorts","1400 грн"],
-["Longsleeve","1300 грн"]
-];
-
-const shop=document.getElementById("shop");
-
-products.forEach((p,i)=>{
-
-shop.innerHTML+=`
+<!-- Товар 1 -->
 
 <div class="card">
 
-<div class="name">${p[0]}</div>
+<img src="hoodie1.jpg" alt="Худи 1">
 
-<div class="price">${p[1]}</div>
+<h2>Худи №1</h2>
 
-<select id="size${i}">
-<option>S</option>
-<option>M</option>
-<option>L</option>
-<option>XL</option>
-</select>
+<p>1700 грн</p>
 
-<button onclick="buy('${p[0]}','${p[1]}','size${i}')">
-Купить
+<div class="sizes">
+
+<button class="size active">S</button>
+<button class="size">M</button>
+<button class="size">L</button>
+<button class="size">XL</button>
+
+</div>
+
+<button class="buyButton"
+data-product="Худи №1"
+data-price="1700">
+🛒 Купить сейчас
 </button>
 
 </div>
 
-`;
+<!-- Товар 2 -->
 
-});
+<div class="card">
 
-function buy(name,price,id){
+<img src="hoodie2.jpg" alt="Худи 2">
 
-let size=document.getElementById(id).value;
+<h2>Худи №2</h2>
 
-let text=`Здравствуйте!
+<p>2000 грн</p>
+
+<div class="sizes">
+
+<button class="size active">S</button>
+<button class="size">M</button>
+<button class="size">L</button>
+<button class="size">XL</button>
+
+</div>
+
+<button class="buyButton"
+data-product="Худи №2"
+data-price="2000">
+🛒 Купить сейчас
+</button>
+
+</div>
+<!-- Товар 3 -->
+
+<div class="card">
+
+<img src="hoodie3.jpg" alt="Худи 3">
+
+<h2>Худи №3</h2>
+
+<p>1800 грн</p>
+
+<div class="sizes">
+
+<button class="size active">S</button>
+<button class="size">M</button>
+<button class="size">L</button>
+<button class="size">XL</button>
+
+</div>
+
+<button class="buyButton"
+data-product="Худи №3"
+data-price="1800">
+🛒 Купить сейчас
+</button>
+
+</div>
+
+<!-- Товар 4 -->
+
+<div class="card">
+
+<img src="shirt1.jpg" alt="Футболка">
+
+<h2>Футболка</h2>
+
+<p>1000 грн</p>
+
+<div class="sizes">
+
+<button class="size active">S</button>
+<button class="size">M</button>
+<button class="size">L</button>
+<button class="size">XL</button>
+
+</div>
+
+<button class="buyButton"
+data-product="Футболка"
+data-price="1000">
+🛒 Купить сейчас
+</button>
+
+</div>
+
+<!-- Товар 5 -->
+
+<div class="card">
+
+<img src="shorts.jpg" alt="Шорты">
+
+<h2>Шорты</h2>
+
+<p>1400 грн</p>
+
+<div class="sizes">
+
+<button class="size active">S</button>
+<button class="size">M</button>
+<button class="size">L</button>
+<button class="size">XL</button>
+
+</div>
+
+<button class="buyButton"
+data-product="Шорты"
+data-price="1400">
+🛒 Купить сейчас
+</button>
+
+</div>
+
+<!-- Товар 6 -->
+
+<div class="card">
+
+<img src="longsleeve.jpg" alt="Лонгслив">
+
+<h2>Лонгслив</h2>
+
+<p>1300 грн</p>
+
+<div class="sizes">
+
+<button class="size active">S</button>
+<button class="size">M</button>
+<button class="size">L</button>
+<button class="size">XL</button>
+
+</div>
+
+<button class="buyButton"
+data-product="Лонгслив"
+data-price="1300">
+🛒 Купить сейчас
+</button>
+
+</div>
+
+</div>
+<script>
+
+// Выбор размера
+
+document.querySelectorAll(".sizes").forEach(group=>{
+
+group.querySelectorAll(".size").forEach(btn=>{
+
+btn.onclick=function(){
+
+group.querySelectorAll(".size").forEach(b=>b.classList.remove("active"));
+
+this.classList.add("active");
+
+}
+
+})
+
+})
+
+// Кнопка Купить
+
+document.querySelectorAll(".buyButton").forEach(button=>{
+
+button.onclick=function(){
+
+const card=this.closest(".card");
+
+const size=card.querySelector(".size.active").innerText;
+
+const product=this.dataset.product;
+
+const price=this.dataset.price;
+
+const text=`Привет! 👋
 
 Хочу заказать:
 
-${name}
+${product}
 
-Размер: ${size}
+📏 Размер: ${size}
 
-Цена: ${price}`;
+💰 Цена: ${price} грн`;
 
-window.open("https://t.me/gotti21svv?text="+encodeURIComponent(text));
+window.open(
+
+`https://t.me/gotti21svv?text=${encodeURIComponent(text)}`,
+
+"_blank"
+
+);
 
 }
+
+})
 
 </script>
 
 </body>
+
 </html>
