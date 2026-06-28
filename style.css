@@ -202,4 +202,25 @@ box-shadow:0 10px 20px rgba(0,0,0,.08);
 background:black;
 color:white;
 border-color:black;
+}.buyButton{
+width:100%;
+margin-top:20px;
+padding:18px;
+background:#111;
+color:#fff;
+border:none;
+border-radius:20px;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+transition:.25s;
+}
+
+.buyButton:hover{
+transform:translateY(-2px);
+box-shadow:0 14px 30px rgba(0,0,0,.18);
+}
+
+.buyButton:active{
+transform:scale(.97);
 }
