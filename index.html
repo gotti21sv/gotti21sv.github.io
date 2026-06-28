@@ -89,59 +89,14 @@ Telegram
 </div>
 
 
-function goShop(){
-
-if(catalog.style.display=="none"){
-
-catalog.style.display="block";
-
-setTimeout(()=>{
-
-catalog.scrollIntoView({
-
-behavior:"smooth",
-
-block:"start"
-
-});
-
-},100);
-
-button.innerHTML="▲ Скрыть каталог";
-
-}else{
-
-catalog.style.display="none";
-
-button.innerHTML="💵 Купить шмот тут →";
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
+<script>
+function goShop() {
+    window.location.href = "shop.html";
 }
+</script>
 
-}
-
-</script>const sizes = document.querySelectorAll(".size");
-
-sizes.forEach(button => {
-
-button.addEventListener("click", () => {
-
-const group = button.parentElement.querySelectorAll(".size");
-
-group.forEach(item => item.classList.remove("active"));
-
-button.classList.add("active");
-
-});
-
-});
+</body>
+</html>
 
 </body>
 
