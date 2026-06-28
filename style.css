@@ -174,4 +174,32 @@ font-size:21px;
 font-size:18px;
 }
 
+}.sizes{
+display:flex;
+justify-content:center;
+gap:12px;
+margin:20px 0;
+}
+
+.size{
+width:52px;
+height:52px;
+border-radius:16px;
+border:1px solid #ddd;
+background:white;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+transition:.25s;
+}
+
+.size:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.size.active{
+background:black;
+color:white;
+border-color:black;
 }
