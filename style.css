@@ -1,0 +1,512 @@
+/* =========================
+   GOTTI21SV STYLE v2
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f7f7f7;
+color:#111;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;
+overflow-x:hidden;
+}
+
+/* =========================
+   HOME
+========================= */
+
+.container{
+width:92%;
+max-width:440px;
+margin:auto;
+padding:60px 0;
+animation:fade .8s ease;
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+h1{
+
+font-size:56px;
+
+font-weight:900;
+
+letter-spacing:-3px;
+
+text-align:center;
+
+margin-bottom:30px;
+
+}
+
+.icons{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+margin-bottom:35px;
+
+}
+
+.icons a{
+
+color:#111;
+
+font-size:28px;
+
+transition:.25s;
+
+}
+
+.icons a:hover{
+
+transform:translateY(-3px);
+
+}
+
+.button{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:12px;
+
+width:100%;
+
+padding:18px;
+
+margin-bottom:16px;
+
+background:#fff;
+
+border-radius:18px;
+
+text-decoration:none;
+
+color:#111;
+
+font-size:18px;
+
+font-weight:700;
+
+border:none;
+
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+transition:.3s;
+
+cursor:pointer;
+
+}
+
+.button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.button:active{
+
+transform:scale(.97);
+
+}
+
+/* =========================
+   STORE
+========================= */
+
+.shop-page{
+
+width:94%;
+
+max-width:1200px;
+
+margin:auto;
+
+padding:40px 0 80px;
+
+}
+
+.shop-title{
+
+text-align:center;
+
+font-size:42px;
+
+font-weight:900;
+
+letter-spacing:-2px;
+
+margin-bottom:10px;
+
+}
+
+.shop-subtitle{
+
+text-align:center;
+
+color:#666;
+
+margin-bottom:40px;
+
+font-size:17px;
+
+}
+
+.catalog{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+}
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.card{
+
+background:#fff;
+
+border-radius:22px;
+
+padding:14px;
+
+box-shadow:0 12px 35px rgba(0,0,0,.07);
+
+transition:.3s;
+
+overflow:hidden;
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.card img{
+
+width:100%;
+
+aspect-ratio:1/1;
+
+object-fit:cover;
+
+border-radius:16px;
+
+margin-bottom:14px;
+
+transition:.35s;
+
+cursor:pointer;
+
+}
+
+.card img:hover{
+
+transform:scale(1.04);
+
+}
+
+.card h2{
+
+font-size:18px;
+
+font-weight:800;
+
+letter-spacing:-.5px;
+
+margin-bottom:6px;
+
+}
+
+.card p{
+
+font-size:17px;
+
+font-weight:700;
+
+margin-bottom:16px;
+
+color:#111;
+
+}
+
+/* =========================
+   SIZE BUTTONS
+========================= */
+
+.sizes{
+
+display:flex;
+
+justify-content:center;
+
+gap:8px;
+
+margin-bottom:16px;
+
+}
+
+.size{
+
+width:42px;
+
+height:42px;
+
+border-radius:12px;
+
+border:1px solid #ddd;
+
+background:#fff;
+
+font-size:15px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.size:hover{
+
+transform:translateY(-2px);
+
+}
+
+.size.active{
+
+background:#111;
+
+color:#fff;
+
+border-color:#111;
+
+}
+
+/* =========================
+   BUY BUTTON
+========================= */
+
+.buyButton{
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+border-radius:14px;
+
+background:#111;
+
+color:#fff;
+
+font-size:15px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.buyButton:hover{
+
+transform:translateY(-2px);
+
+background:#000;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.buyButton:active{
+
+transform:scale(.97);
+
+}
+/* =========================
+   IMAGE PREVIEW
+========================= */
+
+.imageModal{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.9);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999;
+padding:20px;
+animation:fade .25s ease;
+}
+
+.imageModal img{
+max-width:95%;
+max-height:90%;
+border-radius:20px;
+object-fit:contain;
+}
+
+.imageModal.active{
+display:flex;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+width:7px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#222;
+border-radius:999px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.shop-page{
+padding:25px 14px 70px;
+}
+
+.shop-title{
+font-size:34px;
+margin-bottom:6px;
+}
+
+.shop-subtitle{
+font-size:15px;
+margin-bottom:24px;
+}
+
+.catalog{
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+}
+
+.card{
+padding:12px;
+border-radius:18px;
+}
+
+.card img{
+height:165px;
+border-radius:14px;
+}
+
+.card h2{
+font-size:15px;
+margin-bottom:4px;
+}
+
+.card p{
+font-size:14px;
+margin-bottom:12px;
+}
+
+.sizes{
+gap:6px;
+margin-bottom:12px;
+}
+
+.size{
+width:34px;
+height:34px;
+font-size:13px;
+border-radius:10px;
+}
+
+.buyButton{
+padding:11px;
+font-size:13px;
+border-radius:12px;
+}
+
+.button{
+font-size:17px;
+padding:16px;
+}
+
+h1{
+font-size:46px;
+}
+
+}
+
+/* =========================
+   SMALL ANIMATIONS
+========================= */
+
+.card,
+.button,
+.buyButton,
+.size,
+.icons a{
+will-change:transform;
+}
+
+.card:hover img{
+transform:scale(1.05);
+}
+
+.buyButton:hover{
+letter-spacing:.3px;
+}
+
+.size:active,
+.buyButton:active,
+.button:active{
+transform:scale(.96);
+}
+
+
+
+
+
+
+
+
