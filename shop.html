@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SHOP | gotti21sv</title>
+
+<style>
+
+body{
+margin:0;
+padding:25px;
+font-family:Arial,sans-serif;
+background:#f7f7f7;
+}
+
+h1{
+text-align:center;
+font-size:42px;
+margin-bottom:40px;
+}
+
+.card{
+background:white;
+border-radius:30px;
+padding:25px;
+margin-bottom:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.name{
+font-size:28px;
+font-weight:bold;
+}
+
+.price{
+font-size:22px;
+margin:10px 0 20px;
+}
+
+select{
+width:100%;
+padding:15px;
+font-size:18px;
+border-radius:15px;
+border:1px solid #ddd;
+margin-bottom:15px;
+}
+
+button{
+width:100%;
+padding:18px;
+border:none;
+border-radius:18px;
+background:black;
+color:white;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+background:#333;
+}
+
+.back{
+display:block;
+text-align:center;
+margin-top:40px;
+font-size:18px;
+text-decoration:none;
+color:black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>SHOP</h1>
+
+<div id="shop"></div>
+
+<a href="index.html" class="back">← Назад</a>
+
+<script>
+
+const products=[
+["Hoodie 1","1700 грн"],
+["Hoodie 2","2000 грн"],
+["Hoodie 3","1800 грн"],
+["T-Shirt","1000 грн"],
+["Shorts","1400 грн"],
+["Longsleeve","1300 грн"]
+];
+
+const shop=document.getElementById("shop");
+
+products.forEach((p,i)=>{
+
+shop.innerHTML+=`
+
+<div class="card">
+
+<div class="name">${p[0]}</div>
+
+<div class="price">${p[1]}</div>
+
+<select id="size${i}">
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+</select>
+
+<button onclick="buy('${p[0]}','${p[1]}','size${i}')">
+Купить
+</button>
+
+</div>
+
+`;
+
+});
+
+function buy(name,price,id){
+
+let size=document.getElementById(id).value;
+
+let text=`Здравствуйте!
+
+Хочу заказать:
+
+${name}
+
+Размер: ${size}
+
+Цена: ${price}`;
+
+window.open("https://t.me/gotti21svv?text="+encodeURIComponent(text));
+
+}
+
+</script>
+
+</body>
+</html>
