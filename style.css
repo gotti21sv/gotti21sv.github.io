@@ -61,7 +61,8 @@ transition:.2s;
 transform:scale(1.12);
 }
 
-.button{
+.button{transition:.25s ease;
+cursor:pointer;
 display:flex;
 align-items:center;
 gap:16px;
@@ -79,7 +80,14 @@ box-shadow:0 3px 10px rgba(0,0,0,.05);
 transition:.25s;
 }
 
-.button:hover{
+.button:hover{.button:hover{
+transform:translateY(-3px);
+box-shadow:0 18px 35px rgba(0,0,0,.12);
+}
+
+.button:active{
+transform:scale(.96);
+}
 transform:translateY(-2px);
 box-shadow:0 8px 18px rgba(0,0,0,.08);
 }
@@ -88,4 +96,14 @@ box-shadow:0 8px 18px rgba(0,0,0,.08);
 font-size:24px;
 width:28px;
 text-align:center;
+}.icons a{
+transition:.2s;
+}
+
+.icons a:hover{
+transform:scale(1.2);
+}
+
+.icons a:active{
+transform:scale(.9);
 }
