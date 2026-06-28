@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GOTTI21SV STORE</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="shop-page">
+
+<h1 class="shop-title">GOTTI21SV STORE</h1>
+
+<p class="shop-subtitle">Выберите товар и размер</p>
+
+<div class="catalog">
+
+<!-- ТОВАР 1 -->
+
+<div class="card">
+
+<img src="IMG_0646.jpeg" alt="Худи №1">
+
+<h2>Худи №1</h2>
+
+<p>1700 грн</p>
+
+<div class="sizes">
+<button class="size active">S</button>
+<button class="size">M</button>
+<button class="size">L</button>
+<button class="size">XL</button>
+</div>
+
+<button
+class="buyButton"
+data-product="Худи №1"
+data-price="1700">
+
+🛒 Купить сейчас
+
+</button>
+
+</div>
+
+<!-- ТОВАР 2 -->
+
+<div class="card">
+
+<img src="IMG_0659.jpeg" alt="Худи №2">
+
+<h2>Худи №2</h2>
+
+<p>2000 грн</p>
+
+<div class="sizes">
+<button class="size active">S</button>
+<button class="size">M</button>
+<button class="size">L</button>
+<button class="size">XL</button>
+</div>
+
+<button
+class="buyButton"
+data-product="Худи №2"
+data-price="2000">
+
+🛒 Купить сейчас
+
+</button>
+
+</div>
+
+<!-- ТОВАР 3 -->
+
+<div class="card">
+
+<img src="IMG_1393.jpeg" alt="Худи №3">
+
+<h2>Худи №3</h2>
+
+<p>1800 грн</p>
+
+<div class="sizes">
+<button class="size active">S</button>
+<button class="size">M</button>
+<button class="size">L</button>
+<button class="size">XL</button>
+</div>
+
+<button
+class="buyButton"
+data-product="Худи №3"
+data-price="1800">
+
+🛒 Купить сейчас
+
+</button>
+
+</div>
+<!-- ТОВАР 4 -->
+
+<div class="card">
+
+<img src="IMG_1913.jpeg" alt="Футболка">
+
+<h2>Футболка</h2>
+
+<p>1000 грн</p>
+
+<div class="sizes">
+<button class="size active">S</button>
+<button class="size">M</button>
+<button class="size">L</button>
+<button class="size">XL</button>
+</div>
+
+<button
+class="buyButton"
+data-product="Футболка"
+data-price="1000">
+
+🛒 Купить сейчас
+
+</button>
+
+</div>
+
+<!-- ТОВАР 5 -->
+
+<div class="card">
+
+<img src="IMG_1860.jpeg" alt="Шорты">
+
+<h2>Шорты</h2>
+
+<p>1400 грн</p>
+
+<div class="sizes">
+<button class="size active">S</button>
+<button class="size">M</button>
+<button class="size">L</button>
+<button class="size">XL</button>
+</div>
+
+<button
+class="buyButton"
+data-product="Шорты"
+data-price="1400">
+
+🛒 Купить сейчас
+
+</button>
+
+</div>
+
+<!-- ТОВАР 6 -->
+
+<div class="card">
+
+<img src="IMG_1563.jpeg" alt="Лонгслив">
+
+<h2>Лонгслив</h2>
+
+<p>1300 грн</p>
+
+<div class="sizes">
+<button class="size active">S</button>
+<button class="size">M</button>
+<button class="size">L</button>
+<button class="size">XL</button>
+</div>
+
+<button
+class="buyButton"
+data-product="Лонгслив"
+data-price="1300">
+
+🛒 Купить сейчас
+
+</button>
+
+</div>
+</div>
+
+<!-- Просмотр фото -->
+
+<div class="imageModal" id="imageModal">
+    <img id="modalImage" src="" alt="">
+</div>
+
+<script>
+
+// Выбор размера
+
+document.querySelectorAll(".sizes").forEach(group=>{
+
+group.querySelectorAll(".size").forEach(btn=>{
+
+btn.onclick=function(){
+
+group.querySelectorAll(".size").forEach(b=>b.classList.remove("active"));
+
+this.classList.add("active");
+
+}
+
+})
+
+})
+
+// Telegram
+
+document.querySelectorAll(".buyButton").forEach(button=>{
+
+button.onclick=function(){
+
+const card=this.closest(".card");
+
+const size=card.querySelector(".size.active").innerText;
+
+const product=this.dataset.product;
+
+const price=this.dataset.price;
+
+const text=`Привет! 👋
+
+Хочу заказать:
+
+${product}
+
+📏 Размер: ${size}
+
+💰 Цена: ${price} грн`;
+
+window.open(
+
+`https://t.me/gotti21svv?text=${encodeURIComponent(text)}`,
+
+"_blank"
+
+);
+
+}
+
+})
+
+// Просмотр фотографии
+
+const modal=document.getElementById("imageModal");
+
+const modalImage=document.getElementById("modalImage");
+
+document.querySelectorAll(".card img").forEach(img=>{
+
+img.onclick=function(){
+
+modal.classList.add("active");
+
+modalImage.src=this.src;
+
+}
+
+})
+
+modal.onclick=function(){
+
+modal.classList.remove("active");
+
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
