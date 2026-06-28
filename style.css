@@ -1,0 +1,126 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter,Arial,sans-serif;
+}
+
+body{
+background:#000;
+color:#fff;
+}
+
+header{
+padding:60px 20px 30px;
+text-align:center;
+}
+
+.logo{
+width:220px;
+max-width:80%;
+margin-bottom:25px;
+}
+
+.subtitle{
+color:#888;
+letter-spacing:6px;
+font-size:13px;
+margin-bottom:40px;
+}
+
+.links{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-bottom:40px;
+flex-wrap:wrap;
+}
+
+.links a{
+text-decoration:none;
+color:white;
+padding:12px 24px;
+border:1px solid rgba(255,255,255,.2);
+border-radius:12px;
+transition:.3s;
+}
+
+.links a:hover{
+background:white;
+color:black;
+}
+
+.shop{
+width:95%;
+max-width:500px;
+margin:auto;
+padding-bottom:80px;
+}
+
+.shop h1{
+text-align:center;
+font-size:32px;
+letter-spacing:5px;
+margin-bottom:40px;
+}
+
+.product{
+border:1px solid rgba(255,255,255,.12);
+border-radius:22px;
+padding:20px;
+margin-bottom:35px;
+background:#080808;
+}
+
+.product img{
+width:100%;
+border-radius:18px;
+margin-bottom:20px;
+}
+
+.product h2{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.price{
+font-size:20px;
+color:#bbb;
+margin-bottom:20px;
+}
+
+select{
+width:100%;
+padding:15px;
+background:#111;
+color:white;
+border:1px solid rgba(255,255,255,.2);
+border-radius:12px;
+font-size:16px;
+margin-bottom:20px;
+}
+
+button{
+width:100%;
+padding:16px;
+background:white;
+color:black;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.02);
+}
+
+footer{
+padding:50px 20px;
+text-align:center;
+color:#666;
+letter-spacing:3px;
+font-size:12px;
+}
