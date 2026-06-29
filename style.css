@@ -218,52 +218,28 @@ box-shadow:0 20px 45px rgba(0,0,0,.12);
 
 }
 
+.card{
+    background:#fff;
+    border:none;
+    border-radius:0;
+    box-shadow:none;
+    overflow:hidden;
+    transition:.25s;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    padding:0;
+}
+
+.card:hover{
+    transform:none;
+}
+
 .card img{
-
-width:100%;
-
-aspect-ratio:1/1;
-
-object-fit:cover;
-
-border-radius:16px;
-
-margin-bottom:14px;
-
-transition:.35s;
-
-cursor:pointer;
-
-}
-
-.card img:hover{
-
-transform:scale(1.04);
-
-}
-
-.card h2{
-
-font-size:18px;
-
-font-weight:800;
-
-letter-spacing:-.5px;
-
-margin-bottom:6px;
-
-}
-
-.card p{
-
-font-size:17px;
-
-font-weight:700;
-
-margin-bottom:16px;
-
-color:#111;
-
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    display:block;
 }
 
 /* =========================
@@ -412,15 +388,14 @@ border-radius:999px;
 .shop-page{
 padding:25px 14px 70px;
 }
-
-.shop-title{
-font-size:34px;
-margin-bottom:6px;
-}
-
-.shop-subtitle{
-font-size:15px;
-margin-bottom:24px;
+.title{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:30px;
+    letter-spacing:.5px;
+    color:#111;
+    margin:0;
+    line-height:1;
+    text-transform:uppercase;
 }
 
 .catalog{
