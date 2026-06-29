@@ -182,13 +182,13 @@ text-align:center;
 
 #productImage{
 
-width:72%;
+width:50%;
 
-max-width:320px;
+max-width:210px;
 
 display:block;
 
-margin:0 auto 28px;
+margin:20px auto 24px;
 
 object-fit:contain;
 
