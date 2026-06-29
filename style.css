@@ -342,185 +342,59 @@ letter-spacing:1.5px;
 }
 
 }
-.label{
-
-display:block;
-
-font-size:20px;
-
-font-weight:400;
-
-margin:20px 0 10px;
-
-color:#111;
-
-}
-
-/* Quantity */
+/* PRODUCT OPTIONS */
 
 .label{
-
 display:block;
-
 font-size:20px;
-
 font-weight:500;
-
-margin:22px 0 10px;
-
-}
-
-.quantity{
-
-width:52%;
-
-height:56px;
-
-border:2px solid #d9d9d9;
-
-border-radius:16px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-padding:0 18px;
-
-background:#fff;
-
-margin-bottom:28px;
-
-}
-
-.quantity button{
-
-background:none;
-
-border:none;
-
-font-size:30px;
-
-color:#111;
-
-cursor:pointer;
-
-}
-
-#count{
-
-font-size:24px;
-
-font-weight:700;
-
-color:#111;
-
+margin:18px 0 8px;
+text-align:left;
 }
 
 #sizeSelect{
-
-width:52%;
-
-height:56px;
-
-border:2px solid #d9d9d9;
-
-border-radius:16px;
-
-padding:0 18px;
-
-font-size:20px;
-
+width:220px;
+height:54px;
+border:2px solid #ddd;
+border-radius:14px;
+padding:0 16px;
+font-size:18px;
 background:#fff;
-
 color:#111;
-
-margin-bottom:30px;
-
+margin-bottom:24px;
 display:block;
-
 }
 
 .quantity{
-
-width:52%;
-
-height:56px;
-
-border:2px solid #d9d9d9;
-
-border-radius:16px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-padding:0 18px;
-
-margin-bottom:30px;
-
-background:#fff;
-
-}
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-width:150px;
-
+width:220px;
 height:54px;
-
 border:2px solid #ddd;
-
-border-radius:12px;
-
-margin-bottom:34px;
-
-overflow:hidden;
-
+border-radius:14px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 18px;
+margin-bottom:30px;
 }
 
 .quantity button{
-
 background:none;
-
 border:none;
-
-font-size:30px;
-
+font-size:32px;
 color:#111;
-
 cursor:pointer;
-
 }
 
-.quantity span{
-flex:1;
-text-align:center;
+#count{
 font-size:22px;
-font-weight:600;
+font-weight:700;
 color:#111;
 }
 
 #buyButton{
-
-margin-top:10px;
-
-}
-#count{
-
-font-size:24px;
-
-font-weight:700;
-
-color:#111;
-
+margin-top:8px;
+height:54px;
+font-size:18px;
 }
 
 
