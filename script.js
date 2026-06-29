@@ -17,7 +17,8 @@ B3CE-4CC5F699F30C.png
 {
 name:"Pink Hoodie",
 price:"1800 грн",
-image:"hoodie-pink.jpg"
+image:F62943A9-9AEB-4CDF-
+BA27-1C504C1FDCC8.png
 },
 
 {
