@@ -21,7 +21,8 @@ image:"hoodie-pink.jpg"
 {
 name:"Cross T-Shirt",
 price:"1000 грн",
-image:"tshirt-cross.jpg"
+image:261898D7-7E97-45C3-
+A30E-37091EA36423.png
 },
 
 {
