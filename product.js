@@ -63,11 +63,41 @@ images:[
 
 const id = new URLSearchParams(location.search).get("id");
 const product = products[id];
+let currentImage = 0;
 
-document.getElementById("productImage").src = product.images[0];
+const image = document.getElementById("productImage");
+
+image.src = product.images[currentImage];
+
 document.getElementById("productName").innerText = product.name;
 document.getElementById("productPrice").innerText = product.price;
+document.getElementById("nextImage").onclick = () => {
 
+currentImage++;
+
+if(currentImage >= product.images.length){
+
+currentImage = 0;
+
+}
+
+image.src = product.images[currentImage];
+
+};
+
+document.getElementById("prevImage").onclick = () => {
+
+currentImage--;
+
+if(currentImage < 0){
+
+currentImage = product.images.length - 1;
+
+}
+
+image.src = product.images[currentImage];
+
+};
 let quantity = 1;
 
 document.getElementById("plus").onclick = function(){
