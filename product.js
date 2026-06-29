@@ -66,7 +66,7 @@ const product = products[id];
 let currentImage = 0;
 
 const image = document.getElementById("productImage");
-
+const thumbs = document.getElementById("thumbnails");
 image.src = product.images[currentImage];
 
 document.getElementById("productName").innerText = product.name;
