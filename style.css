@@ -446,6 +446,46 @@ font-weight:600;
 color:#111;
 
 }
+.gallery{
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-bottom:25px;
+}
+
+.gallery img{
+width:50%;
+max-width:220px;
+object-fit:contain;
+display:block;
+}
+
+.arrow{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+width:42px;
+height:42px;
+border:none;
+background:#fff;
+border-radius:50%;
+font-size:30px;
+cursor:pointer;
+transition:.2s;
+}
+
+.arrow:hover{
+background:#f2f2f2;
+}
+
+#prevImage{
+left:0;
+}
+
+#nextImage{
+right:0;
+}
 
 
 
