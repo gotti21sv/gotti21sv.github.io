@@ -486,6 +486,49 @@ left:0;
 #nextImage{
 right:0;
 }
+.thumbnails{
+
+display:flex;
+
+justify-content:center;
+
+gap:10px;
+
+margin:18px 0 30px;
+
+flex-wrap:wrap;
+
+}
+
+.thumbnail{
+
+width:58px;
+
+height:58px;
+
+object-fit:cover;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:.2s;
+
+}
+
+.thumbnail.active{
+
+border:2px solid #111;
+
+}
+
+.thumbnail:hover{
+
+opacity:.8;
+
+}
 
 
 
