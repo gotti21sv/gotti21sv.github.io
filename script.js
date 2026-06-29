@@ -10,7 +10,8 @@ B7E7-443F-9AE8-439ABEDD649B.png
 {
 name:"18+ Hoodie",
 price:"2000 грн",
-image:"hoodie-18.jpg"
+image:BDD2C093-6CAB-46D1-
+B3CE-4CC5F699F30C.png
 },
 
 {
