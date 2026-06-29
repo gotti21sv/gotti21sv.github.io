@@ -31,7 +31,7 @@ A30E-37091EA36423.png"
 {
 name:"Black Shorts",
 price:"1400 грн",
-image:"F0OB8C5C-OADE-494C-869D-
+image:"FOOB8C5C-OADE-494C-869D-
 DAE50880EE70.png"
 },
 
