@@ -181,10 +181,15 @@ text-align:center;
 }
 
 #productImage{
-width:45%;
-max-width:190px;
-margin:15px auto 20px;
+width:50%;
+max-width:210px;
+display:block;
+margin:20px auto 24px;
 object-fit:contain;
+
+position:static;
+top:auto;
+left:auto;
 }
 
 #productName{
