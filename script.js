@@ -115,3 +115,13 @@ window.open(
 );
 
 }
+document.querySelectorAll(".product").forEach(card=>{
+
+card.onclick=function(){
+
+window.location.href=
+`product.html?id=${this.dataset.id}`;
+
+};
+
+});
