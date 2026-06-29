@@ -38,7 +38,8 @@ DAE50880EE70.png
 {
 name:"18+ Longsleeve",
 price:"1300 грн",
-image:"longsleeve-18.jpg"
+image:FAB8E75D-6289-4ED5-BA9B-
+A2CBF6FB108C.png
 }
 
 ];
