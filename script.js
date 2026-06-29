@@ -1,9 +1,10 @@
 const products = [
 
 {
-name:"Blue Hoodie",
+name:"Black Hoodie",
 price:"1700 грн",
-image:"hoodie-blue.jpg"
+image:8C130B78-
+B7E7-443F-9AE8-439ABEDD649B.png
 },
 
 {
