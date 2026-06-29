@@ -105,7 +105,6 @@ thumbs.appendChild(img);
 renderThumbnails();
 document.getElementById("productName").innerText = product.name;
 document.getElementById("productPrice").innerText = product.price;
-document.getElementById("nextImage").onclick = () => {
 
 currentImage++;
 
@@ -121,7 +120,7 @@ renderThumbnails();
 
 };
 
-document.getElementById("prevImage").onclick = () => {
+
 
 currentImage--;
 
