@@ -535,7 +535,27 @@ border:2px solid #111;
 opacity:.8;
 
 }
+body{
 
+animation:fade .35s ease;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
 
 
 
