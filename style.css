@@ -51,6 +51,22 @@ cursor:pointer;
 }
 
 .product img{
+
+width:100%;
+
+aspect-ratio:1/1;
+
+object-fit:contain;
+
+padding:20px;
+
+box-sizing:border-box;
+
+display:block;
+
+transition:.25s;
+
+}
 width:100%;
 aspect-ratio:1/1.25;
 object-fit:contain;
@@ -80,6 +96,20 @@ color:#555;
 @media (max-width:768px){
 
 .catalog{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px;
+
+padding:20px;
+
+max-width:900px;
+
+margin:0 auto;
+
+}
 grid-template-columns:repeat(2,1fr);
 gap:14px;
 padding:14px;
