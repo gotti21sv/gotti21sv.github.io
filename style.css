@@ -424,21 +424,15 @@ overflow:hidden;
 
 .quantity button{
 
-border:none;
-
 background:none;
 
-font-size:34px;
+border:none;
 
 color:#111;
 
+font-size:32px;
+
 cursor:pointer;
-
-padding:0;
-
-width:auto;
-
-height:auto;
 
 }
 
