@@ -7,7 +7,7 @@ box-sizing:border-box;
 body{
 background:#fff;
 color:#111;
-font-family:"Inter",sans-serif;
+font-family:"Manrope",sans-serif;
 -webkit-font-smoothing:antialiased;
 -moz-osx-font-smoothing:grayscale;
 }
@@ -650,5 +650,9 @@ z-index:100;
 opacity:.5;
 
 }
+#productImage{
 
+transition:opacity .35s ease,transform .35s ease;
+
+}
 
