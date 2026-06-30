@@ -40,22 +40,32 @@ color:inherit;
 position:relative;
 
 display:flex;
+
 justify-content:center;
+
 align-items:center;
 
-padding:28px 20px 22px;
-
-border-bottom:1px solid #f2f2f2;
+padding:30px 22px 24px;
 
 background:#fff;
+
+border-bottom:1px solid #f3f3f3;
 
 }
 
 .logo{
 
-width:185px;
-
 display:block;
+
+width:170px;
+
+height:auto;
+
+margin:0 auto;
+
+user-select:none;
+
+-webkit-user-drag:none;
 
 }
 
