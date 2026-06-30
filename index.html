@@ -34,7 +34,7 @@
 
 <div class="line"></div>
 
-<a href="shop.html" class="item">
+<a href="#" class="item" id="openShop">
 
 <div class="left">
 
@@ -119,6 +119,25 @@ document.getElementById("loader").classList.add("hide");
 },1600);
 
 });
+
+</script>
+<script>
+
+document.getElementById("openShop").onclick=function(e){
+
+e.preventDefault();
+
+const loader=document.getElementById("loader");
+
+loader.classList.remove("hide");
+
+setTimeout(()=>{
+
+window.location.href="shop.html";
+
+},1400);
+
+}
 
 </script>
 </body>
