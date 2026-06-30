@@ -212,23 +212,25 @@ count.textContent = quantity;
 
 /* ---------------- BUY ---------------- */
 
+/* ---------------- BUY ---------------- */
+
 document.getElementById("buyButton").addEventListener("click",()=>{
 
-const text = `Привіт!
+const text = `Привет!
 
-Хочу замовити:
+Хочу заказать:
 
 ${product.name}
 
-Розмір: ${sizeSelect.value}
+Размер: ${sizeSelect.value}
 
-Кількість: ${quantity}
+Количество: ${quantity}
 
-Ціна: ${product.price}`;
+Цена: ${product.price}`;
 
 window.open(
 
-`https://t.me/gotti21sv?text=${encodeURIComponent(text)}`,
+`https://t.me/gotti21svv?text=${encodeURIComponent(text)}`,
 
 "_blank"
 
