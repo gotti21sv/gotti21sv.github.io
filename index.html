@@ -9,7 +9,7 @@
 <title>GOTTI21SV</title>
 
 <link rel="stylesheet" href="landing.css">
-
+<link rel="stylesheet" href="loader.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -18,7 +18,12 @@
 </head>
 
 <body>
+    
+<div id="loader">
 
+<img src="52917A0C-CBA4-4183-887A-F77A10ECA24C.png" alt="">
+
+</div>
 <div class="container">
 
 <div class="line"></div>
@@ -103,7 +108,19 @@
 <div class="line bottom"></div>
 
 </div>
+<script>
 
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.getElementById("loader").classList.add("hide");
+
+},1600);
+
+});
+
+</script>
 </body>
 
 </html>
