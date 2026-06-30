@@ -257,18 +257,3 @@ window.open(
 );
 
 });
-
-
-/* ---------------- START ANIMATION ---------------- */
-
-window.addEventListener("load",()=>{
-
-image.style.opacity="0";
-
-setTimeout(()=>{
-
-image.style.opacity="1";
-
-},120);
-
-});
