@@ -76,7 +76,31 @@ const countEl = document.getElementById("count");
 
 let currentImage = 0;
 let quantity = 1;
+let startX = 0;
 
+image.addEventListener("touchstart", e=>{
+
+startX = e.touches[0].clientX;
+
+});
+
+image.addEventListener("touchend", e=>{
+
+const endX = e.changedTouches[0].clientX;
+
+if(endX < startX - 50){
+
+changeImage((currentImage + 1) % product.images.length);
+
+}
+
+if(endX > startX + 50){
+
+changeImage((currentImage - 1 + product.images.length) % product.images.length);
+
+}
+
+});
 nameEl.textContent = product.name;
 priceEl.textContent = product.price;
 
