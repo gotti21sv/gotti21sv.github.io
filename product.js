@@ -93,19 +93,15 @@ currentImage = index;
 
 image.style.opacity = "0";
 
-const img = new Image();
-
-img.src = product.images[currentImage];
-
-img.onload = () => {
-
-image.src = img.src;
-
-viewerImage.src = img.src;
+image.onload = () => {
 
 image.style.opacity = "1";
 
 };
+
+image.src = product.images[currentImage];
+
+viewerImage.src = product.images[currentImage];
 
 }
 
