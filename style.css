@@ -611,6 +611,32 @@ transform:scale(1.08);
 .thumbnail.active{
 transform:scale(1.05);
 }
+.back{
 
+position:absolute;
+
+left:24px;
+
+top:34px;
+
+font-size:34px;
+
+font-weight:300;
+
+color:#111;
+
+text-decoration:none;
+
+transition:.25s;
+
+z-index:100;
+
+}
+
+.back:hover{
+
+opacity:.5;
+
+}
 
 
