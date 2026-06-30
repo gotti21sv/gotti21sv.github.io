@@ -280,6 +280,11 @@ margin:0 auto;
 display:block;
 
 }
+#productImage:not([src]),
+#productImage[src=""]{
+opacity:0;
+visibility:hidden;
+}
 
 #productImage:active{
 
