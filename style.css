@@ -121,17 +121,19 @@ transform:scale(1.03);
 
 .product h2{
 
-font-size:17px;
+font-family:"Manrope",sans-serif;
 
-font-weight:500;
+font-size:18px;
 
-letter-spacing:.4px;
+font-weight:600;
+
+letter-spacing:.8px;
 
 text-transform:uppercase;
 
 margin-bottom:8px;
 
-color:#222;
+color:#111;
 
 }
 
@@ -300,15 +302,17 @@ transform:scale(.985);
 
 #productName{
 
-font-size:30px;
+font-family:"Manrope",sans-serif;
 
-font-weight:500;
+font-size:31px;
 
-letter-spacing:.6px;
+font-weight:600;
+
+letter-spacing:1px;
 
 text-transform:uppercase;
 
-color:#202020;
+color:#111;
 
 margin-bottom:10px;
 
