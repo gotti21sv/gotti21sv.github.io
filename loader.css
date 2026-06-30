@@ -27,9 +27,17 @@ visibility:hidden;
 
 #loader img{
 
+display:block;
+
 width:190px;
 
+margin:0;
+
 animation:logoIntro 1.8s ease forwards;
+
+transform:translateZ(0);
+
+will-change:transform,opacity;
 
 }
 
