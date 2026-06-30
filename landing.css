@@ -141,19 +141,13 @@ border-radius:0;
 
 .left span{
 
-display:block;
-
 font-size:17px;
 
-font-weight:300;
+font-weight:400;
 
-letter-spacing:10px;
+letter-spacing:9px;
 
-text-transform:uppercase;
-
-color:#10c10c10c;
-
-line-height:1;
+color:#8f8f8f;
 
 }
 
