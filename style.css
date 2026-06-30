@@ -261,21 +261,15 @@ overflow:hidden;
 
 width:100%;
 
-max-width:370px;
+max-width:360px;
 
-/* немного меньше, чтобы были видны кнопки */
-
-height:41vh;
+height:38vh;
 
 object-fit:contain;
 
+margin:0 auto;
+
 display:block;
-
-transition:
-opacity .35s ease,
-transform .35s ease;
-
-cursor:pointer;
 
 }
 
