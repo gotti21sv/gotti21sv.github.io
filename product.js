@@ -102,7 +102,29 @@ renderThumbs();
 
 
 
-function renderThumbs(){
+const dots = document.getElementById("dots");
+
+function renderDots(){
+
+dots.innerHTML="";
+
+product.images.forEach((_,i)=>{
+
+const dot=document.createElement("div");
+
+dot.className="dot";
+
+if(i===currentImage){
+
+dot.classList.add("active");
+
+}
+
+dots.appendChild(dot);
+
+});
+
+}
 
 thumbs.innerHTML="";
 
