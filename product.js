@@ -3,7 +3,7 @@
 const products = {
 
 "black-hoodie":{
-name:"BLACK HOODIE",
+name:"HOODIE «gotti21sv» 🖤",
 price:"₴1,700.00 UAH",
 images:[
 "8C130B78-B7E7-443F-9AE8-439ABEDD649B.png",
@@ -13,7 +13,7 @@ images:[
 },
 
 "18-hoodie":{
-name:"18+ HOODIE",
+name:"HOODIE «18+» 🤍🖤",
 price:"₴2,000.00 UAH",
 images:[
 "BDD2C093-6CAB-46D1-B3CE-4CC5F699F30C.png",
@@ -23,7 +23,7 @@ images:[
 },
 
 "pink-hoodie":{
-name:"PINK HOODIE",
+name:"HOODIE «gotti21sv» 🩷",
 price:"₴1,800.00 UAH",
 images:[
 "F62943A9-9AEB-4CDF-BA27-1C504C1FDCC8.png",
@@ -33,7 +33,7 @@ images:[
 },
 
 "cross-shirt":{
-name:"CROSS T-SHIRT",
+name:"T-SHIRT «gotti21sv» 🖤",
 price:"₴1,000.00 UAH",
 images:[
 "261898D7-7E97-45C3-A30E-37091EA36423.png",
@@ -42,7 +42,7 @@ images:[
 },
 
 "black-shorts":{
-name:"BLACK SHORTS",
+name:"DOUBLEWAIST SHORTS 🤍🖤",
 price:"₴1,400.00 UAH",
 images:[
 "F00B8C5C-0ADE-494C-869D-DAE50880EE70.png",
@@ -52,7 +52,7 @@ images:[
 },
 
 "18-longsleeve":{
-name:"18+ LONGSLEEVE",
+name:"LONGSLEEVE «18+» 🤍🖤",
 price:"₴1,300.00 UAH",
 images:[
 "FAB8E75D-6289-4ED5-BA9B-A2CBF6FB108C.png",
