@@ -605,7 +605,19 @@ padding:16px 18px;
 
 .product-header .logo{
 
-width:132px;
+position:absolute;
+
+top:8px;
+
+right:18px;
+
+left:auto;
+
+margin:0;
+
+width:95px;
+
+height:auto;
 
 }
 
