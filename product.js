@@ -68,7 +68,23 @@ const image = document.getElementById("productImage");
 const nameEl = document.getElementById("productName");
 const priceEl = document.getElementById("productPrice");
 
-const sizeSelect = document.getElementById("sizeSelect");
+const sizes = document.querySelectorAll(".size");
+
+let selectedSize = "S";
+
+sizes.forEach(button=>{
+
+button.onclick=()=>{
+
+sizes.forEach(x=>x.classList.remove("active"));
+
+button.classList.add("active");
+
+selectedSize = button.textContent;
+
+};
+
+});
 
 const countEl = document.getElementById("count");
 
@@ -210,7 +226,7 @@ const text = `Привіт!
 
 ${product.name}
 
-Розмір: ${sizeSelect.value}
+Розмір: ${selectedSize}
 
 Кількість: ${quantity}
 
