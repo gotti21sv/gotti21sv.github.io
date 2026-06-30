@@ -346,3 +346,19 @@ window.open(
 );
 
 };
+const viewer = document.getElementById("viewer");
+const viewerImage = document.getElementById("viewerImage");
+
+image.onclick = ()=>{
+
+viewer.classList.add("show");
+
+viewerImage.src = image.src;
+
+};
+
+viewer.onclick = ()=>{
+
+viewer.classList.remove("show");
+
+};
