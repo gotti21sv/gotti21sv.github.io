@@ -74,11 +74,11 @@ color:#9d9d9d;
 .left span{
 
 display:block;
-font-size:13px;
+font-size:12px;
 font-weight:300;
-letter-spacing:8px;
-color:#b3b3b3;
-margin-bottom:6px;
+letter-spacing:9px;
+color:#b8b8b8;
+margin-bottom:8px;
 text-transform:uppercase;
 
 }
@@ -86,21 +86,28 @@ text-transform:uppercase;
 .left h3{
 
 font-family:"Cormorant Garamond",serif;
-font-size:32px;
+font-size:30px;
 font-weight:300;
-letter-spacing:.2px;
-color:#3d3d3d;
+letter-spacing:.15px;
+line-height:1.1;
+color:#2f2f2f;
 
 }
 
 .arrow{
-font-size:30px;
-color:#bdbdbd;
-transition:.25s;
+
+font-size:26px;
+font-weight:200;
+color:#c9c9c9;
+transition:.3s ease;
+
 }
 
 .item:hover .arrow{
-transform:translateX(6px);
+
+transform:translateX(4px);
+opacity:.65;
+
 }
 
 @media(max-width:768px){
