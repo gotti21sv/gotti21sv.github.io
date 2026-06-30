@@ -67,7 +67,31 @@ let currentImage = 0;
 
 const image = document.getElementById("productImage");
 const thumbs = document.getElementById("thumbnails");
+image.style.opacity = "0";
+
+setTimeout(() => {
+
+image.style.opacity = "0";
+
+setTimeout(() => {
+
+image.style.opacity = "0";
+
+setTimeout(() => {
+
 image.src = product.images[currentImage];
+
+image.style.opacity = "1";
+
+},150);
+
+image.style.opacity = "1";
+
+},150);
+
+image.style.opacity = "1";
+
+},150);
 function renderThumbnails(){
 
 thumbs.innerHTML="";
@@ -90,7 +114,15 @@ img.onclick=function(){
 
 currentImage=index;
 
-image.src=product.images[currentImage];
+image.style.opacity = "0";
+
+setTimeout(() => {
+
+image.src = product.images[currentImage];
+
+image.style.opacity = "1";
+
+},150);
 
 renderThumbnails();
 
@@ -114,7 +146,15 @@ currentImage = 0;
 
 }
 
+image.style.opacity = "0";
+
+setTimeout(() => {
+
 image.src = product.images[currentImage];
+
+image.style.opacity = "1";
+
+},150);
 
 renderThumbnails();
 
@@ -130,7 +170,39 @@ currentImage = product.images.length - 1;
 
 }
 
+image.style.opacity = "0";
+
+setTimeout(() => {
+
+image.style.opacity = "0";
+
+setTimeout(() => {
+
+image.style.opacity = "0";
+
+setTimeout(() => {
+
+image.style.opacity = "0";
+
+setTimeout(() => {
+
 image.src = product.images[currentImage];
+
+image.style.opacity = "1";
+
+},150);
+
+image.style.opacity = "1";
+
+},150);
+
+image.style.opacity = "1";
+
+},150);
+
+image.style.opacity = "1";
+
+},150);
 
 renderThumbnails();
 
