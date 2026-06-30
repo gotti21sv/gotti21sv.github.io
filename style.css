@@ -718,3 +718,27 @@ width:24px;
 border-radius:20px;
 
 }
+.buy-bar{
+
+position:fixed;
+
+left:0;
+bottom:0;
+
+width:100%;
+
+background:#fff;
+
+padding:18px;
+
+border-top:1px solid #eee;
+
+z-index:100;
+
+}
+
+.buy-bar #buyButton{
+
+margin:0;
+
+}
