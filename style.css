@@ -365,21 +365,19 @@ color:#111;
 
 #sizeSelect{
 
-width:80px;
+width:100%;
 
-height:46px;
+height:54px;
 
-border:1.5px solid #d9d9d9;
+border:1.5px solid #ddd;
 
 border-radius:14px;
 
-padding:0 16px;
+padding:0 18px;
 
 font-size:18px;
 
 background:#fff;
-
-color:#111;
 
 appearance:none;
 
@@ -393,17 +391,15 @@ background-position:right 16px center;
 
 background-size:18px;
 
-margin-bottom:30px;
-
 }
 
 .quantity{
 
-width:170px;
+width:100%;
 
-height:46px;
+height:54px;
 
-border:1.5px solid #d9d9d9;
+border:1.5px solid #ddd;
 
 border-radius:14px;
 
@@ -415,8 +411,6 @@ justify-content:space-between;
 
 padding:0 18px;
 
-margin-bottom:34px;
-
 }
 
 .quantity button{
@@ -425,11 +419,19 @@ background:none;
 
 border:none;
 
-font-size:34px;
+font-size:30px;
+
+cursor:pointer;
 
 color:#111;
 
-cursor:pointer;
+}
+
+#count{
+
+font-size:22px;
+
+font-weight:600;
 
 }
 
@@ -625,4 +627,32 @@ opacity:.5;
 transition:opacity .35s ease,transform .35s ease;
 
 }
+.options{
 
+display:flex;
+
+gap:18px;
+
+width:100%;
+
+margin-bottom:38px;
+
+}
+
+.option{
+
+flex:1;
+
+}
+
+.label{
+
+font-size:17px;
+
+font-weight:500;
+
+margin-bottom:10px;
+
+display:block;
+
+}
