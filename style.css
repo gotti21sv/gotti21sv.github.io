@@ -147,7 +147,9 @@ transform:scale(1.03);
 
 font-size:18px;
 
-font-weight:800;
+font-weight:600;
+
+letter-spacing:.4px;
 
 line-height:1.2;
 
@@ -212,13 +214,17 @@ text-transform:uppercase;
 
 #productPrice{
 
-font-size:22px;
+font-size:28px;
 
-font-weight:300;
+font-weight:400;
 
-margin-bottom:30px;
+letter-spacing:.3px;
 
-color:#444;
+color:#555;
+
+margin-top:12px;
+
+margin-bottom:40px;
 
 }
 
@@ -585,7 +591,13 @@ transform:translateY(-4px) scale(1.02);
 }
 
 #productImage{
-transition:opacity .25s ease, transform .3s ease;
+
+transition:
+
+opacity .35s ease,
+
+transform .35s ease;
+
 }
 
 #productImage:hover{
