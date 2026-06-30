@@ -186,17 +186,12 @@ align-items:flex-start;
 
 }
 
-#productImage{
-
-transition:.35s ease;
-
-}
 
 #productImage:hover{
 
 transform:scale(1.03);
 
-}#
+}
 
 #productName{
 
@@ -306,11 +301,6 @@ opacity:.9;
 
 }
 
-#buyButton:hover{
-
-opacity:.85;
-
-}
 
 @media(max-width:768px){
 
@@ -409,7 +399,7 @@ margin-bottom:30px;
 
 .quantity{
 
-width:40px;
+width:170px;
 
 height:46px;
 
@@ -532,20 +522,9 @@ border:2px solid #111;
 
 }
 
-.thumbnail.active{
-
-border:2px solid #111;
-
-}
-
 .thumbnail:hover{
 
 opacity:.8;
-
-}
-body{
-
-animation:fade .35s ease;
 
 }
 
@@ -590,15 +569,6 @@ transition:.35s ease;
 transform:translateY(-4px) scale(1.02);
 }
 
-#productImage{
-
-transition:
-
-opacity .35s ease,
-
-transform .35s ease;
-
-}
 
 #productImage:hover{
 transform:scale(1.03);
