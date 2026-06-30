@@ -94,7 +94,7 @@ image.src = product.images[currentImage];
 image.style.opacity="1";
 image.style.transform="scale(1)";
 
-renderThumbs();
+renderDots();
 
 },180);
 
