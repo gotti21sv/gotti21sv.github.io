@@ -92,6 +92,26 @@ function showImage(index){
 currentImage = index;
 
 image.style.opacity = "0";
+
+const img = new Image();
+
+img.src = product.images[currentImage];
+
+img.onload = () => {
+
+image.src = img.src;
+
+viewerImage.src = img.src;
+
+image.style.opacity = "1";
+
+};
+
+}
+
+currentImage = index;
+
+image.style.opacity = "0";
 image.style.transform = "scale(.985)";
 
 setTimeout(()=>{
