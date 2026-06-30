@@ -19,18 +19,13 @@ font-family:"Manrope",sans-serif;
 animation:fade .45s ease;
 }
 
-@keyframes fade{
-
-from{
-opacity:0;
-transform:translateY(8px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
+body{
+background:#fff;
+color:#181818;
+font-family:"Manrope",sans-serif;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+animation:fade .35s ease;
 }
 
 a{
