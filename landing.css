@@ -72,17 +72,23 @@ color:#9d9d9d;
 }
 
 .left span{
+
 display:block;
-font-size:12px;
-letter-spacing:6px;
-color:#9a9a9a;
-margin-bottom:8px;
+font-size:13px;
+letter-spacing:7px;
+color:#9b9b9b;
+margin-bottom:6px;
+text-transform:uppercase;
+
 }
 
 .left h3{
-font-size:30px;
+
 font-family:"Cormorant Garamond",serif;
-font-weight:500;
+font-size:34px;
+font-weight:400;
+letter-spacing:.3px;
+
 }
 
 .arrow{
