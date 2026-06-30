@@ -195,12 +195,13 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-padding:18px 22px;
+padding:10px 18px;
 
-background:rgba(255,255,255,.82);
+background:rgba(255,255,255,.9);
 
-backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
+backdrop-filter:blur(12px);
+
+-webkit-backdrop-filter:blur(12px);
 
 z-index:1000;
 
@@ -208,7 +209,7 @@ z-index:1000;
 
 .product-header .logo{
 
-width:145px;
+width:120px;
 
 }
 
