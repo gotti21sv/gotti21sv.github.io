@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Оплата замовлення | GOTTI21SV</title>
+
+<link rel="stylesheet" href="payment.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="52917A0C-CBA4-4183-887A-F77A10ECA24C.png" class="logo">
+
+<h1>Оплата замовлення</h1>
+
+<div class="product">
+
+<img id="productImage">
+
+<div>
+
+<h2 id="productName"></h2>
+
+<p id="productPrice"></p>
+
+</div>
+
+</div>
+
+<h3>Оберіть спосіб оплати</h3>
+
+<div class="payment-select">
+
+<label class="option">
+
+<input
+type="radio"
+name="pay"
+value="500"
+checked>
+
+<span id="depositPrice">
+
+Передоплата 500 грн
+
+</span>
+
+</label>
+
+<label class="option">
+
+<input
+type="radio"
+name="pay"
+value="full">
+
+<span id="fullPrice">
+
+Повна оплата
+
+</span>
+
+</label>
+
+</div>
+<button id="payButton">
+
+Оплатити
+
+</button>
+
+<button id="confirmButton">
+
+Я оплатив
+
+</button>
+
+</div>
+
+<script>
+
+const order = JSON.parse(sessionStorage.getItem("order"));
+
+if(order){
+
+document.getElementById("productImage").src = order.image;
+
+document.getElementById("productName").textContent = order.product;
+
+document.getElementById("productPrice").textContent = order.price;
+
+document.getElementById("fullPrice").textContent =
+"Повна оплата " + order.price;
+
+}
+
+const MONO_LINK="ВСТАВИ_ТУТ_СВОЄ_ПОСИЛАННЯ_НА_БАНКУ";
+
+document.getElementById("payButton").onclick=function(){
+
+window.open(MONO_LINK,"_blank");
+
+}
+
+document.getElementById("confirmButton").onclick=function(){
+
+window.location.href="success.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
