@@ -38,10 +38,7 @@ display:block;
 
 width:200px;
 
-margin:0 auto 34px;
-
-user-select:none;
--webkit-user-drag:none;
+margin:0 auto 6px;
 
 }
 
@@ -53,7 +50,9 @@ width:100%;
 
 overflow:hidden;
 
-margin-bottom:44px;
+margin-top:-15px;
+
+margin-bottom:36px;
 
 }
 
