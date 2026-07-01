@@ -138,9 +138,9 @@ alt="">
 
 const params = new URLSearchParams(window.location.search);
 
-const product = params.get("product") || "";
-const price = params.get("price") || "";
-const image = params.get("image") || "";
+const product = decodeURIComponent(params.get("product") || "");
+const price = decodeURIComponent(params.get("price") || "");
+const image = decodeURIComponent(params.get("image") || "");
 
 document.getElementById("productName").textContent = product;
 document.getElementById("productPrice").textContent = price;
@@ -152,7 +152,7 @@ let selectedSize = "S";
 
 document.querySelectorAll(".size").forEach(btn=>{
 
-btn.onclick=()=>{
+btn.addEventListener("click",()=>{
 
 document.querySelectorAll(".size").forEach(b=>b.classList.remove("active"));
 
@@ -160,7 +160,7 @@ btn.classList.add("active");
 
 selectedSize=btn.textContent;
 
-};
+});
 
 });
 
@@ -170,7 +170,7 @@ let contactType="Telegram";
 
 document.querySelectorAll(".contact-btn").forEach(btn=>{
 
-btn.onclick=()=>{
+btn.addEventListener("click",()=>{
 
 document.querySelectorAll(".contact-btn").forEach(b=>b.classList.remove("active"));
 
@@ -178,15 +178,71 @@ btn.classList.add("active");
 
 contactType=btn.textContent;
 
+});
+
+});
+
+/* ---------- SEND ORDER ---------- */
+
+document.getElementById("checkoutForm").addEventListener("submit",async(e)=>{
+
+e.preventDefault();
+
+const order={
+
+product,
+
+price,
+
+image,
+
+size:selectedSize,
+
+contactType,
+
+contact:document.getElementById("contact").value,
+
+name:document.getElementById("name").value,
+
+city:document.getElementById("city").value,
+
+phone:document.getElementById("phone").value,
+
+department:document.getElementById("department").value,
+
+comment:document.getElementById("comment").value
+
 };
+
+try{
+
+await fetch("https://hook.eu1.make.com/iq2m2x9ampl1w8o87mr32i2xysnytuh1",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify(order)
+
+});
+
+sessionStorage.setItem("order",JSON.stringify(order));
+
+window.location.href="payment.html";
+
+}catch(err){
+
+alert("Помилка відправки замовлення");
+
+console.error(err);
+
+}
 
 });
 
 </script>
-
-</body>
-
-</html>
 
 </body>
 
