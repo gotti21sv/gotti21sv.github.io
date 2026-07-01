@@ -53,150 +53,83 @@ alt="">
 
 <form id="checkoutForm">
 
-<div class="field">
+    <div class="section-title">
+        РОЗМІР
+    </div>
 
-<label>
+    <div class="sizes">
 
-Ім'я та прізвище
+        <button type="button" class="size active">S</button>
+        <button type="button" class="size">M</button>
+        <button type="button" class="size">L</button>
+        <button type="button" class="size">XL</button>
 
-</label>
+    </div>
 
-<input
-id="name"
-type="text"
-placeholder="Ваше ім'я"
-required>
+    <div class="section-title">
+        ЗВ'ЯЗОК
+    </div>
 
-</div>
+    <div class="contact-switch">
 
-<div class="field">
+        <button type="button" class="contact-btn">
+            INSTAGRAM
+        </button>
 
-<label>
+        <button type="button" class="contact-btn active">
+            TELEGRAM
+        </button>
 
-Номер телефону
+    </div>
 
-</label>
+    <input
+        id="contact"
+        type="text"
+        class="input"
+        placeholder="@username">
 
-<input
-id="phone"
-type="tel"
-placeholder="+380..."
-required>
+    <div class="section-title">
+        ДОСТАВКА
+    </div>
 
-</div>
+    <input
+        id="name"
+        type="text"
+        class="input"
+        placeholder="Ім'я, прізвище"
+        required>
 
-<!-- CONTACT -->
-<div class="field">
+    <input
+        id="city"
+        type="text"
+        class="input"
+        placeholder="Місто"
+        required>
 
-<label>
+    <input
+        id="phone"
+        type="tel"
+        class="input"
+        placeholder="Номер телефону"
+        required>
 
-Telegram або Instagram
+    <input
+        id="department"
+        type="text"
+        class="input"
+        placeholder="Номер відділення Нової Пошти"
+        required>
 
-</label>
+    <textarea
+        id="comment"
+        class="textarea"
+        placeholder="Коментар до замовлення"></textarea>
 
-<input
-id="contact"
-type="text"
-placeholder="@username">
+    <button class="submit" type="submit">
 
-</div>
+        ОФОРМИТИ ЗАМОВЛЕННЯ
 
-<div class="field">
-
-<label>
-
-Місто
-
-</label>
-
-<input
-id="city"
-type="text"
-placeholder="Ваше місто"
-required>
-
-</div>
-
-<div class="field">
-
-<label>
-
-Відділення Нової Пошти
-
-</label>
-
-<input
-id="department"
-type="text"
-placeholder="№ відділення"
-required>
-
-</div>
-
-<div class="row">
-
-<div class="field">
-
-<label>
-
-Розмір
-
-</label>
-
-<select id="size">
-
-<option>S</option>
-<option>M</option>
-<option>L</option>
-<option>XL</option>
-
-</select>
-
-</div>
-
-<div class="field">
-
-<label>
-
-Кількість
-
-</label>
-
-<select id="quantity">
-
-<option>1</option>
-<option>2</option>
-<option>3</option>
-<option>4</option>
-
-</select>
-
-</div>
-
-</div>
-
-<div class="field">
-
-<label>
-
-Коментар до замовлення
-
-</label>
-
-<textarea
-id="comment"
-rows="4"
-placeholder="Коментар (необов'язково)"></textarea>
-
-</div>
-
-<button
-type="submit"
-class="submit">
-
-Відправити замовлення
-
-</button>
+    </button>
 
 </form>
 </div>
