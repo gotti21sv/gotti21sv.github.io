@@ -206,8 +206,21 @@ fetch("https://hook.eu1.make.com/iq2m2x9ampl1w8o87mr32i2xysnytuh1", {
     body: JSON.stringify(order)
 })
 .then(() => {
-    sessionStorage.setItem("order", JSON.stringify(order));
-    window.location.href = "payment.html";
+    fetch("https://hook.eu1.make.com/iq2m2x9ampl1w8o87mr32i2xysnytuh1", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(order)
+})
+.then(() => {
+  sessionStorage.setItem("order", JSON.stringify(order));
+  window.location.href = "payment.html";
+})
+.catch(err => {
+  alert("Помилка відправки замовлення");
+  console.error(err);
+});
 })
 .catch(() => {
     alert("Помилка відправки замовлення. Спробуйте ще раз.");
