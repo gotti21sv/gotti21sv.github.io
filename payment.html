@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Оплата замовлення | GOTTI21SV</title>
+
+<link rel="stylesheet" href="payment.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="payment-page">
+
+<a href="javascript:history.back()" class="back">←</a>
+
+<img
+src="52917A0C-CBA4-4183-887A-F77A10ECA24C.png"
+class="logo"
+alt="GOTTI21SV">
+
+<h1>
+
+Оплата замовлення
+
+</h1>
+
+<div class="card">
+
+<h2 id="productName"></h2>
+
+<p id="productPrice"></p>
+
+</div>
+
+<div class="section-title">
+
+Оберіть спосіб оплати
+
+</div>
+
+<div class="payment-buttons">
+
+<button class="pay-btn active" data-type="deposit">
+
+Передоплата 500 грн
+
+</button>
+
+<button class="pay-btn" data-type="full">
+
+Повна оплата
+
+</button>
+
+</div>
+
+<button id="payNow" class="submit">
+
+ОПЛАТИТИ
+
+</button>
+
+</div>
+<script>
+
+const order = JSON.parse(sessionStorage.getItem("order"));
+
+document.getElementById("productName").textContent = order.product;
+document.getElementById("productPrice").textContent = order.price;
+
+const priceText = order.price.replace(/[^\d]/g,"");
+
+const fullPrice = parseInt(priceText);
+
+document.querySelector('[data-type="full"]').textContent =
+`Повна оплата ${fullPrice} грн`;
+
+let paymentAmount = 500;
+
+document.querySelectorAll(".pay-btn").forEach(btn=>{
+
+btn.onclick=()=>{
+
+document.querySelectorAll(".pay-btn").forEach(b=>b.classList.remove("active"));
+
+btn.classList.add("active");
+
+if(btn.dataset.type==="deposit"){
+
+paymentAmount=500;
+
+}else{
+
+paymentAmount=fullPrice;
+
+}
+
+};
+
+});
+
+document.getElementById("payNow").onclick=()=>{
+
+/* ВСТАВЬ СЮДА СВОЮ ССЫЛКУ MONOBANK */
+
+window.location.href="https://https://send.monobank.ua/jar/AVRkCP9whs";
+
+};
+
+</script>
+
+</body>
+
+</html>
