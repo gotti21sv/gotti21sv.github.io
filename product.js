@@ -206,6 +206,7 @@ count.textContent = quantity;
 });
 
 
+
 /* ---------------- BUY ---------------- */
 
 document.getElementById("buyButton").addEventListener("click",()=>{
