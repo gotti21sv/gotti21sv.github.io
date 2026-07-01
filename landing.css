@@ -67,13 +67,13 @@ gap:18px;
 
 width:max-content;
 
-animation:galleryMove 70s linear infinite;
+animation:galleryMove 125s linear infinite;
 
 }
 
 .gallery-track img{
 
-width:320px;
+width:235px;
 
 aspect-ratio:4/5;
 
@@ -314,15 +314,15 @@ margin-bottom:40px;
 
 gap:14px;
 
-animation:galleryMoveMobile 65s linear infinite;
+animation:galleryMoveMobile 125s linear infinite;
 
 }
 
 .gallery-track img{
 
-width:88vw;
+width:62vw;
 
-max-width:360px;
+max-width:250px;
 
 }
 
