@@ -142,69 +142,51 @@ const product = params.get("product") || "";
 const price = params.get("price") || "";
 const image = params.get("image") || "";
 
-document.getElementById("productName").textContent = decodeURIComponent(product);
-document.getElementById("productPrice").textContent = decodeURIComponent(price);
-document.getElementById("productImage").src = decodeURIComponent(image);
+document.getElementById("productName").textContent = product;
+document.getElementById("productPrice").textContent = price;
+document.getElementById("productImage").src = image;
 
-document.getElementById("checkoutForm").addEventListener("submit", async function(e){
+/* ---------- SIZE ---------- */
 
-e.preventDefault();
+let selectedSize = "S";
 
-const order = {
+document.querySelectorAll(".size").forEach(btn=>{
 
-product:decodeURIComponent(product),
+btn.onclick=()=>{
 
-price:decodeURIComponent(price),
+document.querySelectorAll(".size").forEach(b=>b.classList.remove("active"));
 
-image:decodeURIComponent(image),
+btn.classList.add("active");
 
-name:document.getElementById("name").value,
-
-phone:document.getElementById("phone").value,
-
-contact:document.getElementById("contact").value,
-
-city:document.getElementById("city").value,
-
-department:document.getElementById("department").value,
-
-size:document.getElementById("size").value,
-
-quantity:document.getElementById("quantity").value,
-
-comment:document.getElementById("comment").value
+selectedSize=btn.textContent;
 
 };
 
-try{
-
-await fetch("https://hook.eu1.make.com/iq2m2x9ampl1w8o87mr32i2xysnytuh1",{
-
-method:"POST",
-
-headers:{
-"Content-Type":"application/json"
-},
-
-body:JSON.stringify(order)
-
 });
 
-sessionStorage.setItem("order",JSON.stringify(order));
+/* ---------- CONTACT ---------- */
 
-window.location.href="payment.html";
+let contactType="Telegram";
 
-}catch(error){
+document.querySelectorAll(".contact-btn").forEach(btn=>{
 
-alert("Помилка відправки замовлення. Спробуйте ще раз.");
+btn.onclick=()=>{
 
-console.error(error);
+document.querySelectorAll(".contact-btn").forEach(b=>b.classList.remove("active"));
 
-}
+btn.classList.add("active");
+
+contactType=btn.textContent;
+
+};
 
 });
 
 </script>
+
+</body>
+
+</html>
 
 </body>
 
