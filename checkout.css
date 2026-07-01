@@ -36,13 +36,11 @@ font-family:"Manrope",sans-serif;
 
 .checkout-page{
 
-max-width:470px;
+max-width:430px;
 
 margin:auto;
 
-padding:22px 20px 80px;
-
-animation:fade .35s ease;
+padding:8px 22px 60px;
 
 }
 
