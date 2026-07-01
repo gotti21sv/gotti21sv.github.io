@@ -205,29 +205,19 @@ count.textContent = quantity;
 
 });
 
+
 /* ---------------- BUY ---------------- */
 
 document.getElementById("buyButton").addEventListener("click",()=>{
 
-const text = `Привет!
+const image = encodeURIComponent(product.images[0]);
 
-Хочу заказать:
+const name = encodeURIComponent(product.name);
 
-${product.name}
+const price = encodeURIComponent(product.price);
 
-Размер: ${sizeSelect.value}
-
-Количество: ${quantity}
-
-Цена: ${product.price}`;
-
-window.open(
-
-`https://t.me/gotti21svv?text=${encodeURIComponent(text)}`,
-
-"_blank"
-
-);
+window.location.href =
+`checkout.html?product=${name}&price=${price}&image=${image}`;
 
 });
 
