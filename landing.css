@@ -38,7 +38,7 @@ display:block;
 
 width:220px;
 
-margin:0 auto 0px;
+margin:-12px auto -4px;
 
 }
 
@@ -72,19 +72,11 @@ animation:galleryMove 125s linear infinite;
 
 .gallery-track img{
 
-width:235px;
+width:250px;
 
 aspect-ratio:4/5;
 
 object-fit:cover;
-
-flex-shrink:0;
-
-display:block;
-
-user-select:none;
-
--webkit-user-drag:none;
 
 }
 
@@ -311,9 +303,9 @@ animation:galleryMoveMobile 125s linear infinite;
 
 .gallery-track img{
 
-width:62vw;
+width:66vw;
 
-max-width:200px;
+max-width:215px;
 
 }
 
