@@ -190,8 +190,16 @@ afterPayment.style.display="block";
 payButton.onclick=()=>{
 
 sessionStorage.setItem("paid","true");
+sessionStorage.setItem("paymentType",paymentType);
+sessionStorage.setItem("paymentAmount",paymentAmount);
 
-window.location.href="https://send.monobank.ua/jar/AVRkCP9whs";
+window.open(
+"https://send.monobank.ua/jar/AVRkCP9whs",
+"_blank"
+);
+
+payButton.style.display="none";
+afterPayment.style.display="block";
 
 };
 /* ---------- SEND ORDER ---------- */
