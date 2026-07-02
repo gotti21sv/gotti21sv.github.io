@@ -166,31 +166,21 @@ window.location.href="shop.html";
 
 <script>
 
-document.querySelectorAll("a").forEach(link=>{
-
-link.addEventListener("click",function(e){
-
-const href=this.getAttribute("href");
-
-if(!href || href.startsWith("#") || href.startsWith("javascript")) return;
+document.getElementById("openShop").onclick=function(e){
 
 e.preventDefault();
 
-document.body.style.opacity="0";
+const loader=document.getElementById("loader");
 
-document.body.style.transform="translateY(10px)";
-
-document.body.style.transition="all .35s ease";
+loader.classList.remove("hide");
 
 setTimeout(()=>{
 
-window.location=href;
+window.location.href="shop.html";
 
-},320);
+},1400);
 
-});
-
-});
+}
 
 </script>
 </body>
