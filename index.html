@@ -148,37 +148,19 @@ document.getElementById("loader").classList.add("hide");
 
 <script>
 
-document.getElementById("openShop").onclick=function(e){
+document.getElementById("openShop").onclick = function(e){
 
-e.preventDefault();
+    e.preventDefault();
 
-const loader=document.getElementById("loader");
+    const loader = document.getElementById("loader");
 
-loader.classList.remove("hide");
+    loader.classList.remove("hide");
 
-setTimeout(()=>{
+    setTimeout(()=>{
 
-window.location.href="shop.html";
+        window.location.href = "shop.html";
 
-},1400);
-
-}
-
-<script>
-
-document.getElementById("openShop").onclick=function(e){
-
-e.preventDefault();
-
-const loader=document.getElementById("loader");
-
-loader.classList.remove("hide");
-
-setTimeout(()=>{
-
-window.location.href="shop.html";
-
-},1400);
+    },1400);
 
 };
 
