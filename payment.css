@@ -60,15 +60,9 @@ margin-bottom:6px;
 
 .logo{
 
-width:118px;
-
-display:block;
+width:165px;
 
 margin:0 0 18px auto;
-
-user-select:none;
-
--webkit-user-drag:none;
 
 }
 
@@ -139,7 +133,11 @@ margin-bottom:12px;
 
 display:flex;
 
-justify-content:space-between;
+flex-direction:row;
+
+align-items:center;
+
+justify-content:center;
 
 gap:10px;
 
@@ -155,7 +153,7 @@ height:44px;
 
 border:1px solid #e8e8e8;
 
-border-radius:8px;
+border-radius:12px;
 
 background:#fff;
 
@@ -193,7 +191,7 @@ border-color:#111;
 
 display:block;
 
-width:82%;
+width:78%;
 
 height:44px;
 
@@ -201,7 +199,7 @@ margin:0 auto;
 
 border:none;
 
-border-radius:8px;
+border-radius:12px;
 
 background:#111;
 
@@ -211,7 +209,7 @@ font-size:13px;
 
 font-weight:600;
 
-letter-spacing:.22em;
+letter-spacing:.18em;
 
 text-transform:uppercase;
 
@@ -267,9 +265,15 @@ padding:4px 16px 34px;
 
 .logo{
 
-width:118px;
+width:165px;
+
+display:block;
 
 margin:0 0 18px auto;
+
+user-select:none;
+
+-webkit-user-drag:none;
 
 }
 
