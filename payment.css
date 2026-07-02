@@ -323,3 +323,58 @@ font-weight:500;
 text-decoration:underline;
 
 }
+/* ================= NEW DESIGN ================= */
+
+.pay-main{
+
+width:72% !important;
+
+height:46px !important;
+
+margin:18px auto 0 !important;
+
+border-radius:18px !important;
+
+}
+
+.send-btn{
+
+width:88% !important;
+
+height:48px !important;
+
+margin:0 auto !important;
+
+border-radius:18px !important;
+
+background:#16A34A !important;
+
+}
+
+.payment-buttons{
+
+display:flex !important;
+
+flex-direction:row !important;
+
+justify-content:center !important;
+
+align-items:center !important;
+
+gap:10px !important;
+
+}
+
+.pay-btn{
+
+width:50% !important;
+
+height:44px !important;
+
+border-radius:18px !important;
+
+font-size:13px !important;
+
+color:#111 !important;
+
+}
