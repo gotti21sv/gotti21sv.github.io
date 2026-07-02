@@ -22,7 +22,9 @@ font-family:"Manrope",sans-serif;
 opacity:1;
 transition:opacity .4s ease;
 
-animation:fade .45s ease;
+opacity:0;
+transform:translateY(16px);
+animation:pageIn .65s cubic-bezier(.22,.61,.36,1) forwards;
 
 }
 
@@ -741,21 +743,37 @@ body{
 overflow-x:hidden;
 
 }
-@keyframes fade{
+@keyframes pageIn{
 
-from{
+0%{
 
 opacity:0;
-
-transform:translateY(8px);
+transform:translateY(18px);
 
 }
 
-to{
+35%{
+
+opacity:.45;
+transform:translateY(10px);
+
+}
+
+70%{
+
+opacity:.82;
+transform:translateY(4px);
+
+}
+
+100%{
 
 opacity:1;
-
 transform:translateY(0);
+
+}
+
+}
 
 }
 
