@@ -191,7 +191,59 @@ sessionStorage.setItem("paid","true");
 window.location.href="https://send.monobank.ua/jar/AVRkCP9whs";
 
 };
+/* ---------- SEND ORDER ---------- */
 
+document.getElementById("sendOrder").onclick=()=>{
+
+const order = JSON.parse(sessionStorage.getItem("order"));
+
+const payment =
+paymentAmount===500
+? "Передоплата 500 UAH"
+: `Повна оплата ${paymentAmount} UAH`;
+
+const text = `🛒 НОВЕ ЗАМОВЛЕННЯ
+
+👕 Товар:
+${order.product}
+
+💰 Ціна:
+${order.price}
+
+📏 Розмір:
+${order.size}
+
+💳 Оплата:
+${payment}
+
+👤 Ім'я:
+${order.name}
+
+📱 Телефон:
+${order.phone}
+
+🏙 Місто:
+${order.city}
+
+📦 Нова Пошта:
+${order.department}
+
+💬 ${order.contactType}:
+${order.contact}
+
+📝 Коментар:
+${order.comment}
+
+✅ ОПЛАТА ПРОВЕДЕНА`;
+
+window.location.href =
+`https://t.me/gotti21svv?text=${encodeURIComponent(text)}`;
+
+sessionStorage.removeItem("paid");
+
+sessionStorage.removeItem("order");
+
+};
 </script>
 
 </body>
