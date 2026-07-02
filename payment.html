@@ -208,10 +208,13 @@ document.getElementById("sendOrder").onclick=()=>{
 
 const order = JSON.parse(sessionStorage.getItem("order"));
 
+const savedType = sessionStorage.getItem("paymentType");
+const savedAmount = sessionStorage.getItem("paymentAmount");
+
 const payment =
-paymentAmount===500
+savedType==="deposit"
 ? "Передоплата 500 UAH"
-: `Повна оплата ${paymentAmount} UAH`;
+: `Повна оплата ${savedAmount} UAH`;
 
 const text = `🛒 НОВЕ ЗАМОВЛЕННЯ
 
@@ -253,6 +256,8 @@ window.location.href =
 sessionStorage.removeItem("paid");
 
 sessionStorage.removeItem("order");
+sessionStorage.removeItem("paymentType");
+sessionStorage.removeItem("paymentAmount");
 
 };
 </script>
