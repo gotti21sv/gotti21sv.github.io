@@ -35,15 +35,10 @@ font-family:"Manrope",sans-serif;
 /* ================================================= */
 
 .checkout-page{
-
-max-width:390px;
-
-margin:auto;
-
-padding:4px 18px 50px;
-
-animation:fade .45s ease;
-
+    max-width:390px;
+    margin:auto;
+    padding:0 18px 40px;
+    animation:fade .45s ease;
 }
 
 /* ================================================= */
@@ -76,11 +71,11 @@ opacity:.55;
 /* ================================================= */
 
 .logo{
-
-width:105px;
-display:block;
-margin:0 0 10px auto;
-
+    width:150px;
+    display:block;
+    margin:-18px 0 6px auto;
+    user-select:none;
+    -webkit-user-drag:none;
 }
 
 /* ================================================= */
@@ -93,7 +88,7 @@ h1{
     font-weight:600;
     letter-spacing:.20em;
     text-transform:uppercase;
-    margin:-10px 0 26px;
+    margin:-4px 0 18px;
 }
 
 /* ================================================= */
@@ -107,6 +102,7 @@ h1{
     justify-content:center;
     text-align:center;
     gap:16px;
+    margin-top:-10px;
     margin-bottom:24px;
 }
 
