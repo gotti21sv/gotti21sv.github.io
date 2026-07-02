@@ -38,7 +38,9 @@ font-family:"Manrope",sans-serif;
     max-width:390px;
     margin:auto;
     padding:0 18px 40px;
-    animation:fade .45s ease;
+    opacity:0;
+transform:translateY(16px);
+animation:pageIn .65s cubic-bezier(.22,.61,.36,1) forwards;
 }
 
 /* ================================================= */
@@ -508,25 +510,38 @@ color:#b7b7b7;
 /*                  ANIMATIONS                        */
 /* ================================================= */
 
-@keyframes fade{
+@keyframes pageIn{
 
 0%{
 
 opacity:0;
+transform:translateY(18px);
 
-transform:translateY(14px);
+}
+
+35%{
+
+opacity:.45;
+transform:translateY(10px);
+
+}
+
+70%{
+
+opacity:.82;
+transform:translateY(4px);
 
 }
 
 100%{
 
 opacity:1;
+transform:translateY(0);
 
-transform:none;
+}
 
 }
 
-}
 
 @keyframes pulse{
 
