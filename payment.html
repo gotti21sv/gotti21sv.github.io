@@ -170,9 +170,23 @@ paymentAmount=fullPrice;
 
 });
 
-document.getElementById("payNow").onclick=()=>{
+/* ---------- PAYMENT ---------- */
 
-/* ВСТАВЬ СЮДА СВОЮ ССЫЛКУ MONOBANK */
+const payButton=document.getElementById("payNow");
+
+const afterPayment=document.getElementById("afterPayment");
+
+if(sessionStorage.getItem("paid")==="true"){
+
+payButton.style.display="none";
+
+afterPayment.style.display="block";
+
+}
+
+payButton.onclick=()=>{
+
+sessionStorage.setItem("paid","true");
 
 window.location.href="https://send.monobank.ua/jar/AVRkCP9whs";
 
