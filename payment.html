@@ -139,9 +139,13 @@ const order = JSON.parse(sessionStorage.getItem("order"));
 document.getElementById("productName").textContent = order.product;
 document.getElementById("productPrice").textContent = order.price;
 
-const priceText = order.price.replace(/[^\d]/g,"");
-
-const fullPrice = parseInt(priceText);
+const fullPrice = Number(
+    order.price
+        .replace("₴","")
+        .replace(" UAH","")
+        .replace(",","")
+        .replace(".00","")
+);
 
 document.querySelector('[data-type="full"]').textContent =
 `Повна оплата ${fullPrice} UAH`;
