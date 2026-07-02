@@ -60,11 +60,15 @@ margin-bottom:6px;
 
 .logo{
 
+width:118px;
+
 display:block;
 
-width:84px;
+margin:0 0 18px auto;
 
-margin:0 auto 12px;
+user-select:none;
+
+-webkit-user-drag:none;
 
 }
 
@@ -110,7 +114,7 @@ text-transform:uppercase;
 
 font-size:15px;
 
-color:#666;
+color:#111;
 
 }
 
