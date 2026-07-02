@@ -144,9 +144,10 @@ const priceText = order.price.replace(/[^\d]/g,"");
 const fullPrice = parseInt(priceText);
 
 document.querySelector('[data-type="full"]').textContent =
-`Повна оплата ${fullPrice} грн`;
+`Повна оплата ${fullPrice} UAH`;
 
 let paymentAmount = 500;
+let paymentType = "deposit";
 
 document.querySelectorAll(".pay-btn").forEach(btn=>{
 
@@ -159,10 +160,12 @@ btn.classList.add("active");
 if(btn.dataset.type==="deposit"){
 
 paymentAmount=500;
+paymentType="deposit";
 
 }else{
 
 paymentAmount=fullPrice;
+paymentType="full";
 
 }
 
