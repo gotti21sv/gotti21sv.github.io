@@ -278,3 +278,32 @@ font-size:14px;
 }
 
 }
+.support{
+
+margin-top:14px;
+
+text-align:center;
+
+font-size:12px;
+
+color:#9a9a9a;
+
+line-height:1.5;
+
+}
+
+.support a{
+
+color:#4A7DFF;
+
+text-decoration:none;
+
+font-weight:500;
+
+}
+
+.support a:hover{
+
+text-decoration:underline;
+
+}
