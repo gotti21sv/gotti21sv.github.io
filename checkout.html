@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Оформлення замовлення | GOTTI21SV</title>
+
+<link rel="stylesheet" href="checkout.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="checkout-page">
+
+<a href="javascript:history.back()" class="back">←</a>
+
+<img
+src="52917A0C-CBA4-4183-887A-F77A10ECA24C.png"
+class="logo"
+alt="GOTTI21SV">
+
+<h1>
+
+Оформлення замовлення
+
+</h1>
+
+<div class="product-card">
+
+<img
+id="productImage"
+src=""
+alt="">
+
+<div class="product-info">
+
+<h2 id="productName"></h2>
+
+<p id="productPrice"></p>
+
+</div>
+
+</div>
+
+<form id="checkoutForm">
+
+    <div class="section-title">
+        РОЗМІР
+    </div>
+
+    <div class="sizes">
+
+        <button type="button" class="size active">S</button>
+        <button type="button" class="size">M</button>
+        <button type="button" class="size">L</button>
+        <button type="button" class="size">XL</button>
+
+    </div>
+
+    <div class="section-title">
+        ЗВ'ЯЗОК
+    </div>
+
+    <div class="contact-switch">
+
+        <button type="button" class="contact-btn">
+            INSTAGRAM
+        </button>
+
+        <button type="button" class="contact-btn active">
+            TELEGRAM
+        </button>
+
+    </div>
+
+    <input
+        id="contact"
+        type="text"
+        class="input"
+        placeholder="@username">
+
+    <div class="section-title">
+        ДОСТАВКА
+    </div>
+
+    <input
+        id="name"
+        type="text"
+        class="input"
+        placeholder="Ім'я, прізвище"
+        required>
+
+    <input
+        id="city"
+        type="text"
+        class="input"
+        placeholder="Місто"
+        required>
+
+    <input
+        id="phone"
+        type="tel"
+        class="input"
+        placeholder="Номер телефону"
+        required>
+
+    <input
+        id="department"
+        type="text"
+        class="input"
+        placeholder="Номер відділення Нової Пошти"
+        required>
+
+    <textarea
+        id="comment"
+        class="textarea"
+        placeholder="Коментар до замовлення"></textarea>
+
+    <button class="submit" type="submit">
+
+        ОФОРМИТИ ЗАМОВЛЕННЯ
+
+    </button>
+
+</form>
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const product = decodeURIComponent(params.get("product") || "");
+const price = decodeURIComponent(params.get("price") || "");
+const image = decodeURIComponent(params.get("image") || "");
+
+document.getElementById("productName").textContent = product;
+document.getElementById("productPrice").textContent = price;
+document.getElementById("productImage").src = image;
+
+/* ---------- SIZE ---------- */
+
+let selectedSize = "S";
+
+document.querySelectorAll(".size").forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+document.querySelectorAll(".size").forEach(b=>b.classList.remove("active"));
+
+btn.classList.add("active");
+
+selectedSize=btn.textContent;
+
+});
+
+});
+
+/* ---------- CONTACT ---------- */
+
+let contactType="Telegram";
+
+document.querySelectorAll(".contact-btn").forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+document.querySelectorAll(".contact-btn").forEach(b=>b.classList.remove("active"));
+
+btn.classList.add("active");
+
+contactType=btn.textContent;
+
+});
+
+});
+
+/* ---------- SEND ORDER ---------- */
+
+document.getElementById("checkoutForm").addEventListener("submit",async(e)=>{
+
+e.preventDefault();
+
+const order={
+
+product,
+
+price,
+
+image,
+
+size:selectedSize,
+
+contactType,
+
+contact:document.getElementById("contact").value,
+
+name:document.getElementById("name").value,
+
+city:document.getElementById("city").value,
+
+phone:document.getElementById("phone").value,
+
+department:document.getElementById("department").value,
+
+comment:document.getElementById("comment").value
+
+};
+
+try{
+
+await fetch("https://hook.eu1.make.com/iq2m2x9ampl1w8o87mr32i2xysnytuh1",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify(order)
+
+});
+
+sessionStorage.setItem("order",JSON.stringify(order));
+
+window.location.href="payment.html";
+
+}catch(err){
+
+alert("Помилка відправки замовлення");
+
+console.error(err);
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
