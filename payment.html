@@ -146,7 +146,7 @@ const fullPrice = Number(
 );
 
 document.querySelector('[data-type="full"]').textContent =
-`Повна оплата ${fullPrice} UAH`;
+"Повна оплата";
 
 let paymentAmount = 500;
 let paymentType = "deposit";
@@ -216,7 +216,7 @@ const savedAmount = sessionStorage.getItem("paymentAmount");
 const payment =
 savedType==="deposit"
 ? "Передоплата 500 UAH"
-: `Повна оплата ${savedAmount} UAH`;
+: "Повна оплата";
 
 const text = `🛒 НОВЕ ЗАМОВЛЕННЯ
 
