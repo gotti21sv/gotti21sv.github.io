@@ -51,19 +51,18 @@ animation:fade .45s ease;
 /* ================================================= */
 
 .back{
+    display:inline-block;
+    font-size:28px;
+    color:#111;
+    text-decoration:none;
+    margin-top:18px;
+    margin-left:12px;
+    margin-bottom:14px;
+    transition:.25s;
+}
 
-display:inline-block;
-
-font-size:27px;
-
-text-decoration:none;
-
-color:#111;
-
-margin-bottom:6px;
-
-transition:.25s;
-
+.back:hover{
+    opacity:.6;
 }
 
 .back:hover{
