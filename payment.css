@@ -139,25 +139,31 @@ margin-bottom:12px;
 
 display:flex;
 
-flex-direction:column;
+justify-content:space-between;
 
 gap:10px;
 
-margin-bottom:20px;
+margin-bottom:22px;
 
 }
 
 .pay-btn{
 
-width:100%;
+flex:1;
 
-height:46px;
+height:44px;
 
 border:1px solid #e8e8e8;
 
+border-radius:8px;
+
 background:#fff;
 
-font-size:14px;
+color:#111;
+
+font-size:13px;
+
+font-weight:500;
 
 cursor:pointer;
 
@@ -185,11 +191,17 @@ border-color:#111;
 
 .submit{
 
-width:100%;
+display:block;
 
-height:48px;
+width:82%;
+
+height:44px;
+
+margin:0 auto;
 
 border:none;
+
+border-radius:8px;
 
 background:#111;
 
@@ -255,9 +267,9 @@ padding:4px 16px 34px;
 
 .logo{
 
-width:78px;
+width:118px;
 
-margin-bottom:10px;
+margin:0 0 18px auto;
 
 }
 
