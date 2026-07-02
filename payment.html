@@ -248,10 +248,8 @@ ${order.comment}
 
 ✅ ОПЛАТА ПРОВЕДЕНА`;
 
-window.open(
-`https://t.me/share/url?url=&text=${encodeURIComponent(text)}`,
-"_blank"
-);
+window.location.href =
+`tg://msg?text=${encodeURIComponent(text)}`;
 
 sessionStorage.removeItem("paid");
 
