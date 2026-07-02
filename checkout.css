@@ -1,0 +1,622 @@
+/* ================================================= */
+/*                     RESET                          */
+/* ================================================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#fff;
+color:#111;
+font-family:"Manrope",sans-serif;
+overflow-x:hidden;
+-webkit-font-smoothing:antialiased;
+
+}
+
+button,
+input,
+textarea{
+
+font-family:"Manrope",sans-serif;
+
+}
+
+/* ================================================= */
+/*                     PAGE                           */
+/* ================================================= */
+
+.checkout-page{
+
+max-width:390px;
+
+margin:auto;
+
+padding:4px 18px 50px;
+
+animation:fade .45s ease;
+
+}
+
+/* ================================================= */
+/*                     BACK                           */
+/* ================================================= */
+
+.back{
+
+display:inline-block;
+
+font-size:27px;
+
+text-decoration:none;
+
+color:#111;
+
+margin-bottom:6px;
+
+transition:.25s;
+
+}
+
+.back:hover{
+
+opacity:.55;
+
+}
+
+/* ================================================= */
+/*                     LOGO                           */
+/* ================================================= */
+
+.logo{
+
+display:block;
+
+width:84px;
+
+margin:0 auto 8px;
+
+user-select:none;
+
+-webkit-user-drag:none;
+
+}
+
+/* ================================================= */
+/*                     TITLE                          */
+/* ================================================= */
+
+h1{
+
+font-size:16px;
+
+font-weight:600;
+
+letter-spacing:.18em;
+
+text-transform:uppercase;
+
+margin-bottom:18px;
+
+}
+
+/* ================================================= */
+/*                  PRODUCT CARD                      */
+/* ================================================= */
+
+.product-card{
+
+display:flex;
+
+align-items:flex-start;
+
+gap:12px;
+
+margin-bottom:22px;
+
+}
+
+.product-card img{
+
+width:66px;
+
+height:88px;
+
+object-fit:cover;
+
+border-radius:3px;
+
+flex-shrink:0;
+
+}
+
+.product-info{
+
+flex:1;
+
+padding-top:2px;
+
+}
+
+.product-info h2{
+
+font-size:15px;
+
+font-weight:600;
+
+text-transform:uppercase;
+
+line-height:1.35;
+
+margin-bottom:4px;
+
+}
+
+.product-info p{
+
+font-size:14px;
+
+font-weight:500;
+
+color:#666;
+
+}
+
+/* ================================================= */
+/*                     TITLES                         */
+/* ================================================= */
+
+.section-title,
+.payment-title{
+
+font-size:10px;
+
+font-weight:700;
+
+letter-spacing:.24em;
+
+text-transform:uppercase;
+
+margin:20px 0 9px;
+
+}
+
+/* ================================================= */
+/*                     SIZE                           */
+/* ================================================= */
+
+.sizes{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:8px;
+
+margin-bottom:18px;
+
+}
+
+.size{
+
+height:40px;
+
+border:1px solid #e8e8e8;
+
+background:#fff;
+
+font-size:14px;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.size.active{
+
+background:#111;
+
+color:#fff;
+
+border-color:#111;
+
+}
+
+.size:hover{
+
+border-color:#111;
+
+}
+/* ================================================= */
+/*                  CONTACT                           */
+/* ================================================= */
+
+.contact-switch{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:8px;
+
+margin-bottom:12px;
+
+}
+
+.contact-btn{
+
+height:40px;
+
+border:1px solid #e8e8e8;
+
+background:#fff;
+
+font-size:12px;
+
+letter-spacing:.16em;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.contact-btn.active{
+
+background:#111;
+
+color:#fff;
+
+border-color:#111;
+
+}
+
+.contact-btn:hover{
+
+border-color:#111;
+
+}
+
+/* ================================================= */
+/*                    INPUTS                          */
+/* ================================================= */
+
+.input{
+
+width:100%;
+
+height:42px;
+
+padding:0 14px;
+
+border:1px solid #e8e8e8;
+
+background:#fff;
+
+font-size:14px;
+
+outline:none;
+
+margin-bottom:10px;
+
+transition:.25s;
+
+}
+
+.input:focus{
+
+border-color:#111;
+
+}
+
+.textarea{
+
+width:100%;
+
+height:88px;
+
+padding:14px;
+
+border:1px solid #e8e8e8;
+
+background:#fff;
+
+resize:none;
+
+outline:none;
+
+font-size:14px;
+
+margin-bottom:20px;
+
+transition:.25s;
+
+}
+
+.textarea:focus{
+
+border-color:#111;
+
+}
+
+/* ================================================= */
+/*                 PAYMENT BUTTONS                    */
+/* ================================================= */
+
+.payment-buttons{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:8px;
+
+margin-bottom:18px;
+
+}
+
+.pay-btn{
+
+height:38px;
+
+border:1px solid #e8e8e8;
+
+background:#fff;
+
+font-size:12px;
+
+font-weight:500;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.pay-btn.active{
+
+background:#111;
+
+color:#fff;
+
+border-color:#111;
+
+}
+
+.pay-btn:hover{
+
+border-color:#111;
+
+}
+/* ================================================= */
+/*                    MAIN BUTTONS                    */
+/* ================================================= */
+
+.submit{
+
+width:100%;
+
+height:46px;
+
+border:none;
+
+background:#111;
+
+color:#fff;
+
+font-size:13px;
+
+font-weight:600;
+
+letter-spacing:.20em;
+
+text-transform:uppercase;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.submit:hover{
+
+opacity:.92;
+
+}
+
+.submit:active{
+
+transform:scale(.985);
+
+}
+
+/* ================================================= */
+/*                 SUCCESS BUTTON                     */
+/* ================================================= */
+
+.success-button{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:#1ca64c;
+
+animation:pulse 1s ease infinite;
+
+}
+
+.success-button:hover{
+
+background:#179342;
+
+opacity:1;
+
+}
+
+/* ================================================= */
+/*                     INFO                           */
+/* ================================================= */
+
+.payment-info{
+
+margin-top:14px;
+
+font-size:11px;
+
+line-height:1.6;
+
+color:#7b7b7b;
+
+text-align:center;
+
+}
+
+/* ================================================= */
+/*                    SUPPORT                         */
+/* ================================================= */
+
+.support{
+
+margin-top:16px;
+
+text-align:center;
+
+font-size:12px;
+
+color:#888;
+
+line-height:1.6;
+
+}
+
+.support a{
+
+color:#229ED9;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+.support a:hover{
+
+text-decoration:underline;
+
+}
+
+/* ================================================= */
+/*                  PLACEHOLDER                       */
+/* ================================================= */
+
+::placeholder{
+
+color:#b7b7b7;
+
+}
+
+/* ================================================= */
+/*                  ANIMATIONS                        */
+/* ================================================= */
+
+@keyframes fade{
+
+0%{
+
+opacity:0;
+
+transform:translateY(14px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.03);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* ================================================= */
+/*                    MOBILE                          */
+/* ================================================= */
+
+@media(max-width:480px){
+
+.checkout-page{
+
+padding:2px 16px 40px;
+
+}
+
+.payment-buttons{
+
+gap:6px;
+
+}
+
+.pay-btn{
+
+height:36px;
+
+font-size:11px;
+
+}
+
+.submit{
+
+height:46px;
+
+font-size:12px;
+
+}
+
+.support{
+
+font-size:11px;
+
+}
+
+.payment-info{
+
+font-size:10px;
+
+}
+
+}
