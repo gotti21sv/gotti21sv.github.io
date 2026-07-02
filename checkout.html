@@ -214,30 +214,9 @@ comment:document.getElementById("comment").value
 
 };
 
-try{
-
-
-method:"POST",
-
-headers:{
-"Content-Type":"application/json"
-},
-
-body:JSON.stringify(order)
-
-});
-
 sessionStorage.setItem("order",JSON.stringify(order));
 
 window.location.href="payment.html";
-
-}catch(err){
-
-alert("Помилка відправки замовлення");
-
-console.error(err);
-
-}
 
 });
 
