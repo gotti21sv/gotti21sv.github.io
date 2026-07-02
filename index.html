@@ -164,8 +164,35 @@ window.location.href="shop.html";
 
 }
 
-</script>
+<script>
 
+document.querySelectorAll("a").forEach(link=>{
+
+link.addEventListener("click",function(e){
+
+const href=this.getAttribute("href");
+
+if(!href || href.startsWith("#") || href.startsWith("javascript")) return;
+
+e.preventDefault();
+
+document.body.style.opacity="0";
+
+document.body.style.transform="translateY(10px)";
+
+document.body.style.transition="all .35s ease";
+
+setTimeout(()=>{
+
+window.location=href;
+
+},320);
+
+});
+
+});
+
+</script>
 </body>
 
 </html>
