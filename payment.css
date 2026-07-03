@@ -81,7 +81,7 @@ display:block;
 
 width:142px;
 
-margin:-30px 0 10px auto;
+margin:-38px 0 10px auto;
 
 user-select:none;
 -webkit-user-drag:none;
@@ -130,6 +130,8 @@ text-transform:uppercase;
 
 line-height:1.35;
 
+margin-top:-4px;
+
 margin-bottom:8px;
 
 }
@@ -145,13 +147,13 @@ color:#666;
 
 display:block;
 
-width:120px;
+width:110px;
 
 height:auto;
 
 object-fit:contain;
 
-margin:0 auto 16px;
+margin:-4px auto 14px;
 
 user-select:none;
 
@@ -233,7 +235,7 @@ user-select:none;
 
 .pay-btn[data-type="full"]{
 
-font-size:11px;
+font-size:10px;
 
 letter-spacing:.02em;
 
@@ -241,9 +243,10 @@ letter-spacing:.02em;
 
 /* Передоплата */
 
+
 .pay-btn[data-type="deposit"]{
 
-font-size:9.5px;
+font-size:10px;
 
 letter-spacing:0;
 
@@ -275,23 +278,23 @@ display:block;
 
 width:72%;
 
-height:46px;
+height:48px;
 
 margin:0 auto;
 
 border:none;
 
-border-radius:18px;
+border-radius:20px;
 
 background:#111;
 
 color:#fff;
 
-font-size:13px;
+font-size:12px;
 
 font-weight:600;
 
-letter-spacing:.18em;
+letter-spacing:.22em;
 
 text-transform:uppercase;
 
