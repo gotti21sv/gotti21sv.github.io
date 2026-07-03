@@ -191,6 +191,27 @@ window.addEventListener("pageshow", function(){
         payButton.style.display="none";
         afterPayment.style.display="block";
 
+        afterPayment.style.opacity="0";
+        afterPayment.style.transform="translateY(15px)";
+
+        requestAnimationFrame(function(){
+
+            afterPayment.style.transition="all .35s ease";
+            afterPayment.style.opacity="1";
+            afterPayment.style.transform="translateY(0)";
+
+        });
+
+    }
+
+});
+window.addEventListener("pageshow", function(){
+
+    if(sessionStorage.getItem("paid")==="true"){
+
+        payButton.style.display="none";
+        afterPayment.style.display="block";
+
     }
 
 });
