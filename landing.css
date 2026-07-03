@@ -404,10 +404,3 @@ transform:translateX(calc(-90vw * 12));
 }
 
 }
-body{
-
-opacity:1;
-transform:translateY(0);
-transition:opacity .35s ease, transform .35s ease;
-
-}
