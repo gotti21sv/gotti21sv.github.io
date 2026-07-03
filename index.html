@@ -136,41 +136,32 @@
 
 window.addEventListener("load",()=>{
 
-setTimeout(()=>{
+    setTimeout(()=>{
 
-document.getElementById("loader").classList.add("hide");
-
-},1600);
-
-});
-
-</script>
-
-<script>
-
-window.addEventListener("load", () => {
-
-    setTimeout(() => {
         document.getElementById("loader").classList.add("hide");
-    }, 1600);
+
+    },1600);
 
 });
 
-document.getElementById("openShop").addEventListener("click", function(e){
+document.getElementById("openShop").addEventListener("click",function(e){
 
     e.preventDefault();
 
-    const loader = document.getElementById("loader");
+    const loader=document.getElementById("loader");
 
     loader.classList.remove("hide");
 
-    setTimeout(() => {
-        window.location.href = "shop.html";
-    }, 1400);
+    setTimeout(()=>{
+
+        window.location.href="shop.html";
+
+    },1400);
 
 });
 
 </script>
 
 </body>
+
 </html>
