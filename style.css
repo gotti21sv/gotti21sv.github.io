@@ -28,19 +28,6 @@ animation:pageIn .65s cubic-bezier(.22,.61,.36,1) forwards;
 
 }
 
-body{
-background:#fff;
-color:#181818;
-font-family:"Manrope",sans-serif;
--webkit-font-smoothing:antialiased;
--moz-osx-font-smoothing:grayscale;
-animation:fade .35s ease;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
 
 /* ---------------- HEADER ---------------- */
 
@@ -746,30 +733,26 @@ overflow-x:hidden;
 @keyframes pageIn{
 
 0%{
-
 opacity:0;
 transform:translateY(18px);
-
 }
 
 35%{
-
 opacity:.45;
 transform:translateY(10px);
-
 }
 
 70%{
-
 opacity:.82;
 transform:translateY(4px);
-
 }
 
 100%{
-
 opacity:1;
 transform:translateY(0);
+}
+
+}
 
 body{
 
