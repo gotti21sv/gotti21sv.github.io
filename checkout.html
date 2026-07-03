@@ -141,11 +141,16 @@ const params = new URLSearchParams(window.location.search);
 const product = decodeURIComponent(params.get("product") || "");
 const price = decodeURIComponent(params.get("price") || "");
 const image = decodeURIComponent(params.get("image") || "");
+if(!product || !price || !image){
+
+window.location.href="shop.html";
+
+}
 
 document.getElementById("productName").textContent = product;
 document.getElementById("productPrice").textContent = price;
 document.getElementById("productImage").src = image;
-
+document.getElementById("productImage").loading="eager";
 /* ---------- SIZE ---------- */
 
 let selectedSize = "S";
@@ -200,23 +205,33 @@ size:selectedSize,
 
 contactType,
 
-contact:document.getElementById("contact").value,
+contact:document.getElementById("contact").value.trim(),
 
-name:document.getElementById("name").value,
+name:document.getElementById("name").value.trim(),
 
-city:document.getElementById("city").value,
+city:document.getElementById("city").value.trim(),
 
-phone:document.getElementById("phone").value,
+phone:document.getElementById("phone").value.trim(),
 
-department:document.getElementById("department").value,
+department:document.getElementById("department").value.trim(),
 
-comment:document.getElementById("comment").value
+comment:document.getElementById("comment").value.trim()
 
 };
 
 sessionStorage.setItem("order",JSON.stringify(order));
 
+document.body.style.opacity="0";
+
+document.body.style.transform="translateY(10px)";
+
+document.body.style.transition="all .35s ease";
+
+setTimeout(()=>{
+
 window.location.href="payment.html";
+
+},300);
 
 });
 
