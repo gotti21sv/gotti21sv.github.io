@@ -141,7 +141,23 @@ font-size:15px;
 color:#666;
 
 }
+.product-image{
 
+display:block;
+
+width:120px;
+
+height:auto;
+
+object-fit:contain;
+
+margin:0 auto 16px;
+
+user-select:none;
+
+-webkit-user-drag:none;
+
+}
 /* ================================================= */
 /*                    SECTION                         */
 /* ================================================= */
