@@ -38,9 +38,15 @@ alt="GOTTI21SV">
 
 <div class="card">
 
-<h2 id="productName"></h2>
+    <img
+        id="productImage"
+        class="product-image"
+        src=""
+        alt="">
 
-<p id="productPrice"></p>
+    <h2 id="productName"></h2>
+
+    <p id="productPrice"></p>
 
 </div>
 
@@ -132,7 +138,7 @@ const order = JSON.parse(sessionStorage.getItem("order"));
 
 document.getElementById("productName").textContent = order.product;
 document.getElementById("productPrice").textContent = order.price;
-
+document.getElementById("productImage").src = order.image;
 const fullPrice = Number(
     order.price
         .replace("₴","")
