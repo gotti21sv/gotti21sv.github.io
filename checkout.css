@@ -73,11 +73,17 @@ opacity:.55;
 /* ================================================= */
 
 .logo{
-    width:150px;
-    display:block;
-    margin:-18px 0 6px auto;
-    user-select:none;
-    -webkit-user-drag:none;
+
+width:190px;
+
+display:block;
+
+margin:-38px -6px 4px auto;
+
+user-select:none;
+
+-webkit-user-drag:none;
+
 }
 
 /* ================================================= */
@@ -85,12 +91,19 @@ opacity:.55;
 /* ================================================= */
 
 h1{
-    text-align:center;
-    font-size:16px;
-    font-weight:600;
-    letter-spacing:.20em;
-    text-transform:uppercase;
-    margin:-4px 0 18px;
+
+text-align:center;
+
+font-size:16px;
+
+font-weight:600;
+
+letter-spacing:.20em;
+
+text-transform:uppercase;
+
+margin:-18px 0 18px;
+
 }
 
 /* ================================================= */
@@ -98,14 +111,23 @@ h1{
 /* ================================================= */
 
 .product-card{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    gap:16px;
-    margin-top:-10px;
-    margin-bottom:24px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+gap:14px;
+
+margin-top:-24px;
+
+margin-bottom:24px;
+
 }
 
 .product-card img{
