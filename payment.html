@@ -177,13 +177,32 @@ const payButton=document.getElementById("payNow");
 
 const afterPayment=document.getElementById("afterPayment");
 
-if(sessionStorage.getItem("paid")==="true"){
+function updatePaymentState(){
 
-payButton.style.display="none";
+    if(sessionStorage.getItem("paid")==="true"){
 
-afterPayment.style.display="block";
+        payButton.style.display="none";
+        afterPayment.style.display="block";
+
+    }else{
+
+        payButton.style.display="block";
+        afterPayment.style.display="none";
+
+    }
 
 }
+
+updatePaymentState();
+
+window.addEventListener("pageshow", updatePaymentState);
+document.addEventListener("visibilitychange", function(){
+
+    if(!document.hidden){
+        updatePaymentState();
+    }
+
+});
 window.addEventListener("pageshow", function(){
 
     if(sessionStorage.getItem("paid")==="true"){
