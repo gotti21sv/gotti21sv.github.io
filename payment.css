@@ -420,3 +420,11 @@ transform:translateY(0);
 transition:opacity .35s ease, transform .35s ease;
 
 }
+.pay-btn{
+    color:#111 !important;
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    font-size:18px !important;
+    font-weight:600 !important;
+}
