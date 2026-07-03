@@ -79,7 +79,7 @@ width:140px;
 
 display:block;
 
-margin:-55px -4px 2px auto;
+margin:-66px -4px 0 auto;
 
 user-select:none;
 
@@ -103,7 +103,7 @@ letter-spacing:.20em;
 
 text-transform:uppercase;
 
-margin:-32px 0 14px;
+margin:-18px 0 18px;
 
 }
 
@@ -123,20 +123,32 @@ justify-content:center;
 
 text-align:center;
 
-gap:10px;
+gap:6px;
 
-margin-top:-5px;
+margin-top:-4px;
 
-margin-bottom:20px;
+margin-bottom:18px;
 
 }
 
 .product-card img{
-    width:120px;
-    height:auto;
-    object-fit:contain;
-    display:block;
-    margin:0 auto;
+
+width:115px;
+
+height:auto;
+
+display:block;
+
+object-fit:contain;
+
+margin:0 auto 4px;
+
+user-select:none;
+
+-webkit-user-drag:none;
+
+transition:.35s ease;
+
 }
 
 .product-info{
@@ -146,21 +158,23 @@ margin-bottom:20px;
 
 .product-info h2{
 
-font-size:15px;
+font-size:16px;
 
 font-weight:600;
 
 text-transform:uppercase;
 
+letter-spacing:.04em;
+
 line-height:1.35;
 
-margin-bottom:4px;
+margin-bottom:5px;
 
 }
 
 .product-info p{
 
-font-size:14px;
+font-size:15px;
 
 font-weight:500;
 
@@ -205,7 +219,9 @@ margin-bottom:18px;
 
 .size{
 
-height:40px;
+height:42px;
+
+border-radius:14px;
 
 border:1px solid #e8e8e8;
 
@@ -251,6 +267,8 @@ margin-bottom:12px;
 }
 
 .contact-btn{
+    
+border-radius:14px;
 
 height:40px;
 
@@ -291,6 +309,8 @@ border-color:#111;
 /* ================================================= */
 
 .input{
+    
+border-radius:14px;
 
 width:100%;
 
@@ -319,6 +339,8 @@ border-color:#111;
 }
 
 .textarea{
+
+border-radius:14px;
 
 width:100%;
 
@@ -405,21 +427,27 @@ border-color:#111;
 
 .submit{
 
-width:100%;
+width:76%;
 
-height:46px;
+height:48px;
+
+margin:0 auto;
+
+display:block;
 
 border:none;
+
+border-radius:18px;
 
 background:#111;
 
 color:#fff;
 
-font-size:13px;
+font-size:12px;
 
 font-weight:600;
 
-letter-spacing:.20em;
+letter-spacing:.18em;
 
 text-transform:uppercase;
 
