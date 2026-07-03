@@ -405,6 +405,13 @@ font-size:13px !important;
 
 color:#111 !important;
 
+display:flex;
+align-items:center;
+justify-content:center;
+
+overflow:hidden;
+white-space:nowrap;
+
 }
 body{
 
