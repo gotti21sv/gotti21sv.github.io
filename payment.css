@@ -161,11 +161,12 @@ display:flex !important;
 justify-content:center !important;
 align-items:center !important;
 
-font-size:11px !important;
-font-weight:500 !important;
-letter-spacing:0 !important;
+overflow:hidden;
+white-space:nowrap;
 
 color:#111 !important;
+
+font-weight:500 !important;
 
 }
 
@@ -416,14 +417,7 @@ transform:translateY(0);
 transition:opacity .35s ease, transform .35s ease;
 
 }
-.pay-btn{
-    color:#111 !important;
-    display:flex !important;
-    justify-content:center !important;
-    align-items:center !important;
-    font-size:18px !important;
-    font-weight:600 !important;
-}
+
 .pay-btn[data-type="full"]{
 
 font-size:12px !important;
