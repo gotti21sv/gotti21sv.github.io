@@ -148,7 +148,15 @@ document.getElementById("loader").classList.add("hide");
 
 <script>
 
-document.getElementById("openShop").onclick = function(e){
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+        document.getElementById("loader").classList.add("hide");
+    }, 1600);
+
+});
+
+document.getElementById("openShop").addEventListener("click", function(e){
 
     e.preventDefault();
 
@@ -156,16 +164,13 @@ document.getElementById("openShop").onclick = function(e){
 
     loader.classList.remove("hide");
 
-    setTimeout(()=>{
-
+    setTimeout(() => {
         window.location.href = "shop.html";
+    }, 1400);
 
-    },1400);
-
-};
+});
 
 </script>
 
 </body>
-
 </html>
