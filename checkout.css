@@ -37,7 +37,8 @@ font-family:"Manrope",sans-serif;
 .checkout-page{
     max-width:390px;
     margin:auto;
-    padding:0 18px 40px;
+    padding:0 18px 30px;
+    margin-top:-18px;
     opacity:0;
 transform:translateY(16px);
 animation:pageIn .65s cubic-bezier(.22,.61,.36,1) forwards;
@@ -102,7 +103,7 @@ letter-spacing:.20em;
 
 text-transform:uppercase;
 
-margin:-18px 0 18px;
+margin:-32px 0 14px;
 
 }
 
@@ -122,11 +123,11 @@ justify-content:center;
 
 text-align:center;
 
-gap:14px;
+gap:10px;
 
-margin-top:-24px;
+margin-top:-22px;
 
-margin-bottom:24px;
+margin-bottom:20px;
 
 }
 
