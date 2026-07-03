@@ -55,7 +55,7 @@ alt="GOTTI21SV">
 <button
 type="button"
 class="pay-btn active"
-data-type="full"
+data-type="full">
 
 Повна оплата
 
@@ -64,7 +64,7 @@ data-type="full"
 <button
 type="button"
 class="pay-btn"
-data-type="deposit"
+data-type="deposit">
 
 Передоплата 500 UAH
 
@@ -144,8 +144,8 @@ const fullPrice = Number(
 document.querySelector('[data-type="full"]').textContent =
 "Повна оплата";
 
-let paymentAmount = 500;
-let paymentType = "deposit";
+let paymentAmount = fullPrice;
+let paymentType = "full";
 
 document.querySelectorAll(".pay-btn").forEach(btn=>{
 
