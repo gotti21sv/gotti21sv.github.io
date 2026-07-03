@@ -234,16 +234,21 @@ window.addEventListener("pageshow", function(){
     }
 
 });
-payButton.onclick=()=>{
+payButton.onclick = () => {
 
-sessionStorage.setItem("paid","true");
-sessionStorage.setItem("paymentType",paymentType);
-sessionStorage.setItem("paymentAmount",paymentAmount);
+    sessionStorage.setItem("paid","true");
+    sessionStorage.setItem("paymentType",paymentType);
+    sessionStorage.setItem("paymentAmount",paymentAmount);
 
-window.open(
-    "https://send.monobank.ua/jar/AVRkCP9whs",
-    "_blank"
-);
+    // Сразу меняем интерфейс
+    payButton.style.display = "none";
+    afterPayment.style.display = "block";
+
+    // Затем открываем Monobank
+    window.open(
+        "https://send.monobank.ua/jar/AVRkCP9whs",
+        "_blank"
+    );
 
 };
 /* ---------- SEND ORDER ---------- */
