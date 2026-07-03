@@ -136,6 +136,12 @@ target="_blank">
 
 const order = JSON.parse(sessionStorage.getItem("order"));
 
+if(!order){
+
+window.location.href="checkout.html";
+
+}
+
 document.getElementById("productName").textContent = order.product;
 document.getElementById("productPrice").textContent = order.price;
 document.getElementById("productImage").src = order.image;
@@ -234,7 +240,6 @@ document.getElementById("sendOrder").onclick=()=>{
 const order = JSON.parse(sessionStorage.getItem("order"));
 
 const savedType = sessionStorage.getItem("paymentType");
-const savedAmount = sessionStorage.getItem("paymentAmount");
 
 const payment =
 savedType==="deposit"
