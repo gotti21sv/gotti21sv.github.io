@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Оплата замовлення | GOTTI21SV</title>
+
+<link rel="stylesheet" href="payment.css?v=3">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="payment-page">
+
+<a href="javascript:history.back()" class="back">←</a>
+
+<img
+src="52917A0C-CBA4-4183-887A-F77A10ECA24C.png"
+class="logo"
+alt="GOTTI21SV">
+
+<h1>
+
+Оплата замовлення
+
+</h1>
+
+<div class="card">
+
+<img
+id="productImage"
+class="product-image"
+src=""
+alt="">
+
+<h2 id="productName"></h2>
+
+<p id="productPrice"></p>
+
+</div>
+
+<div class="section-title">
+
+Оберіть спосіб оплати
+
+</div>
+
+<div class="payment-buttons">
+
+<button
+type="button"
+class="pay-btn active"
+data-type="full">
+
+Повна оплата
+
+</button>
+
+<button
+type="button"
+class="pay-btn"
+data-type="deposit">
+
+Передоплата 500 UAH
+
+</button>
+
+</div>
+
+<button
+id="payNow"
+class="submit pay-main">
+
+ОПЛАТИТИ
+
+</button>
+
+<div
+id="afterPayment"
+style="display:none;">
+
+<div class="payment-success">
+
+<div class="success-icon">
+
+✅
+
+</div>
+
+<h3>
+
+Після успішної оплати натисніть сюди:
+
+</h3>
+
+<div style="height:14px;"></div>
+
+<button
+id="sendOrder"
+class="submit send-btn">
+
+ВІДПРАВИТИ ДАНІ ДЛЯ ВІДПРАВКИ
+
+</button>
+
+</div>
+
+<div class="support">
+
+Виникли проблеми?
+
+<a
+href="https://t.me/gotti21svv"
+target="_blank">
+
+@gotti21svv
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const order = JSON.parse(sessionStorage.getItem("order"));
+
+if(!order){
+
+window.location.href="checkout.html";
+
+}
+
+document.getElementById("productName").textContent=order.product;
+
+document.getElementById("productPrice").textContent=order.price;
+
+document.getElementById("productImage").src=order.image;
+
+const fullPrice=Number(
+
+order.price
+
+.replace("₴","")
+
+.replace(" UAH","")
+
+.replace(",","")
+
+.replace(".00","")
+
+);
+
+let paymentAmount=fullPrice;
+
+let paymentType="full";
+document.querySelectorAll(".pay-btn").forEach(btn=>{
+
+btn.onclick=()=>{
+
+document.querySelectorAll(".pay-btn").forEach(b=>b.classList.remove("active"));
+
+btn.classList.add("active");
+
+if(btn.dataset.type==="deposit"){
+
+paymentAmount=500;
+
+paymentType="deposit";
+
+}else{
+
+paymentAmount=fullPrice;
+
+paymentType="full";
+
+}
+
+};
+
+});
+
+/* ---------- PAYMENT ---------- */
+
+const payButton=document.getElementById("payNow");
+
+const afterPayment=document.getElementById("afterPayment");
+
+function updatePaymentState(){
+
+if(sessionStorage.getItem("paid")==="true"){
+
+payButton.style.display="none";
+
+afterPayment.style.display="block";
+
+}else{
+
+payButton.style.display="block";
+
+afterPayment.style.display="none";
+
+}
+
+}
+
+updatePaymentState();
+
+window.addEventListener("pageshow",updatePaymentState);
+
+document.addEventListener("visibilitychange",()=>{
+
+if(!document.hidden){
+
+updatePaymentState();
+
+}
+
+});
+
+payButton.onclick=()=>{
+
+sessionStorage.setItem("paid","true");
+
+sessionStorage.setItem("paymentType",paymentType);
+
+sessionStorage.setItem("paymentAmount",paymentAmount);
+
+payButton.style.display="none";
+
+afterPayment.style.display="block";
+
+window.open(
+
+"https://send.monobank.ua/jar/AVRkCP9whs",
+
+"_blank"
+
+);
+
+};
+
+/* ---------- SEND ORDER ---------- */
+
+document.getElementById("sendOrder").onclick=()=>{
+
+const order=JSON.parse(sessionStorage.getItem("order"));
+
+const payment=
+
+sessionStorage.getItem("paymentType")==="deposit"
+
+? "Передоплата 500 UAH"
+
+: "Повна оплата";
+
+const text=`🛒 НОВЕ ЗАМОВЛЕННЯ
+
+👕 Товар:
+${order.product}
+
+💰 Ціна:
+${order.price}
+
+📏 Розмір:
+${order.size}
+
+💳 Оплата:
+${payment}
+
+👤 Ім'я:
+${order.name}
+
+📱 Телефон:
+${order.phone}
+
+🏙 Місто:
+${order.city}
+
+📦 Нова Пошта:
+${order.department}
+
+💬 ${order.contactType}:
+${order.contact}
+
+📝 Коментар:
+${order.comment}
+
+✅ ОПЛАТА ПРОВЕДЕНА`;
+window.location.href=
+`https://t.me/gotti21svv?text=${encodeURIComponent(text)}`;
+
+sessionStorage.removeItem("paid");
+
+sessionStorage.removeItem("order");
+
+sessionStorage.removeItem("paymentType");
+
+sessionStorage.removeItem("paymentAmount");
+
+};
+
+</script>
+
+</body>
+
+</html>
