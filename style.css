@@ -229,6 +229,22 @@ font-weight:300;
 
 transition:.25s;
 
+color:#111 !important;
+text-decoration:none !important;
+-webkit-tap-highlight-color:transparent;
+
+.back:visited{
+color:#111 !important;
+}
+
+.back:hover{
+color:#111 !important;
+}
+
+.back:active{
+color:#111 !important;
+}
+
 }
 
 .back:hover{
