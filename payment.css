@@ -90,6 +90,8 @@ margin-bottom:22px;
 
 margin-bottom:28px;
 
+text-align:center;
+
 }
 
 .card h2{
@@ -104,6 +106,8 @@ margin-bottom:8px;
 
 text-transform:uppercase;
 
+text-align:center;
+
 }
 
 .card p{
@@ -111,6 +115,8 @@ text-transform:uppercase;
 font-size:15px;
 
 color:#111;
+
+text-align:center;
 
 }
 
@@ -275,11 +281,11 @@ padding:4px 16px 34px;
 
 .logo{
 
-width:165px;
+width:145px;
 
 display:block;
 
-margin:0 0 18px auto;
+margin:-28px 0 12px auto;
 
 user-select:none;
 
@@ -289,9 +295,17 @@ user-select:none;
 
 h1{
 
-font-size:15px;
+font-size:16px;
+
+font-weight:600;
+
+letter-spacing:.18em;
+
+text-transform:uppercase;
 
 margin-bottom:18px;
+
+text-align:center;
 
 }
 
