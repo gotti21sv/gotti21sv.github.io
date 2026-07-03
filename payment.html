@@ -141,11 +141,8 @@ const fullPrice = Number(
         .replace(".00","")
 );
 
-document.querySelector('[data-type="full"]').textContent =
-"Повна оплата";
-
-document.querySelector('[data-type="deposit"]').textContent =
-"Передоплата 500 UAH";
+document.querySelector('[data-type="full"]').innerText = "Повна оплата";
+document.querySelector('[data-type="deposit"]').innerText = "Передоплата 500 UAH";
 
 let paymentAmount = fullPrice;
 let paymentType = "full";
