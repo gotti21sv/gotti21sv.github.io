@@ -120,15 +120,55 @@ alt="">
         placeholder="Номер відділення Нової Пошти"
         required>
 
-    <textarea
-        id="comment"
-        class="textarea"
-        placeholder="Коментар до замовлення"></textarea>
 
     <button class="submit" type="submit">
+<div class="section-title">
 
-        ОФОРМИТИ ЗАМОВЛЕННЯ
+ОБЕРІТЬ СПОСІБ ОПЛАТИ
 
+</div>
+
+<div class="payment-buttons">
+
+<button
+type="button"
+class="pay-btn active"
+data-type="full">
+
+Повна оплата
+
+</button>
+
+<button
+type="button"
+class="pay-btn"
+data-type="deposit">
+
+Передоплата 500 UAH
+
+</button>
+
+</div>
+        ОПЛАТИТИ
+<div
+id="afterPayment"
+style="display:none;">
+
+<p class="payment-info">
+
+Після успішної оплати натисніть кнопку нижче для відправки даних.
+
+</p>
+
+<button
+id="sendOrder"
+class="submit success-button">
+
+ВІДПРАВИТИ ДАНІ ДЛЯ ВІДПРАВКИ
+
+</button>
+
+</div>
     </button>
 
 </form>
