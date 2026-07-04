@@ -404,3 +404,18 @@ transform:translateX(calc(-90vw * 12));
 }
 
 }
+.website-icon{
+
+width:58px;
+height:58px;
+
+}
+
+.website-icon img{
+
+width:100%;
+height:100%;
+
+object-fit:contain;
+
+}
