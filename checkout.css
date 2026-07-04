@@ -376,27 +376,29 @@ border-color:#111;
 
 .payment-buttons{
 
-display:grid;
+display:flex;
 
-grid-template-columns:1fr 1fr;
+width:100%;
 
-gap:8px;
+gap:12px;
 
-margin-bottom:18px;
+margin-bottom:20px;
 
 }
 
 .pay-btn{
 
-height:42px;
+flex:1;
 
-border:1px solid #e8e8e8;
+height:56px;
+
+border-radius:18px;
+
+border:1px solid #ddd;
 
 background:#fff;
 
-color:#111;
-
-font-size:12px;
+font-size:15px;
 
 font-weight:500;
 
@@ -747,5 +749,14 @@ background:#16A34A !important;
 background:#14863d !important;
 
 opacity:1;
+
+}
+.pay-main{
+
+display:block;
+
+width:100%;
+
+margin:20px auto 0;
 
 }
