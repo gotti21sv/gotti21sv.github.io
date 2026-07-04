@@ -230,7 +230,25 @@ contactType=btn.textContent;
 });
 
 });
+/* ---------- PAYMENT TYPE ---------- */
 
+let paymentType = "Повна оплата";
+
+document.querySelectorAll(".pay-btn").forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+document.querySelectorAll(".pay-btn").forEach(b=>b.classList.remove("active"));
+
+btn.classList.add("active");
+
+paymentType = btn.dataset.type === "deposit"
+? "Передоплата 500 UAH"
+: "Повна оплата";
+
+});
+
+});
 /* ---------- SEND ORDER ---------- */
 
 document.getElementById("checkoutForm").addEventListener("submit",async(e)=>{
@@ -259,17 +277,17 @@ phone:document.getElementById("phone").value.trim(),
 
 department:document.getElementById("department").value.trim(),
 
-comment:document.getElementById("comment").value.trim()
-
 };
 
 sessionStorage.setItem("order", JSON.stringify(order));
 
 sessionStorage.setItem("paid","false");
 
+sessionStorage.setItem("paid","true");
+
 window.open(
-    "https://send.monobank.ua/jar/AVRkCP9whs",
-    "_blank"
+"https://send.monobank.ua/jar/AVRkCP9whs",
+"_blank"
 );
 
 const sendButton = document.querySelector(".submit");
@@ -278,11 +296,26 @@ sendButton.textContent = "ВІДПРАВИТИ ДАНІ ДЛЯ ВІДПРАВК�
 
 sendButton.style.background = "#16A34A";
 
+document.querySelector(".sizes").style.display="none";
+document.querySelector(".contact-switch").style.display="none";
+
+document.querySelectorAll(".section-title")[0].style.display="none";
+document.querySelectorAll(".section-title")[1].style.display="none";
+document.querySelectorAll(".section-title")[2].style.display="none";
+document.querySelectorAll(".payment-buttons")[0].style.display="none";
+
+document.getElementById("contact").style.display="none";
+document.getElementById("name").style.display="none";
+document.getElementById("city").style.display="none";
+document.getElementById("phone").style.display="none";
+document.getElementById("department").style.display="none";
+
+document.querySelector(".payment-info").style.display="block";
+
 sendButton.type = "button";
 
 sendButton.onclick = () => {
 
-const payment = "Повна оплата";
 
 const text = `🛒 НОВЕ ЗАМОВЛЕННЯ
 
@@ -313,9 +346,6 @@ ${document.getElementById("department").value}
 💬 ${contactType}:
 ${document.getElementById("contact").value}
 
-📝 Коментар:
-${document.getElementById("comment").value}
-
 ✅ ОПЛАТА ПРОВЕДЕНА`;
 
 window.open(
@@ -326,7 +356,31 @@ window.open(
 };
 
 });
+window.addEventListener("focus", () => {
 
+    if(sessionStorage.getItem("paid") === "true"){
+
+        document.querySelector(".sizes").style.display = "none";
+        document.querySelector(".contact-switch").style.display = "none";
+
+        document.querySelectorAll(".section-title")[0].style.display = "none";
+        document.querySelectorAll(".section-title")[1].style.display = "none";
+        document.querySelectorAll(".section-title")[2].style.display = "none";
+
+        document.querySelector(".payment-buttons").style.display = "none";
+
+        document.getElementById("contact").style.display = "none";
+        document.getElementById("name").style.display = "none";
+        document.getElementById("city").style.display = "none";
+        document.getElementById("phone").style.display = "none";
+        document.getElementById("department").style.display = "none";
+
+        document.querySelector(".submit").style.display = "none";
+
+        document.getElementById("afterPayment").style.display = "block";
+    }
+
+});
 </script>
 
 </body>
