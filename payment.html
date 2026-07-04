@@ -263,7 +263,17 @@ window.open(
 
 document.getElementById("sendOrder").onclick=()=>{
 
-const order=JSON.parse(sessionStorage.getItem("order"));
+let order;
+
+try{
+
+order = JSON.parse(sessionStorage.getItem("order"));
+
+}catch(e){
+
+order = null;
+
+}
 
 const payment=
 
