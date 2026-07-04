@@ -160,7 +160,27 @@ type="submit">
 <div
 id="afterPayment"
 style="display:none;">
+<div id="orderSummary">
 
+    <p><strong>👤 Ім'я</strong><br>
+    <span id="summaryName"></span></p>
+
+    <p><strong>🏙 Місто</strong><br>
+    <span id="summaryCity"></span></p>
+
+    <p><strong>📱 Телефон</strong><br>
+    <span id="summaryPhone"></span></p>
+
+    <p><strong>📦 Нова Пошта</strong><br>
+    <span id="summaryDepartment"></span></p>
+
+    <p><strong>💬 Зв'язок</strong><br>
+    <span id="summaryContact"></span></p>
+
+    <p><strong>💳 Оплата</strong><br>
+    <span id="summaryPayment"></span></p>
+
+</div>
 <p class="payment-info">
 
 Після успішної оплати натисніть кнопку нижче для відправки даних.
@@ -307,6 +327,23 @@ document.querySelector(".payment-buttons").style.display = "none";
 document.querySelector(".pay-main").style.display = "none";
 
 document.getElementById("afterPayment").style.display = "block";
+document.getElementById("summaryName").textContent =
+document.getElementById("name").value;
+
+document.getElementById("summaryCity").textContent =
+document.getElementById("city").value;
+
+document.getElementById("summaryPhone").textContent =
+document.getElementById("phone").value;
+
+document.getElementById("summaryDepartment").textContent =
+document.getElementById("department").value;
+
+document.getElementById("summaryContact").textContent =
+contactType + ": " + document.getElementById("contact").value;
+
+document.getElementById("summaryPayment").textContent =
+paymentType;
 
 });
 
