@@ -223,19 +223,9 @@ comment:document.getElementById("comment").value.trim()
 
 };
 
-sessionStorage.setItem("order",JSON.stringify(order));
+sessionStorage.setItem("order", JSON.stringify(order));
 
-document.body.style.opacity="0";
-
-document.body.style.transform="translateY(10px)";
-
-document.body.style.transition="all .35s ease";
-
-setTimeout(()=>{
-
-window.location.href="payment.html";
-
-},300);
+window.location.href = "payment.html";
 
 });
 
