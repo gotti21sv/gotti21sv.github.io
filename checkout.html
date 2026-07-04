@@ -225,11 +225,65 @@ comment:document.getElementById("comment").value.trim()
 
 sessionStorage.setItem("order", JSON.stringify(order));
 
-alert(sessionStorage.getItem("order"));
+sessionStorage.setItem("paid","false");
 
-alert("Переходим на payment");
+window.open(
+    "https://send.monobank.ua/jar/AVRkCP9whs",
+    "_blank"
+);
 
-window.location.href = "payment.html";
+const sendButton = document.querySelector(".submit");
+
+sendButton.textContent = "ВІДПРАВИТИ ДАНІ ДЛЯ ВІДПРАВКИ";
+
+sendButton.style.background = "#16A34A";
+
+sendButton.type = "button";
+
+sendButton.onclick = () => {
+
+const payment = "Повна оплата";
+
+const text = `🛒 НОВЕ ЗАМОВЛЕННЯ
+
+👕 Товар:
+${product}
+
+💰 Ціна:
+${price}
+
+📏 Розмір:
+${selectedSize}
+
+💳 Оплата:
+${payment}
+
+👤 Ім'я:
+${document.getElementById("name").value}
+
+📱 Телефон:
+${document.getElementById("phone").value}
+
+🏙 Місто:
+${document.getElementById("city").value}
+
+📦 Нова Пошта:
+${document.getElementById("department").value}
+
+💬 ${contactType}:
+${document.getElementById("contact").value}
+
+📝 Коментар:
+${document.getElementById("comment").value}
+
+✅ ОПЛАТА ПРОВЕДЕНА`;
+
+window.open(
+`https://t.me/gotti21svv?text=${encodeURIComponent(text)}`,
+"_blank"
+);
+
+};
 
 });
 
