@@ -378,11 +378,11 @@ border-color:#111;
 
 display:flex;
 
-width:100%;
-
 gap:12px;
 
-margin-bottom:20px;
+width:100%;
+
+margin:18px 0 22px;
 
 }
 
@@ -390,17 +390,21 @@ margin-bottom:20px;
 
 flex:1;
 
-height:56px;
+height:58px;
+
+border:1px solid #E7E7E7;
 
 border-radius:18px;
 
-border:1px solid #ddd;
-
 background:#fff;
 
-font-size:15px;
+color:#111;
+
+font-size:18px;
 
 font-weight:500;
+
+font-family:'Manrope',sans-serif;
 
 cursor:pointer;
 
@@ -757,6 +761,10 @@ display:block;
 
 width:100%;
 
-margin:20px auto 0;
+height:58px;
+
+margin-top:8px;
+
+border-radius:18px;
 
 }
