@@ -1,15 +1,6 @@
 /* ---------------- PRODUCTS ---------------- */
 
 const products = {
-    if(!product){
-
-alert("Товар не знайдено.");
-
-window.location.href="shop.html";
-
-throw new Error("Product not found");
-
-}
 
 "black-hoodie":{
 name:"BLACK HOODIE",
