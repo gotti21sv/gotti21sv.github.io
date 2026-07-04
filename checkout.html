@@ -319,47 +319,6 @@ document.querySelector(".payment-info").style.display="block";
 
 sendButton.type = "button";
 
-const payment = paymentType;
-
-const text = `🛒 НОВЕ ЗАМОВЛЕННЯ
-
-👕 Товар:
-${product}
-
-💰 Ціна:
-${price}
-
-📏 Розмір:
-${selectedSize}
-
-💳 Оплата:
-${payment}
-
-👤 Ім'я:
-${document.getElementById("name").value}
-
-📱 Телефон:
-${document.getElementById("phone").value}
-
-🏙 Місто:
-${document.getElementById("city").value}
-
-📦 Нова Пошта:
-${document.getElementById("department").value}
-
-💬 ${contactType}:
-${document.getElementById("contact").value}
-
-✅ ОПЛАТА ПРОВЕДЕНА`;
-
-window.open(
-`https://t.me/gotti21svv?text=${encodeURIComponent(text)}`,
-"_blank"
-);
-
-};
-
-});
 document.getElementById("sendOrder").onclick = () => {
 
 const payment = paymentType;
