@@ -121,7 +121,7 @@ alt="">
         required>
 
 
-    <button class="submit" type="submit">
+<button class="submit pay-main" type="submit">
 <div class="section-title">
 
 ОБЕРІТЬ СПОСІБ ОПЛАТИ
@@ -378,6 +378,9 @@ window.addEventListener("focus", () => {
         document.querySelector(".submit").style.display = "none";
 
         document.getElementById("afterPayment").style.display = "block";
+        document.querySelector(".payment-buttons").style.display = "none";
+
+document.querySelector(".pay-main").style.display = "none";
     }
 
 });
