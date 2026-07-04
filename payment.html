@@ -140,9 +140,11 @@ const order = JSON.parse(sessionStorage.getItem("order") || "{}");
 
 if(!order.product){
 
-alert("Замовлення не знайдено");
-window.location.href="checkout.html";
-return;
+    alert("Замовлення не знайдено");
+    window.location.href = "checkout.html";
+
+    throw new Error("Order not found");
+
 }
 
 document.getElementById("productName").textContent=order.product;
