@@ -66,6 +66,11 @@ images:[
 /* ---------------- GET PRODUCT ---------------- */
 
 const id = new URLSearchParams(window.location.search).get("id");
+if (!products[id]) {
+    alert("Товар не знайдено");
+    window.location.href = "shop.html";
+    throw new Error("Unknown product: " + id);
+}
 const product = products[id];
 
 const image = document.getElementById("productImage");
