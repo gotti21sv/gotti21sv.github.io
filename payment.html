@@ -128,10 +128,18 @@ target="_blank">
 </div>
 <script>
 
-const order = JSON.parse(sessionStorage.getItem("order"));
+const rawOrder = sessionStorage.getItem("order");
 
-document.getElementById("productName").textContent = order.product;
-document.getElementById("productPrice").textContent = order.price;
+if (!rawOrder) {
+    alert("Не знайдено дані замовлення.");
+    window.location.href = "checkout.html";
+}
+
+const order = JSON.parse(rawOrder);
+
+document.getElementById("productName").textContent = order.product || "";
+document.getElementById("productPrice").textContent = order.price || "";
+document.getElementById("productImage").src = order.image || "";
 
 const fullPrice = Number(
     order.price
