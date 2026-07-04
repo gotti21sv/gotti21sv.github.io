@@ -136,13 +136,19 @@ target="_blank">
 
 <script>
 
-const order = JSON.parse(sessionStorage.getItem("order"));
+const rawOrder = sessionStorage.getItem("order");
 
-if(!order){
+if(!rawOrder){
 
-window.location.href="checkout.html";
+alert("Дані замовлення не знайдено.");
+
+history.back();
+
+throw new Error("Order not found");
 
 }
+
+const order = JSON.parse(rawOrder);
 
 document.getElementById("productName").textContent=order.product;
 
