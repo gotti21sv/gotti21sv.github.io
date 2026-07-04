@@ -224,7 +224,11 @@ comment:document.getElementById("comment").value.trim()
 };
 
 sessionStorage.setItem("order", JSON.stringify(order));
+
 alert(sessionStorage.getItem("order"));
+
+alert("Переходим на payment");
+
 window.location.href = "payment.html";
 
 });
