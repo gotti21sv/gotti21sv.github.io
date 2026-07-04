@@ -136,15 +136,6 @@ target="_blank">
 
 <script>
 
-window.onerror = function(message, source, line, col, error) {
-    document.body.innerHTML =
-        "<div style='padding:20px;font-family:Arial'>" +
-        "<h2>JavaScript Error</h2>" +
-        "<p><b>" + message + "</b></p>" +
-        "<p>Line: " + line + "</p>" +
-        "</div>";
-};
-
 const order = JSON.parse(sessionStorage.getItem("order") || "{}");
 
 if(!order.product){
