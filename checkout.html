@@ -143,7 +143,11 @@ const price = decodeURIComponent(params.get("price") || "");
 const image = decodeURIComponent(params.get("image") || "");
 if(!product || !price || !image){
 
-window.location.href="shop.html";
+alert("Помилка відкриття товару.");
+
+history.back();
+
+throw new Error("Missing product data");
 
 }
 
