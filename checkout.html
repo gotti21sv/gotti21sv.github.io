@@ -296,29 +296,24 @@ window.open(
 );
 
 });
-window.addEventListener("focus", () => {
+document.querySelector(".sizes").style.display = "none";
+document.querySelector(".contact-switch").style.display = "none";
 
-    if(sessionStorage.getItem("paid") !== "true") return;
+document.querySelectorAll(".section-title")[0].style.display = "none";
+document.querySelectorAll(".section-title")[1].style.display = "none";
+document.querySelectorAll(".section-title")[2].style.display = "none";
 
-    document.querySelector(".sizes").style.display = "none";
-    document.querySelector(".contact-switch").style.display = "none";
+document.querySelector(".payment-buttons").style.display = "none";
+document.querySelector(".pay-main").style.display = "none";
 
-    document.querySelectorAll(".section-title")[0].style.display = "none";
-    document.querySelectorAll(".section-title")[1].style.display = "none";
-    document.querySelectorAll(".section-title")[2].style.display = "none";
+document.getElementById("contact").style.display = "none";
+document.getElementById("name").style.display = "none";
+document.getElementById("city").style.display = "none";
+document.getElementById("phone").style.display = "none";
+document.getElementById("department").style.display = "none";
 
-    document.querySelector(".payment-buttons").style.display = "none";
-    document.querySelector(".pay-main").style.display = "none";
+document.getElementById("afterPayment").style.display = "block";
 
-    document.getElementById("contact").style.display = "none";
-    document.getElementById("name").style.display = "none";
-    document.getElementById("city").style.display = "none";
-    document.getElementById("phone").style.display = "none";
-    document.getElementById("department").style.display = "none";
-
-    document.getElementById("afterPayment").style.display = "block";
-
-});
 </script>
 
 </body>
