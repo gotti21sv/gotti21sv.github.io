@@ -288,8 +288,6 @@ department:document.getElementById("department").value.trim(),
 
 sessionStorage.setItem("order", JSON.stringify(order));
 
-sessionStorage.setItem("paid","false");
-
 sessionStorage.setItem("paid","true");
 
 window.open(
@@ -297,7 +295,7 @@ window.open(
 "_blank"
 );
 
-const sendButton = document.querySelector(".submit");
+const sendButton = document.getElementById("sendOrder");
 
 sendButton.textContent = "ВІДПРАВИТИ ДАНІ ДЛЯ ВІДПРАВКИ";
 
@@ -321,8 +319,7 @@ document.querySelector(".payment-info").style.display="block";
 
 sendButton.type = "button";
 
-sendButton.onclick = () => {
-
+const payment = paymentType;
 
 const text = `🛒 НОВЕ ЗАМОВЛЕННЯ
 
@@ -363,6 +360,45 @@ window.open(
 };
 
 });
+document.getElementById("sendOrder").onclick = () => {
+
+const payment = paymentType;
+
+const text = `🛒 НОВЕ ЗАМОВЛЕННЯ
+
+👕 Товар:
+${product}
+
+💰 Ціна:
+${price}
+
+📏 Розмір:
+${selectedSize}
+
+💳 Оплата:
+${payment}
+
+👤 Ім'я:
+${document.getElementById("name").value}
+
+📱 Телефон:
+${document.getElementById("phone").value}
+
+🏙 Місто:
+${document.getElementById("city").value}
+
+📦 Нова Пошта:
+${document.getElementById("department").value}
+
+💬 ${contactType}:
+${document.getElementById("contact").value}
+
+✅ ОПЛАТА ПРОВЕДЕНА`;
+
+window.location.href =
+`https://t.me/gotti21svv?text=${encodeURIComponent(text)}`;
+
+};
 window.addEventListener("focus", () => {
 
     if(sessionStorage.getItem("paid") === "true"){
