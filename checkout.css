@@ -824,21 +824,14 @@ margin-bottom:3px;
 }
 
 .back{
-    position:absolute;
-    left:1px;
-    top:50%;
-    transform:translateY(-50%);
-
-    width:30px;
-    height:30px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
+    position: absolute;
+    left: 4px;
+    top: 19px;
+    font-size: 18px;
+    font-weight: 300;
+    text-decoration: none;
     color:#111;
-    text-decoration:none;
-    transition:opacity .2s ease;
+    line-height:1;
 }
 
 .back:hover{
