@@ -191,6 +191,9 @@ border-radius:8px;
 
 transition:.3s ease;
 
+position: relative;
+top: 6px;
+
 }
 
 #openShop .icon img{
