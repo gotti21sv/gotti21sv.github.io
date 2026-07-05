@@ -825,17 +825,9 @@ margin-bottom:3px;
 
 .back{
     position:absolute;
-    left:0;
+    left:6px;
     top:50%;
     transform:translateY(-50%);
-
-    font-size:42px;
-    font-weight:300;
-    font-family:Arial,sans-serif;
-    line-height:1;
-
-    color:#111;
-    text-decoration:none;
 
     width:28px;
     height:28px;
@@ -843,6 +835,15 @@ margin-bottom:3px;
     display:flex;
     align-items:center;
     justify-content:center;
+
+    color:#111;
+    text-decoration:none;
+}
+
+.back svg{
+    width:22px;
+    height:22px;
+    display:block;
 }
 
 .checkout-header h1{
