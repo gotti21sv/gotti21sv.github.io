@@ -191,9 +191,6 @@ border-radius:8px;
 
 transition:.3s ease;
 
-position: relative;
-top: 6px;
-
 }
 
 #openShop .icon img{
@@ -406,4 +403,8 @@ transform:translateX(calc(-90vw * 12));
 
 }
 
+}
+.website-img{
+    position: relative;
+    top: 5px;
 }
