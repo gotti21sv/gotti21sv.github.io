@@ -162,35 +162,20 @@ gap:22px;
 /* ---------------- ICONS ---------------- */
 
 .icon{
+    width:42px;
+    height:42px;
 
-width:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-height:42px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-flex-shrink:0;
-
+    flex-shrink:0;
 }
 
 .icon img{
-
-width:32px;
-
-height:32px;
-
-display:block;
-
-object-fit:contain;
-
-border-radius:8px;
-
-transition:.3s ease;
-
+    width:24px;
+    height:24px;
+    object-fit:contain;
 }
 
 #openShop .icon img{
