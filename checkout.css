@@ -829,13 +829,20 @@ margin-bottom:3px;
     top:50%;
     transform:translateY(-50%);
 
-    font-size:18px;
+    font-size:42px;
     font-weight:300;
+    font-family:Arial,sans-serif;
+    line-height:1;
+
     color:#111;
     text-decoration:none;
 
-    padding:6px 8px;
-    line-height:1;
+    width:28px;
+    height:28px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .checkout-header h1{
