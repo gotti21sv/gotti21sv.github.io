@@ -406,5 +406,5 @@ transform:translateX(calc(-90vw * 12));
 }
 .website-img{
     position: relative;
-    top: 4px;
+    top: 6px;
 }
