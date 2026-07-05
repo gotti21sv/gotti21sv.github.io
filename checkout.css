@@ -818,10 +818,10 @@ margin-bottom:3px;
 .checkout-header{
 
 display:flex;
-align-items:center;
-gap:18px;
 
-margin:10px 0 22px;
+align-items:center;
+
+margin:8px 0 16px;
 
 }
 
@@ -829,22 +829,28 @@ margin:10px 0 22px;
 
 margin:0;
 
-font-size:38px;
+font-size:22px;
 
-letter-spacing:4px;
+font-weight:500;
 
-font-weight:400;
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+flex:1;
+
+text-align:center;
 
 }
 
 .checkout-header .back{
 
-font-size:40px;
+font-size:34px;
 
 text-decoration:none;
 
 color:#111;
 
-line-height:1;
+width:40px;
 
 }
