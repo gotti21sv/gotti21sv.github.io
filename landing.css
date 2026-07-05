@@ -351,11 +351,7 @@ height:24px;
 }
 
 #openShop .icon img{
-
-width:28px;
-
-height:28px;
-
+    transform:translateY(7px);
 }
 
 .left span{
