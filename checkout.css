@@ -815,31 +815,40 @@ margin-bottom:3px;
 
 }
 .checkout-header{
+    position:relative;
     display:flex;
     align-items:center;
-    margin-top:8px;
-    margin-bottom:6px;
+    justify-content:center;
+    height:40px;
+    margin:8px 0 8px;
 }
 
-.checkout-header .back{
-    font-size:36px;
-    text-decoration:none;
+.back{
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+
+    font-size:18px;
+    font-weight:300;
     color:#111;
-    width:40px;
-    flex-shrink:0;
+    text-decoration:none;
+
+    padding:6px 8px;
+    line-height:1;
 }
 
 .checkout-header h1{
-    flex:1;
     margin:0;
-    text-align:center;
 
     font-family:"Manrope",sans-serif;
     font-size:15px;
-    font-weight:600;
+    font-weight:500;
 
-    letter-spacing:2.5px;
+    letter-spacing:3px;
     text-transform:uppercase;
 
-    white-space:nowrap;
+    color:#111;
+
+    text-align:center;
 }
