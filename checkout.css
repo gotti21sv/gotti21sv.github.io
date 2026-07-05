@@ -825,7 +825,7 @@ margin-bottom:3px;
 
 .back{
     position:absolute;
-    left:8px;
+    left:1px;
     top:50%;
     transform:translateY(-50%);
 
@@ -864,4 +864,8 @@ margin-bottom:3px;
     color:#111;
 
     text-align:center;
+    
+    position: relative;
+top: 3px;
+
 }
