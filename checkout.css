@@ -825,12 +825,12 @@ margin-bottom:3px;
 
 .back{
     position:absolute;
-    left:6px;
+    left:8px;
     top:50%;
     transform:translateY(-50%);
 
-    width:28px;
-    height:28px;
+    width:30px;
+    height:30px;
 
     display:flex;
     align-items:center;
@@ -838,11 +838,16 @@ margin-bottom:3px;
 
     color:#111;
     text-decoration:none;
+    transition:opacity .2s ease;
+}
+
+.back:hover{
+    opacity:.6;
 }
 
 .back svg{
-    width:22px;
-    height:22px;
+    width:18px;
+    height:18px;
     display:block;
 }
 
