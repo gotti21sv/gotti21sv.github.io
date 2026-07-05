@@ -177,7 +177,17 @@ location.assign("shop.html");
 },1400);
 
 });
+window.addEventListener("pageshow", () => {
+    const track = document.querySelector(".gallery-track");
 
+    track.style.animation = "none";
+    track.offsetHeight; // принудительная перерисовка
+    track.style.animation = "galleryMoveMobile 125s linear infinite";
+
+    if (window.innerWidth > 768) {
+        track.style.animation = "galleryMove 125s linear infinite";
+    }
+});
 </script>
 
 </body>
