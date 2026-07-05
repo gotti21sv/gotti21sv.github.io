@@ -49,14 +49,10 @@ animation:pageIn .65s cubic-bezier(.22,.61,.36,1) forwards;
 /* ================================================= */
 
 .back{
-    display:inline-block;
     font-size:28px;
     color:#111;
     text-decoration:none;
-    margin-top:18px;
-    margin-left:12px;
-    margin-bottom:14px;
-    transition:.25s;
+    margin-right:10px;
 }
 
 .back:hover{
@@ -125,7 +121,8 @@ text-align:center;
 
 gap:6px;
 
-margin-top:-4px;
+    margin-top:0;
+    padding-top:0;
 
 margin-bottom:18px;
 
@@ -148,6 +145,8 @@ user-select:none;
 -webkit-user-drag:none;
 
 transition:.35s ease;
+
+margin-top:-10px;
 
 }
 
@@ -818,8 +817,8 @@ margin-bottom:3px;
 .checkout-header{
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    margin:8px 0 18px;
+    margin-top:8px;
+    margin-bottom:6px;
 }
 
 .checkout-header .back{
@@ -834,10 +833,13 @@ margin-bottom:3px;
     flex:1;
     margin:0;
     text-align:center;
-    font-size:18px;
-    font-weight:500;
-    letter-spacing:2px;
+
+    font-family:"Manrope",sans-serif;
+    font-size:15px;
+    font-weight:600;
+
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+
     white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
 }
