@@ -816,41 +816,28 @@ margin-bottom:3px;
 
 }
 .checkout-header{
-
-display:flex;
-
-align-items:center;
-
-margin:8px 0 16px;
-
-}
-
-.checkout-header h1{
-
-margin:0;
-
-font-size:22px;
-
-font-weight:500;
-
-letter-spacing:3px;
-
-text-transform:uppercase;
-
-flex:1;
-
-text-align:center;
-
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin:8px 0 18px;
 }
 
 .checkout-header .back{
+    font-size:36px;
+    text-decoration:none;
+    color:#111;
+    width:40px;
+    flex-shrink:0;
+}
 
-font-size:34px;
-
-text-decoration:none;
-
-color:#111;
-
-width:40px;
-
+.checkout-header h1{
+    flex:1;
+    margin:0;
+    text-align:center;
+    font-size:18px;
+    font-weight:500;
+    letter-spacing:2px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
