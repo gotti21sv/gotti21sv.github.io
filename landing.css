@@ -54,6 +54,9 @@ margin-top:-45px;
 
 margin-bottom:36px;
 
+display:flex;
+justify-content:flex-start;
+
 }
 
 .gallery-track{
