@@ -489,25 +489,43 @@ transform:translateX(calc(-90vw * 12));
 /* ---------- TOP BAR ---------- */
 
 .top-bar{
+
 position:relative;
-height:72px;
+
+height:40px;
+
+margin-bottom:-8px;
+
 }
 
 .logo{
+
 position:absolute;
-top:6px;
+
+top:-10px;
+
 right:18px;
-width:105px;
+
+width:115px;
+
 z-index:20;
+
 }
 
 .socials{
+
 position:absolute;
-top:22px;
-left:20px;
+
+top:-2px;
+
+left:18px;
+
 display:flex;
+
 gap:18px;
+
 z-index:20;
+
 }
 
 .social-icon{
@@ -533,13 +551,13 @@ display:block;
 
 .website-btn{
 
-width:calc(100% - 36px);
+width:calc(100% - 22px);
 
-height:72px;
+height:78px;
 
-margin:26px auto 0;
+margin:24px auto 0;
 
-padding:0 24px;
+padding:0 28px;
 
 display:flex;
 
@@ -547,21 +565,19 @@ align-items:center;
 
 justify-content:space-between;
 
-border:1px solid #ececec;
-
-border-radius:24px;
-
 background:#fff;
 
-color:#666;
+border:1px solid rgba(0,0,0,.035);
 
-font-size:22px;
+border-radius:28px;
+
+font-size:23px;
 
 font-weight:300;
 
-letter-spacing:7px;
+letter-spacing:8px;
 
-text-decoration:none;
+color:#6b6b6b;
 
 transition:.25s;
 
