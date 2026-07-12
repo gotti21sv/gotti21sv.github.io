@@ -64,7 +64,7 @@ margin-bottom:10px;
 
 position:absolute;
 
-top:18px;
+top:16px;
 
 left:18px;
 
@@ -72,23 +72,17 @@ display:flex;
 
 align-items:center;
 
-gap:16px;
+gap:14px;
 
 z-index:100;
 
 }
 
-.socials svg{
+.social-icon{
 
 width:22px;
 
 height:22px;
-
-display:block;
-
-}
-
-.socials a{
 
 display:flex;
 
@@ -96,13 +90,31 @@ align-items:center;
 
 justify-content:center;
 
+color:#111;
+
+transition:.25s;
+
 }
 
-.socials img:hover{
+.social-icon svg{
 
-transform:scale(.92);
+width:20px;
 
-opacity:.7;
+height:20px;
+
+display:block;
+
+stroke:currentColor;
+
+fill:currentColor;
+
+}
+
+.social-icon:hover{
+
+opacity:.6;
+
+transform:scale(.9);
 
 }
 
@@ -261,15 +273,13 @@ flex-shrink:0;
     object-fit:contain;
 }
 
-#openShop .icon img{
+#openShop .icon svg{
 
-width:26px;
+width:22px;
 
-height:26px;
+height:22px;
 
-object-fit:contain;
-
-transform:none;
+display:block;
 
 }
 
@@ -343,9 +353,15 @@ padding:28px 0 50px;
 
 .logo{
 
-width:180px;
+width:110px;
 
-margin-bottom:28px;
+position:absolute;
+
+top:14px;
+
+right:18px;
+
+margin:0;
 
 }
 
