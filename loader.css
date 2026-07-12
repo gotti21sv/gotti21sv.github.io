@@ -3,15 +3,17 @@
 position:fixed;
 inset:0;
 
-background:#fff;
-
 display:flex;
 justify-content:center;
 align-items:center;
 
+background:#fff;
+
 z-index:999999;
 
-transition:opacity 1.1s ease, visibility 1.1s ease;
+transition:
+opacity 1s ease,
+visibility 1s ease;
 
 }
 
@@ -27,30 +29,39 @@ pointer-events:none;
 
 width:170px;
 
-animation:logoIntro 2.2s cubic-bezier(.22,.61,.36,1) forwards;
+opacity:0;
+
+animation:introLogo 2.25s cubic-bezier(.22,.61,.36,1) forwards;
 
 }
 
-@keyframes logoIntro{
+@keyframes introLogo{
 
 0%{
 
 opacity:0;
-transform:scale(.7);
+transform:scale(.72);
 
 }
 
-25%{
+20%{
 
 opacity:1;
-transform:scale(.92);
+transform:scale(.9);
 
 }
 
-65%{
+55%{
 
-opacity:1;
 transform:scale(1.08);
+
+}
+
+80%{
+
+transform:scale(1);
+
+opacity:1;
 
 }
 
