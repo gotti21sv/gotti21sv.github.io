@@ -34,15 +34,15 @@ padding:0 0 60px;
 
 .logo{
 
-width:110px;
-
 position:absolute;
 
-top:14px;
+top:8px;
 
 right:18px;
 
-margin:0;
+width:92px;
+
+height:auto;
 
 z-index:100;
 
@@ -64,15 +64,15 @@ margin-bottom:10px;
 
 position:absolute;
 
-top:16px;
+top:18px;
 
 left:18px;
 
 display:flex;
 
-align-items:center;
+gap:18px;
 
-gap:14px;
+align-items:center;
 
 z-index:100;
 
@@ -98,15 +98,11 @@ transition:.25s;
 
 .social-icon svg{
 
-width:20px;
+width:22px;
 
-height:20px;
+height:22px;
 
 display:block;
-
-stroke:currentColor;
-
-fill:currentColor;
 
 }
 
@@ -114,7 +110,7 @@ fill:currentColor;
 
 opacity:.6;
 
-transform:scale(.9);
+transform:scale(.92);
 
 }
 
@@ -267,10 +263,16 @@ flex-shrink:0;
 
 }
 
-.icon img{
-    width:24px;
-    height:24px;
-    object-fit:contain;
+.icon svg{
+
+width:22px;
+
+height:22px;
+
+display:block;
+
+color:#111;
+
 }
 
 #openShop .icon svg{
@@ -449,10 +451,6 @@ width:24px;
 
 height:24px;
 
-}
-
-#openShop .icon img{
-    transform:translateY(5px);
 }
 
 .left span{
