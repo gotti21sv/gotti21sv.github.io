@@ -486,3 +486,131 @@ transform:translateX(calc(-90vw * 12));
     position: relative;
     top: 14px;
 }
+/* ---------- TOP BAR ---------- */
+
+.top-bar{
+position:relative;
+height:72px;
+}
+
+.logo{
+position:absolute;
+top:6px;
+right:18px;
+width:105px;
+z-index:20;
+}
+
+.socials{
+position:absolute;
+top:22px;
+left:20px;
+display:flex;
+gap:18px;
+z-index:20;
+}
+
+.social-icon{
+display:flex;
+align-items:center;
+justify-content:center;
+color:#111;
+text-decoration:none;
+transition:.25s;
+}
+
+.social-icon:hover{
+opacity:.6;
+transform:scale(.92);
+}
+
+.social-icon svg{
+width:24px;
+height:24px;
+display:block;
+}
+/* ---------- WEBSITE BUTTON ---------- */
+
+.website-btn{
+
+width:calc(100% - 36px);
+
+height:72px;
+
+margin:26px auto 0;
+
+padding:0 24px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+border:1px solid #ececec;
+
+border-radius:24px;
+
+background:#fff;
+
+color:#666;
+
+font-size:22px;
+
+font-weight:300;
+
+letter-spacing:7px;
+
+text-decoration:none;
+
+transition:.25s;
+
+}
+
+.website-btn:hover{
+
+transform:translateY(-2px);
+
+}
+.website-icon{
+
+width:34px;
+
+height:34px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.website-icon svg{
+
+width:34px;
+
+height:34px;
+
+overflow:visible;
+
+}
+.planet{
+
+transform-origin:center;
+
+animation:spinPlanet 12s linear infinite;
+
+}
+
+@keyframes spinPlanet{
+
+from{
+transform:rotate(0deg);
+}
+
+to{
+transform:rotate(360deg);
+}
+
+}
