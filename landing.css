@@ -34,17 +34,17 @@ padding:0 0 60px;
 
 .logo{
 
-width:150px;
+width:110px;
 
 position:absolute;
 
-top:18px;
+top:14px;
 
-right:22px;
+right:18px;
 
 margin:0;
 
-z-index:20;
+z-index:100;
 
 }
 
@@ -52,7 +52,11 @@ z-index:20;
 
 position:relative;
 
-height:70px;
+width:100%;
+
+height:58px;
+
+margin-bottom:10px;
 
 }
 
@@ -60,25 +64,27 @@ height:70px;
 
 position:absolute;
 
-top:22px;
+top:18px;
 
-left:22px;
+left:18px;
 
 display:flex;
 
 align-items:center;
 
-gap:18px;
+gap:16px;
 
-z-index:20;
+z-index:100;
 
 }
 
 .socials img{
 
-width:24px;
+display:block;
 
-height:24px;
+width:22px;
+
+height:22px;
 
 object-fit:contain;
 
@@ -88,9 +94,9 @@ transition:.25s ease;
 
 .socials img:hover{
 
-opacity:.65;
+transform:scale(.92);
 
-transform:scale(.94);
+opacity:.7;
 
 }
 
@@ -226,14 +232,21 @@ align-items:center;
 /* ---------------- ICONS ---------------- */
 
 .icon{
-    width:42px;
-    height:42px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+width:30px;
 
-    flex-shrink:0;
+height:30px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin-left:auto;
+
+flex-shrink:0;
+
 }
 
 .icon img{
@@ -244,11 +257,13 @@ align-items:center;
 
 #openShop .icon img{
 
-width:28px;
+width:26px;
 
-height:28px;
+height:26px;
 
-transform:translateY(2px);
+object-fit:contain;
+
+transform:none;
 
 }
 
