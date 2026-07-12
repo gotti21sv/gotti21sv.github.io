@@ -353,13 +353,13 @@ padding:28px 0 50px;
 
 .logo{
 
-width:110px;
-
 position:absolute;
 
-top:14px;
+top:-18px;
 
 right:18px;
+
+width:105px;
 
 margin:0;
 
