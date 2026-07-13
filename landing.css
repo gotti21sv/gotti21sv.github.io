@@ -420,11 +420,13 @@ font-size:30px;
 
 .products-strip{
 
-margin:45px 0 10px;
+width:100%;
+
+margin-top:28px;
 
 overflow:hidden;
 
-width:100%;
+position:relative;
 
 }
 
@@ -434,33 +436,29 @@ display:flex;
 
 align-items:center;
 
-gap:2px;
+gap:0;
 
 width:max-content;
 
-animation:productsMove 28s linear infinite;
+animation:productsMove 22s linear infinite;
 
 }
 
 .products-track img{
 
-height:210px;
+width:180px;
 
-width:auto;
+height:auto;
 
-object-fit:contain;
+display:block;
 
 flex-shrink:0;
 
-filter:drop-shadow(0 12px 25px rgba(0,0,0,.05));
+margin:0 -6px;
 
-transition:.35s;
+object-fit:contain;
 
-mix-blend-mode:multiply;
-
-filter:
-contrast(1.02)
-brightness(.995);
+filter:none;
 
 }
 
