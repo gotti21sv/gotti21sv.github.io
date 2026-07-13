@@ -7,10 +7,9 @@ box-sizing:border-box;
 }
 
 body{
-background:#fefefe;
-font-family:"Inter",sans-serif;
-color:#111;
-overflow-x:hidden;
+
+background:
+radial-gradient(circle at top,#ffffff 0%,#fcfcfc 45%,#f7f7f7 100%);
 
 }
 
@@ -22,6 +21,7 @@ max-width:560px;
 margin:auto;
 padding-bottom:34px;
 background:#fefefe;
+background:transparent;
 
 }
 
@@ -222,7 +222,8 @@ color:#111;
 
 transition:.28s ease;
 
-box-shadow:0 8px 24px rgba(0,0,0,.03);
+box-shadow:
+0 8px 35px rgba(0,0,0,.035);
 
 }
 
@@ -448,6 +449,12 @@ flex-shrink:0;
 filter:drop-shadow(0 12px 25px rgba(0,0,0,.05));
 
 transition:.35s;
+
+mix-blend-mode:multiply;
+
+filter:
+contrast(1.02)
+brightness(.995);
 
 }
 
