@@ -538,46 +538,38 @@ transform:translateX(calc(-190px * 3));
 }
 
 }
-/* SHOP NOW */
+/* ---------- SHOP NOW ---------- */
 
 .shop-now{
 
 display:flex;
-
 align-items:center;
-
 justify-content:center;
 
 width:170px;
+height:82px;
 
-height:74px;
-
-margin:34px auto 70px;
+margin:42px auto 70px;
 
 border-radius:24px;
 
 text-decoration:none;
 
-color:#fff;
+font-family:"Cormorant Garamond",serif;
+font-size:28px;
+font-weight:600;
 
-font-size:22px;
+color:#ffffff;
 
-font-weight:700;
+background:rgba(20,20,20,.78);
 
-letter-spacing:.5px;
+backdrop-filter:blur(24px);
+-webkit-backdrop-filter:blur(24px);
 
-backdrop-filter:blur(22px);
-
--webkit-backdrop-filter:blur(22px);
-
-background:rgba(18,18,18,.78);
-
-border:1px solid rgba(255,255,255,.35);
+border:1px solid rgba(255,255,255,.28);
 
 box-shadow:
-
-0 10px 35px rgba(0,0,0,.18),
-
+0 18px 45px rgba(0,0,0,.18),
 inset 0 1px rgba(255,255,255,.18);
 
 transition:.3s;
@@ -589,15 +581,13 @@ transition:.3s;
 transform:translateY(-3px);
 
 box-shadow:
-
-0 16px 45px rgba(0,0,0,.25),
-
-inset 0 1px rgba(255,255,255,.2);
+0 24px 55px rgba(0,0,0,.22),
+inset 0 1px rgba(255,255,255,.22);
 
 }
 
 .shop-now:active{
 
-transform:scale(.97);
+transform:scale(.96);
 
 }
