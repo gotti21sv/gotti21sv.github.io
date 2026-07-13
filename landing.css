@@ -34,11 +34,11 @@ padding:0 0 60px;
 
 .logo{
 
-width:140px;
+width:150px;
 
 position:absolute;
 
-top:4px;
+top:-8px;
 
 right:18px;
 
@@ -671,13 +671,11 @@ transform:translateY(0);
 
 .website-card{
 
-width:calc(100% - 32px);
+width:calc(100% - 34px);
 
-height:118px;
+margin:34px auto;
 
-margin:30px auto 0;
-
-padding:0 34px;
+padding:26px 30px;
 
 display:flex;
 
@@ -685,13 +683,15 @@ align-items:center;
 
 justify-content:space-between;
 
-border:1px solid rgba(0,0,0,.05);
+background:#fff;
+
+border:1px solid rgba(0,0,0,.06);
 
 border-radius:34px;
 
-background:#fff;
+text-decoration:none;
 
-transition:.35s;
+transition:.3s;
 
 }
 
@@ -715,13 +715,15 @@ gap:18px;
 
 .planet{
 
-width:56px;
+width:30px;
 
-height:56px;
+height:30px;
 
-color:#7a7a7a;
+color:#8d8d8d;
 
-animation:planetSpin 10s linear infinite;
+animation:planetSpin 12s linear infinite;
+
+flex-shrink:0;
 
 }
 
@@ -731,8 +733,6 @@ width:100%;
 
 height:100%;
 
-display:block;
-
 }
 
 .card-text{
@@ -741,23 +741,17 @@ display:flex;
 
 flex-direction:column;
 
-justify-content:center;
-
 }
 
 .small-title{
 
-font-size:13px;
+font-size:12px;
 
-letter-spacing:7px;
-
-font-weight:300;
+letter-spacing:6px;
 
 color:#9a9a9a;
 
 margin-bottom:8px;
-
-text-transform:uppercase;
 
 }
 
@@ -765,25 +759,19 @@ text-transform:uppercase;
 
 font-family:"Cormorant Garamond",serif;
 
-font-size:31px;
+font-size:34px;
 
 font-weight:400;
 
 color:#222;
 
-line-height:1;
-
 }
 
 .card-arrow{
 
-font-size:48px;
+font-size:42px;
 
-font-weight:200;
-
-color:#c4c4c4;
-
-transition:.3s;
+color:#c8c8c8;
 
 }
 
