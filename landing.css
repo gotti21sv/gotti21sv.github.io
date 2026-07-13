@@ -143,17 +143,17 @@ border-radius:2px;
 
 }
 
-@keyframes galleryMove{
+@keyframes galleryMoveMobile{
 
-from{
+0%{
 
 transform:translateX(0);
 
 }
 
-to{
+100%{
 
-transform:translateX(calc(-314px * 12));
+transform:translateX(calc(-72vw * 12));
 
 }
 
@@ -356,25 +356,25 @@ transform:translateX(6px);
 
 width:120px;
 
-top:-16px;
+top:2px;
 
-right:16px;
+right:10px;
 
 }
 
 .gallery{
 
-height:54vh;
+height:39vh;
 
-margin-top:10px;
+margin-top:18px;
 
 }
 
 .gallery-track img{
 
-width:76vw;
-
-height:54vh;
+width:54vw;
+height:39vh;
+object-fit:cover;
 
 }
 
