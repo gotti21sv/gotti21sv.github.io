@@ -7,7 +7,7 @@ box-sizing:border-box;
 }
 
 body{
-background:#f7f7f7;
+background:#fefefe;
 font-family:"Inter",sans-serif;
 color:#111;
 overflow-x:hidden;
@@ -21,7 +21,7 @@ overflow-x:hidden;
 max-width:560px;
 margin:auto;
 padding-bottom:34px;
-background:#f7f7f7;
+background:#fefefe;
 
 }
 
@@ -210,7 +210,7 @@ align-items:center;
 
 justify-content:space-between;
 
-background:#f7f7f7;
+background:#fefefe;
 
 border:1px solid rgba(0,0,0,.05);
 
