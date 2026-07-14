@@ -113,6 +113,8 @@ button.classList.add("active");
 
 catalog.classList.add("switching");
 
+catalog.style.pointerEvents="none";
+
 setTimeout(()=>{
 
 catalog.classList.remove("view-1");
@@ -126,6 +128,8 @@ requestAnimationFrame(()=>{
 setTimeout(()=>{
 
 catalog.classList.remove("switching");
+
+catalog.style.pointerEvents="";
 
 },70);
 
