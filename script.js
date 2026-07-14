@@ -147,3 +147,92 @@ catalog.style.pointerEvents="";
 });
 
 });
+/* ==========================================
+   CURRENCY
+========================================== */
+
+const pricesUAH = {
+    "cross-shirt":"₴1,000.00 UAH",
+    "black-hoodie":"₴1,700.00 UAH",
+    "black-shorts":"₴1,400.00 UAH",
+    "pink-hoodie":"₴1,800.00 UAH",
+    "18-hoodie":"₴2,000.00 UAH",
+    "18-longsleeve":"₴1,300.00 UAH"
+};
+
+const pricesEUR = {
+    "cross-shirt":"€20",
+    "black-hoodie":"€34",
+    "black-shorts":"€28",
+    "pink-hoodie":"€36",
+    "18-hoodie":"€40",
+    "18-longsleeve":"€26"
+};
+
+const currencyButton = document.getElementById("currencyButton");
+const currencyMenu = document.getElementById("currencyMenu");
+const currencyText = document.getElementById("currencyText");
+const currencyOptions = document.querySelectorAll(".currency-option");
+
+let currency = localStorage.getItem("currency") || "UAH";
+
+function updatePrices(){
+
+    document.querySelectorAll(".product").forEach(product=>{
+
+        const id = product.dataset.id;
+
+        const price = product.querySelector("p");
+
+        if(currency==="UAH"){
+
+            price.textContent = pricesUAH[id];
+
+        }else{
+
+            price.textContent = pricesEUR[id];
+
+        }
+
+    });
+
+    currencyText.textContent =
+        currency==="UAH"
+        ? "UKRAINE 🇺🇦"
+        : "EUROPE 🇪🇺";
+
+}
+
+updatePrices();
+
+currencyButton.addEventListener("click",()=>{
+
+    currencyMenu.classList.toggle("show");
+
+});
+
+currencyOptions.forEach(option=>{
+
+    option.addEventListener("click",()=>{
+
+        currency = option.dataset.currency;
+
+        localStorage.setItem("currency",currency);
+
+        updatePrices();
+
+        currencyMenu.classList.remove("show");
+
+    });
+
+});
+
+document.addEventListener("click",(e)=>{
+
+    if(!e.target.closest(".currency-switch")){
+
+        currencyMenu.classList.remove("show");
+
+    }
+
+});
