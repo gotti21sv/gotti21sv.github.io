@@ -87,6 +87,8 @@ top:0;
 width:100%;
 height:220px;
 
+pointer-events:none;
+
 background:linear-gradient(
 
 180deg,
@@ -112,6 +114,8 @@ bottom:0;
 
 width:100%;
 height:260px;
+
+pointer-events:none;
 
 background:linear-gradient(
 
@@ -259,7 +263,7 @@ flex-direction:column;
 
 gap:26px;
 
-z-index:30;
+z-index:9999;
 
 }
 
@@ -294,12 +298,6 @@ object-fit:contain;
 user-select:none;
 
 transition:.25s ease;
-
-}
-
-.hero-socials a:active img{
-
-transform:scale(.88);
 
 }
 
