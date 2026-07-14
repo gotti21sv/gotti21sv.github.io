@@ -135,7 +135,7 @@ z-index:2;
 
 position:absolute;
 
-top:58px;
+top:28px;
 
 left:50%;
 
@@ -247,11 +247,21 @@ transform:scale(.96);
 
 .hero-socials{
 
-margin-top:34px;
+position:absolute;
+
+top:34px;
+
+left:24px;
 
 display:flex;
 
-gap:34px;
+flex-direction:column;
+
+gap:24px;
+
+margin:0;
+
+z-index:20;
 
 }
 
@@ -273,11 +283,15 @@ transform:scale(.88);
 
 .hero-socials svg{
 
-width:31px;
+width:34px;
 
-height:31px;
+height:34px;
 
 display:block;
+
+filter:
+
+drop-shadow(0 0 2px rgba(255,255,255,.45));
 
 }
 
