@@ -477,19 +477,21 @@ display:flex;
 align-items:center;
 justify-content:center;
 
-width:185px;
-height:88px;
+width:165px;
+height:76px;
 
-margin:40px auto 70px;
+margin:55px auto 70px;
 transform:translateY(0px);
 
 text-decoration:none;
 
-font-family:Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+font-family:"Inter",sans-serif;
 
-font-size:25px;
+font-size:24px;
 
-font-weight:300;
+font-weight:500;
+
+letter-spacing:.5px;
 
 letter-spacing:.2px;
 color:#111;
@@ -554,7 +556,13 @@ z-index:100;
 
 .header-title{
 
-font-size:11px;
+position:absolute;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:13px;
 
 font-weight:300;
 
@@ -568,9 +576,7 @@ white-space:nowrap;
 
 text-align:center;
 
-transform:scale(1.35);
-
-transform-origin:center;
+line-height:1;
 
 }
 
