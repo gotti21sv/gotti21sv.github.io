@@ -228,8 +228,41 @@ throw new Error("Missing product data");
 
 }
 
-document.getElementById("productName").textContent = product;
 const currency = localStorage.getItem("currency") || "UAH";
+
+/* ---------- CHANGE LANGUAGE ---------- */
+
+if(currency==="EUR"){
+
+document.querySelector(".section-title:nth-of-type(1)").textContent="SIZE";
+
+document.querySelector(".section-title:nth-of-type(2)").textContent="CONTACT";
+
+document.querySelector(".section-title:nth-of-type(3)").textContent="SHIPPING";
+
+document.querySelector(".section-title:nth-of-type(4)").textContent="PAYMENT";
+
+document.querySelector(".pay-btn[data-type='full']").textContent="Full payment";
+
+document.querySelector(".pay-btn[data-type='deposit']").textContent="Deposit €10";
+
+document.querySelector(".pay-main").textContent="PAY";
+
+document.querySelector(".payment-info").textContent=
+"After successful payment, tap the button below to send your order.";
+
+document.getElementById("sendOrder").textContent=
+"SEND ORDER";
+
+document.getElementById("name").placeholder="Full name";
+
+document.getElementById("city").placeholder="City";
+
+document.getElementById("phone").placeholder="Phone number";
+
+document.getElementById("department").placeholder="Address / Delivery";
+
+}
 
 document.getElementById("productPrice").textContent = price;
 document.getElementById("productImage").src = image;
@@ -278,9 +311,36 @@ currency==="EUR"
 ? "Full payment"
 : "Повна оплата";
 
+document.querySelectorAll(".pay-btn").forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+document.querySelectorAll(".pay-btn").forEach(b=>b.classList.remove("active"));
+
+btn.classList.add("active");
+
+if(currency==="EUR"){
+
+paymentType = btn.dataset.type==="deposit"
+
+? "Deposit €10"
+
+: "Full payment";
+
+}else{
+
+paymentType = btn.dataset.type==="deposit"
+
+? "Передоплата 500 UAH"
+
+: "Повна оплата";
+
+}
+
 });
 
 });
+
 /* ---------- SEND ORDER ---------- */
 
 document.getElementById("checkoutForm").addEventListener("submit",async(e)=>{
@@ -358,7 +418,40 @@ paymentType;
 });
 document.getElementById("sendOrder").addEventListener("click", () => {
 
-const text = `🛒 НОВЕ ЗАМОВЛЕННЯ
+const text = currency==="EUR"
+
+? `🛒 NEW ORDER
+
+👕 Product:
+${product}
+
+💰 Price:
+${price}
+
+📏 Size:
+${selectedSize}
+
+💳 Payment:
+${paymentType}
+
+👤 Name:
+${document.getElementById("name").value}
+
+📱 Phone:
+${document.getElementById("phone").value}
+
+🏙 City:
+${document.getElementById("city").value}
+
+📦 Address:
+${document.getElementById("department").value}
+
+💬 ${contactType}:
+${document.getElementById("contact").value}
+
+✅ PAID`
+
+: `🛒 НОВЕ ЗАМОВЛЕННЯ
 
 👕 Товар:
 ${product}
