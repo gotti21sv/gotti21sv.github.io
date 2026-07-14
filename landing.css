@@ -1,0 +1,308 @@
+/* =======================================
+   RESET
+======================================= */
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+html,
+body{
+
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+background:#000;
+
+font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+
+}
+
+/* =======================================
+   HERO
+======================================= */
+
+.hero{
+
+position:relative;
+
+width:100%;
+
+height:100vh;
+
+overflow:hidden;
+
+background:#000;
+
+}
+
+/* =======================================
+   PHOTO
+======================================= */
+
+.hero-image{
+
+position:absolute;
+
+inset:0;
+
+z-index:1;
+
+}
+
+.hero-image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+/* =======================================
+   DARK GRADIENT
+======================================= */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+top:0;
+
+width:100%;
+height:220px;
+
+background:linear-gradient(
+
+180deg,
+
+rgba(0,0,0,.62),
+
+rgba(0,0,0,0)
+
+);
+
+z-index:2;
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:0;
+
+width:100%;
+height:260px;
+
+background:linear-gradient(
+
+0deg,
+
+rgba(0,0,0,.78),
+
+rgba(0,0,0,0)
+
+);
+
+z-index:2;
+
+}
+
+/* =======================================
+   LOGO
+======================================= */
+
+.hero-header{
+
+position:absolute;
+
+top:58px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+z-index:5;
+
+}
+
+.hero-logo{
+
+width:235px;
+
+display:block;
+
+user-select:none;
+
+-webkit-user-drag:none;
+
+}
+
+/* =======================================
+   BOTTOM
+======================================= */
+
+.hero-bottom{
+
+position:absolute;
+
+left:0;
+
+bottom:18px;
+
+width:100%;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+z-index:5;
+
+}
+
+/* =======================================
+   BUTTON
+======================================= */
+
+.shop-now{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+width:220px;
+
+height:92px;
+
+border:2.5px solid rgba(255,255,255,.92);
+
+border-radius:24px;
+
+background:rgba(0,0,0,.42);
+
+backdrop-filter:blur(12px);
+
+-webkit-backdrop-filter:blur(12px);
+
+color:#fff;
+
+text-decoration:none;
+
+font-size:31px;
+
+font-weight:800;
+
+font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif;
+
+transition:.3s;
+
+box-shadow:
+
+0 12px 35px rgba(0,0,0,.35);
+
+}
+
+.shop-now:hover{
+
+transform:translateY(-2px);
+
+}
+
+.shop-now:active{
+
+transform:scale(.96);
+
+}
+
+/* =======================================
+   SOCIALS
+======================================= */
+
+.hero-socials{
+
+margin-top:34px;
+
+display:flex;
+
+gap:34px;
+
+}
+
+.hero-socials a{
+
+color:#fff;
+
+text-decoration:none;
+
+transition:.25s;
+
+}
+
+.hero-socials a:active{
+
+transform:scale(.88);
+
+}
+
+.hero-socials svg{
+
+width:31px;
+
+height:31px;
+
+display:block;
+
+}
+
+/* =======================================
+   MOBILE
+======================================= */
+
+@media(max-width:768px){
+
+.hero-logo{
+
+width:210px;
+
+}
+
+.shop-now{
+
+width:192px;
+
+height:82px;
+
+font-size:29px;
+
+}
+
+.hero-socials{
+
+gap:30px;
+
+}
+
+}
