@@ -93,3 +93,30 @@ location.href="product.html?id="+id;
 });
 
 });
+/* =========================================
+   VIEW SWITCH
+========================================= */
+
+const catalog = document.querySelector(".catalog");
+
+const buttons = document.querySelectorAll(".view-btn");
+
+buttons.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+buttons.forEach(b=>b.classList.remove("active"));
+
+button.classList.add("active");
+
+catalog.classList.remove("view-1");
+catalog.classList.remove("view-4");
+catalog.classList.remove("view-12");
+
+catalog.classList.add("view-"+button.dataset.view);
+
+});
+
+});
+
+catalog.classList.add("view-4");
