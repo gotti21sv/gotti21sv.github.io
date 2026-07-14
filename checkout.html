@@ -229,6 +229,8 @@ throw new Error("Missing product data");
 }
 
 document.getElementById("productName").textContent = product;
+const currency = localStorage.getItem("currency") || "UAH";
+
 document.getElementById("productPrice").textContent = price;
 document.getElementById("productImage").src = image;
 document.getElementById("productImage").loading="eager";
@@ -269,18 +271,11 @@ contactType=btn.textContent;
 });
 /* ---------- PAYMENT TYPE ---------- */
 
-let paymentType = "Повна оплата";
+const currency = localStorage.getItem("currency") || "UAH";
 
-document.querySelectorAll(".pay-btn").forEach(btn=>{
-
-btn.addEventListener("click",()=>{
-
-document.querySelectorAll(".pay-btn").forEach(b=>b.classList.remove("active"));
-
-btn.classList.add("active");
-
-paymentType = btn.dataset.type === "deposit"
-? "Передоплата 500 UAH"
+let paymentType =
+currency==="EUR"
+? "Full payment"
 : "Повна оплата";
 
 });
