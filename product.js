@@ -231,6 +231,8 @@ const image = encodeURIComponent(product.images[0]);
 
 const name = encodeURIComponent(product.name);
 
+const size = encodeURIComponent(sizeSelect.value);
+
 const euroPrices = {
 
 "cross-shirt":"€20",
@@ -255,7 +257,7 @@ currency==="EUR"
 const price = encodeURIComponent(currentPrice);
 
 window.location.href =
-`checkout.html?v=7&product=${name}&price=${price}&image=${image}`;
+`checkout.html?product=${name}&price=${price}&image=${image}&size=${size}`;
 
 });
 
