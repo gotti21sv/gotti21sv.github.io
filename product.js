@@ -62,6 +62,8 @@ if (!products[id]) {
 }
 const product = products[id];
 
+const currency = localStorage.getItem("currency") || "UAH";
+
 const image = document.getElementById("productImage");
 const viewer = document.getElementById("viewer");
 const viewerImage = document.getElementById("viewerImage");
@@ -77,7 +79,27 @@ let currentImage = 0;
 let quantity = 1;
 
 nameEl.textContent = product.name;
-priceEl.textContent = product.price;
+
+const euroPrices = {
+
+"cross-shirt":"€20",
+
+"black-hoodie":"€34",
+
+"black-shorts":"€28",
+
+"pink-hoodie":"€36",
+
+"18-hoodie":"€40",
+
+"18-longsleeve":"€26"
+
+};
+
+priceEl.textContent =
+currency==="EUR"
+? euroPrices[id]
+: product.price;
 
 /* ---------------- CHANGE IMAGE ---------------- */
 
@@ -209,7 +231,28 @@ const image = encodeURIComponent(product.images[0]);
 
 const name = encodeURIComponent(product.name);
 
-const price = encodeURIComponent(product.price);
+const euroPrices = {
+
+"cross-shirt":"€20",
+
+"black-hoodie":"€34",
+
+"black-shorts":"€28",
+
+"pink-hoodie":"€36",
+
+"18-hoodie":"€40",
+
+"18-longsleeve":"€26"
+
+};
+
+const currentPrice =
+currency==="EUR"
+? euroPrices[id]
+: product.price;
+
+const price = encodeURIComponent(currentPrice);
 
 window.location.href =
 `checkout.html?product=${name}&price=${price}&image=${image}`;
