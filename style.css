@@ -987,3 +987,40 @@ gap:12px;
 }
 
 }
+/* =========================================
+   PREMIUM GRID ANIMATION
+========================================= */
+
+.catalog{
+
+transition:
+grid-template-columns .55s cubic-bezier(.22,.61,.36,1),
+gap .55s cubic-bezier(.22,.61,.36,1);
+
+}
+
+.product{
+
+transition:
+
+transform .55s cubic-bezier(.22,.61,.36,1),
+
+opacity .45s ease,
+
+filter .45s ease,
+
+width .55s cubic-bezier(.22,.61,.36,1);
+
+will-change:transform;
+
+}
+
+.catalog.switching .product{
+
+opacity:.55;
+
+transform:scale(.94);
+
+filter:blur(.8px);
+
+}
