@@ -1151,3 +1151,106 @@ font-size:11px;
 opacity:.78;
 
 }
+/* ==========================
+   CURRENCY
+========================== */
+
+.currency-switch{
+
+position:absolute;
+
+left:20px;
+
+top:118px;
+
+z-index:20;
+
+}
+
+#currencyButton{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:10px 14px;
+
+background:#fff;
+
+border:1px solid #e7e7e7;
+
+border-radius:11px;
+
+font-size:14px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+#currencyButton:active{
+
+transform:scale(.96);
+
+}
+
+.arrow{
+
+font-size:11px;
+
+}
+
+.currency-menu{
+
+position:absolute;
+
+top:50px;
+
+left:0;
+
+width:170px;
+
+background:#fff;
+
+border:1px solid #ececec;
+
+border-radius:12px;
+
+overflow:hidden;
+
+display:none;
+
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.currency-menu.show{
+
+display:block;
+
+}
+
+.currency-option{
+
+padding:13px 16px;
+
+cursor:pointer;
+
+font-size:14px;
+
+font-weight:500;
+
+transition:.2s;
+
+}
+
+.currency-option:hover{
+
+background:#f7f7f7;
+
+}
