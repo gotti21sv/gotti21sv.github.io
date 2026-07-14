@@ -100,6 +100,16 @@ location.href="product.html?id="+id;
 const catalog = document.querySelector(".catalog");
 const buttons = document.querySelectorAll(".view-btn");
 
+buttons.forEach(btn=>btn.classList.remove("active"));
+
+document
+.querySelector('[data-view="4"]')
+.classList.add("active");
+
+catalog.classList.remove("view-1","view-12");
+
+catalog.classList.add("view-4");
+
 /* по умолчанию сразу открываем 4 карточки */
 
 catalog.classList.add("view-4");
