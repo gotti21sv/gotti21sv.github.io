@@ -132,3 +132,16 @@ setTimeout(()=>{
     shop.style.transform="translateY(0)";
 
 },700);
+window.addEventListener("load",()=>{
+
+requestAnimationFrame(()=>{
+
+requestAnimationFrame(()=>{
+
+document.getElementById("loader").classList.add("hide");
+
+});
+
+});
+
+});
