@@ -134,6 +134,10 @@ font-weight:300;
 
 color:#666;
 
+transition:
+opacity .22s ease,
+transform .22s ease;
+
 }
 
 /* ---------------- MOBILE ---------------- */
