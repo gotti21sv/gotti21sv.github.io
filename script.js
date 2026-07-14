@@ -98,8 +98,11 @@ location.href="product.html?id="+id;
 ========================================= */
 
 const catalog = document.querySelector(".catalog");
-
 const buttons = document.querySelectorAll(".view-btn");
+
+/* по умолчанию сразу открываем 4 карточки */
+
+catalog.classList.add("view-4");
 
 buttons.forEach(button=>{
 
@@ -117,13 +120,9 @@ catalog.style.pointerEvents="none";
 
 setTimeout(()=>{
 
-catalog.classList.remove("view-1");
-catalog.classList.remove("view-4");
-catalog.classList.remove("view-12");
+catalog.classList.remove("view-1","view-4","view-12");
 
 catalog.classList.add("view-"+button.dataset.view);
-
-requestAnimationFrame(()=>{
 
 setTimeout(()=>{
 
@@ -131,20 +130,10 @@ catalog.classList.remove("switching");
 
 catalog.style.pointerEvents="";
 
-},70);
-
-});
+},120);
 
 },180);
 
 });
 
 });
-
-catalog.classList.add("view-4");
-
-});
-
-});
-
-catalog.classList.add("view-4");
