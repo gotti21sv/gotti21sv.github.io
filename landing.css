@@ -223,6 +223,10 @@ box-shadow:
 
 0 12px 35px rgba(0,0,0,.35);
 
+opacity:0;
+
+transform:translateY(24px);
+
 }
 
 .shop-now:hover{
@@ -304,5 +308,32 @@ font-size:29px;
 gap:30px;
 
 }
+
+}
+.shop-now.pressed{
+
+transform:scale(.95);
+
+filter:brightness(.96);
+
+}
+
+.hero-image img{
+
+transition:transform .35s linear;
+
+will-change:transform;
+
+}
+
+.hero-logo{
+
+will-change:transform,opacity;
+
+}
+
+.hero-socials a{
+
+will-change:transform,opacity;
 
 }
