@@ -52,7 +52,7 @@ let direction=1;
 
 setInterval(()=>{
 
-    scale+=0.0004*direction;
+    scale+=0.0006*direction;
 
     if(scale>=1.09){
 
@@ -68,7 +68,7 @@ setInterval(()=>{
 
     heroImage.style.transform=`scale(${scale})`;
 
-},40);
+},25);
 
 
 /* ===========================================
