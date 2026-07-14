@@ -64,7 +64,7 @@ top:16px;
 
 display:flex;
 
-gap:18px;
+gap:26px;
 
 }
 
@@ -94,9 +94,9 @@ transform:scale(.92);
 
 .socials svg{
 
-width:22px;
+width:31px;
 
-height:22px;
+height:31px;
 
 display:block;
 
