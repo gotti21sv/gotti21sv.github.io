@@ -218,6 +218,8 @@ const params = new URLSearchParams(window.location.search);
 const product = decodeURIComponent(params.get("product") || "");
 const price = decodeURIComponent(params.get("price") || "");
 const image = decodeURIComponent(params.get("image") || "");
+const selectedSizeFromProduct =
+params.get("size") || "S";
 if(!product || !price || !image){
 
 alert("Помилка відкриття товару.");
@@ -264,7 +266,7 @@ document.getElementById("productImage").src = image;
 document.getElementById("productImage").loading = "eager";
 /* ---------- SIZE ---------- */
 
-let selectedSize = "S";
+let selectedSize = selectedSizeFromProduct;
 
 document.querySelectorAll(".size").forEach(btn=>{
 
@@ -277,6 +279,18 @@ btn.classList.add("active");
 selectedSize=btn.textContent;
 
 });
+
+});
+
+document.querySelectorAll(".size").forEach(btn=>{
+
+if(btn.textContent===selectedSize){
+
+document.querySelectorAll(".size").forEach(b=>b.classList.remove("active"));
+
+btn.classList.add("active");
+
+}
 
 });
 
