@@ -177,6 +177,14 @@ const currencyOptions = document.querySelectorAll(".currency-option");
 let currency = localStorage.getItem("currency") || "UAH";
 
 function updatePrices(){
+    
+document.querySelectorAll(".product p").forEach(price=>{
+
+    price.style.opacity="0";
+
+    price.style.transform="translateY(6px)";
+
+});
 
     document.querySelectorAll(".product").forEach(product=>{
 
@@ -201,6 +209,17 @@ function updatePrices(){
         ? "UKRAINE 🇺🇦"
         : "EUROPE 🇪🇺";
 
+    setTimeout(()=>{
+
+    document.querySelectorAll(".product p").forEach(price=>{
+
+        price.style.opacity="1";
+
+        price.style.transform="translateY(0)";
+
+    });
+
+},220);
 }
 
 updatePrices();
