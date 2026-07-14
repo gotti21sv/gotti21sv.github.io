@@ -19,12 +19,7 @@ font-family:"Manrope",sans-serif;
 -webkit-font-smoothing:antialiased;
 -moz-osx-font-smoothing:grayscale;
 
-opacity:1;
-transition:opacity .4s ease;
-
-opacity:0;
-transform:translateY(16px);
-animation:pageIn .65s cubic-bezier(.22,.61,.36,1) forwards;
+overflow-x:hidden;
 
 }
 
