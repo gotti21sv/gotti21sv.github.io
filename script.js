@@ -1,24 +1,95 @@
-document.querySelectorAll(".product").forEach(card => {
+const products = document.querySelectorAll(".product");
 
-    card.addEventListener("click", function () {
+/* ==========================================
+   Ждём полной загрузки страницы
+========================================== */
 
-        const id = this.dataset.id;
+window.addEventListener("load", () => {
 
-        // плавное нажатие карточки
-        this.style.transform = "scale(0.97)";
-        this.style.opacity = "0.75";
+    const images = document.images;
 
-        // плавное исчезновение всей страницы
-        document.body.style.transition = "opacity .4s ease";
-        document.body.style.opacity = "0";
+    let loaded = 0;
 
-        // переход после завершения анимации
-        setTimeout(() => {
+    function reveal(){
 
-            window.location.href = "product.html?id=" + id;
+        products.forEach((card,index)=>{
 
-        }, 350);
+            setTimeout(()=>{
 
-    });
+                card.classList.add("show");
+
+            },index*45);
+
+        });
+
+    }
+
+    if(images.length===0){
+
+        setTimeout(reveal,120);
+
+        return;
+
+    }
+
+    for(const img of images){
+
+        if(img.complete){
+
+            loaded++;
+
+        }else{
+
+            img.onload=()=>{
+
+                loaded++;
+
+                if(loaded===images.length){
+
+                    setTimeout(reveal,120);
+
+                }
+
+            };
+
+        }
+
+    }
+
+    if(loaded===images.length){
+
+        setTimeout(reveal,120);
+
+    }
+
+});
+
+/* ==========================================
+   Переход
+========================================== */
+
+products.forEach(card=>{
+
+card.addEventListener("click",()=>{
+
+const id=card.dataset.id;
+
+card.style.transform="scale(.985)";
+
+setTimeout(()=>{
+
+document.body.style.opacity="0";
+
+document.body.style.transition=".35s ease";
+
+},70);
+
+setTimeout(()=>{
+
+location.href="product.html?id="+id;
+
+},420);
+
+});
 
 });
