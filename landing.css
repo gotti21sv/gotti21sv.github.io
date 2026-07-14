@@ -167,7 +167,7 @@ position:absolute;
 
 left:0;
 
-bottom:18px;
+bottom:90px;
 
 width:100%;
 
@@ -249,7 +249,7 @@ transform:scale(.96);
 
 position:absolute;
 
-top:34px;
+top:36px;
 
 left:22px;
 
@@ -257,11 +257,9 @@ display:flex;
 
 flex-direction:column;
 
-gap:24px;
+gap:26px;
 
-margin:0;
-
-z-index:20;
+z-index:30;
 
 }
 
@@ -283,19 +281,25 @@ transform:scale(.88);
 
 .hero-socials img{
 
-width:36px;
+width:34px;
 
-height:36px;
+height:34px;
 
 display:block;
 
 object-fit:contain;
 
-transition:.25s ease;
-
 -webkit-user-drag:none;
 
 user-select:none;
+
+transition:.25s ease;
+
+}
+
+.hero-socials a:active img{
+
+transform:scale(.88);
 
 }
 
