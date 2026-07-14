@@ -264,9 +264,10 @@ document.getElementById("department").placeholder="Address / Delivery";
 
 }
 
+document.getElementById("productName").textContent = product;
 document.getElementById("productPrice").textContent = price;
 document.getElementById("productImage").src = image;
-document.getElementById("productImage").loading="eager";
+document.getElementById("productImage").loading = "eager";
 /* ---------- SIZE ---------- */
 
 let selectedSize = "S";
@@ -303,8 +304,6 @@ contactType=btn.textContent;
 
 });
 /* ---------- PAYMENT TYPE ---------- */
-
-const currency = localStorage.getItem("currency") || "UAH";
 
 let paymentType =
 currency==="EUR"
