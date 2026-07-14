@@ -374,3 +374,28 @@ height:45px;
 transform:translateX(-8px);
 
 }
+.hero{
+
+animation:heroReveal 2.2s cubic-bezier(.22,.61,.36,1);
+
+}
+
+@keyframes heroReveal{
+
+0%{
+
+transform:scale(1.035);
+
+opacity:.92;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
