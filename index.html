@@ -181,7 +181,86 @@ window.addEventListener("load",()=>{
     },2300);
 
 });
+/* ===============================
+   MENU
+================================ */
 
+const menuBtn = document.getElementById("menuBtn");
+
+const sideMenu = document.getElementById("sideMenu");
+
+const overlay = document.getElementById("menuOverlay");
+
+const gallery = document.querySelector(".gallery-track");
+
+function openMenu(){
+
+menuBtn.classList.add("active");
+
+sideMenu.classList.add("open");
+
+overlay.classList.add("show");
+
+document.body.style.overflow="hidden";
+
+/* пауза галереи */
+
+gallery.style.animationPlayState="paused";
+
+}
+
+function closeMenu(){
+
+menuBtn.classList.remove("active");
+
+sideMenu.classList.remove("open");
+
+overlay.classList.remove("show");
+
+document.body.style.overflow="";
+
+/* продолжение галереи */
+
+gallery.style.animationPlayState="running";
+
+}
+
+menuBtn.addEventListener("click",()=>{
+
+if(sideMenu.classList.contains("open")){
+
+closeMenu();
+
+}else{
+
+openMenu();
+
+}
+
+});
+
+overlay.addEventListener("click",closeMenu);
+
+
+/* ===============================
+   SHOP BUTTON
+================================ */
+
+document.getElementById("shopNow").addEventListener("click",function(e){
+
+e.preventDefault();
+
+this.classList.add("loading");
+
+document.getElementById("loader").classList.remove("hide");
+
+setTimeout(()=>{
+
+location.href="shop.html";
+
+},850);
+
+});
 document.getElementById("openShop").addEventListener("click",function(e){
 
     e.preventDefault();
