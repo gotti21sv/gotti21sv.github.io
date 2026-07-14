@@ -234,32 +234,26 @@ const currency = localStorage.getItem("currency") || "UAH";
 
 if(currency==="EUR"){
 
-document.querySelector(".section-title:nth-of-type(1)").textContent="SIZE";
+const titles=document.querySelectorAll(".section-title");
 
-document.querySelector(".section-title:nth-of-type(2)").textContent="CONTACT";
+titles[0].textContent="SIZE";
+titles[1].textContent="CONTACT";
+titles[2].textContent="SHIPPING";
+titles[3].textContent="PAYMENT";
 
-document.querySelector(".section-title:nth-of-type(3)").textContent="SHIPPING";
-
-document.querySelector(".section-title:nth-of-type(4)").textContent="PAYMENT";
-
-document.querySelector(".pay-btn[data-type='full']").textContent="Full payment";
-
-document.querySelector(".pay-btn[data-type='deposit']").textContent="Deposit €10";
+document.querySelector('[data-type="full"]').textContent="Full payment";
+document.querySelector('[data-type="deposit"]').textContent="Deposit €10";
 
 document.querySelector(".pay-main").textContent="PAY";
 
 document.querySelector(".payment-info").textContent=
 "After successful payment, tap the button below to send your order.";
 
-document.getElementById("sendOrder").textContent=
-"SEND ORDER";
+document.getElementById("sendOrder").textContent="SEND ORDER";
 
 document.getElementById("name").placeholder="Full name";
-
 document.getElementById("city").placeholder="City";
-
 document.getElementById("phone").placeholder="Phone number";
-
 document.getElementById("department").placeholder="Address / Delivery";
 
 }
@@ -415,6 +409,9 @@ document.getElementById("summaryPayment").textContent =
 paymentType;
 
 });
+console.log(product);
+console.log(price);
+console.log(image);
 document.getElementById("sendOrder").addEventListener("click", () => {
 
 const text = currency==="EUR"
