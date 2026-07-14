@@ -471,8 +471,6 @@ transform:translateX(calc(-190px * 3));
 }
 /* ---------- SHOP NOW ---------- */
 
-/* SHOP NOW */
-
 .shop-now{
 
 display:flex;
@@ -483,6 +481,7 @@ width:185px;
 height:88px;
 
 margin:12px auto 70px;
+transform:translateY(-30px);
 
 text-decoration:none;
 
@@ -509,35 +508,10 @@ transition:.25s ease;
 
 .shop-now:hover{
 
-background:rgba(255,255,255,.28);
-
-transform:translateY(-2px);
-
-}
-
-.shop-now:active{
-
-transform:scale(.97);
-
-}
-
-.shop-now:hover{
-
-transform:translateY(-2px);
-
 background:rgba(18,18,18,.82);
+color:#fff;
 
-}
-
-.shop-now:active{
-
-transform:scale(.97);
-
-}
-
-.shop-now:hover{
-
-transform:translateY(-3px);
+transform:translateY(-33px);
 
 box-shadow:
 0 24px 55px rgba(0,0,0,.22),
@@ -547,17 +521,6 @@ inset 0 1px rgba(255,255,255,.22);
 
 .shop-now:active{
 
-transform:scale(.96);
-
-}
-.separator{
-
-width:84%;
-
-height:1px;
-
-margin:18px auto 24px;
-
-background:rgba(0,0,0,.05);
+transform:translateY(-30px) scale(.96);
 
 }
