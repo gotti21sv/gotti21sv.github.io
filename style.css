@@ -1024,3 +1024,130 @@ transform:scale(.94);
 filter:blur(.8px);
 
 }
+/* =========================================
+   PREMIUM PRODUCT RESIZE
+========================================= */
+
+.product img{
+
+transition:
+
+transform .65s cubic-bezier(.22,.61,.36,1),
+
+width .65s cubic-bezier(.22,.61,.36,1),
+
+margin .65s cubic-bezier(.22,.61,.36,1),
+
+opacity .4s ease;
+
+}
+
+.product h2{
+
+transition:
+
+font-size .55s cubic-bezier(.22,.61,.36,1),
+
+letter-spacing .55s cubic-bezier(.22,.61,.36,1),
+
+margin .55s cubic-bezier(.22,.61,.36,1),
+
+opacity .4s ease;
+
+}
+
+.product p{
+
+transition:
+
+font-size .55s cubic-bezier(.22,.61,.36,1),
+
+opacity .4s ease;
+
+}
+
+/* =========================================
+   1 COLUMN
+========================================= */
+
+.catalog.view-1 .product img{
+
+max-width:100%;
+
+}
+
+.catalog.view-1 .product h2{
+
+font-size:20px;
+
+letter-spacing:.7px;
+
+margin-top:8px;
+
+}
+
+.catalog.view-1 .product p{
+
+font-size:18px;
+
+}
+
+/* =========================================
+   4 GRID
+========================================= */
+
+.catalog.view-4 .product img{
+
+max-width:100%;
+
+}
+
+.catalog.view-4 .product h2{
+
+font-size:15px;
+
+}
+
+.catalog.view-4 .product p{
+
+font-size:15px;
+
+}
+
+/* =========================================
+   12 GRID
+========================================= */
+
+.catalog.view-12 .product{
+
+padding:0;
+
+}
+
+.catalog.view-12 .product img{
+
+max-width:100%;
+
+margin-bottom:6px;
+
+}
+
+.catalog.view-12 .product h2{
+
+font-size:11px;
+
+letter-spacing:.35px;
+
+margin-bottom:2px;
+
+line-height:1.25;
+
+}
+
+.catalog.view-12 .product p{
+
+font-size:11px;
+
+opacity:.78;
+
+}
