@@ -277,19 +277,19 @@ margin:0;
 
 .domain{
 
-font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
-
 font-size:12px;
 
 font-weight:300;
 
-letter-spacing:7px;
+letter-spacing:8px;
 
-text-transform:lowercase;
+text-transform:uppercase;
 
-color:#9a9a9a;
+color:#9c9c9c;
 
-margin:0;
+font-family:inherit;
+
+margin-left:10px;
 
 }
 
