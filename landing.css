@@ -246,9 +246,11 @@ transform:scale(.985);
 .card-text{
 
 display:flex;
+
 flex-direction:row;
 
 align-items:center;
+
 justify-content:center;
 
 gap:14px;
@@ -257,33 +259,37 @@ gap:14px;
 
 .small-title{
 
-font-size:12px;
+font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 
-letter-spacing:7px;
+font-size:12px;
 
 font-weight:300;
 
-color:#9a9a9a;
+letter-spacing:7px;
 
 text-transform:uppercase;
 
-font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+color:#9a9a9a;
+
+margin:0;
 
 }
 
 .domain{
 
-font-size:12px;
+font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 
-letter-spacing:7px;
+font-size:12px;
 
 font-weight:300;
 
-color:#9a9a9a;
-
-font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+letter-spacing:7px;
 
 text-transform:lowercase;
+
+color:#9a9a9a;
+
+margin:0;
 
 }
 
