@@ -255,7 +255,7 @@ currency==="EUR"
 const price = encodeURIComponent(currentPrice);
 
 window.location.href =
-`checkout.html?product=${name}&price=${price}&image=${image}`;
+`checkout.html?v=7&product=${name}&price=${price}&image=${image}`;
 
 });
 
