@@ -105,15 +105,39 @@ buttons.forEach(button=>{
 
 button.addEventListener("click",()=>{
 
+if(button.classList.contains("active")) return;
+
 buttons.forEach(b=>b.classList.remove("active"));
 
 button.classList.add("active");
+
+catalog.classList.add("switching");
+
+setTimeout(()=>{
 
 catalog.classList.remove("view-1");
 catalog.classList.remove("view-4");
 catalog.classList.remove("view-12");
 
 catalog.classList.add("view-"+button.dataset.view);
+
+requestAnimationFrame(()=>{
+
+setTimeout(()=>{
+
+catalog.classList.remove("switching");
+
+},70);
+
+});
+
+},180);
+
+});
+
+});
+
+catalog.classList.add("view-4");
 
 });
 
