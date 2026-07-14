@@ -807,17 +807,13 @@ transform:translateY(0) scale(1);
 
 display:flex;
 
-justify-content:flex-end;
-
 align-items:center;
 
-gap:14px;
+justify-content:space-between;
 
-max-width:1180px;
+margin-top:34px;
 
-margin:6px auto 26px;
-
-padding:0 20px;
+margin-bottom:30px;
 
 }
 
@@ -1157,39 +1153,48 @@ opacity:.78;
 
 .currency-switch{
 
-position:absolute;
+position:relative;
 
-left:20px;
+display:flex;
 
-top:118px;
+align-items:center;
 
-z-index:20;
+margin-right:auto;
 
 }
 
 #currencyButton{
 
 display:flex;
-
 align-items:center;
-
 gap:8px;
 
-padding:10px 14px;
+background:transparent;
 
-background:#fff;
+border:none;
 
-border:1px solid #e7e7e7;
+outline:none;
 
-border-radius:11px;
+padding:0;
 
-font-size:14px;
+margin:0;
 
-font-weight:600;
+font-family:"Inter",sans-serif;
+
+font-size:17px;
+
+font-weight:400;
+
+letter-spacing:.3px;
+
+color:#111;
 
 cursor:pointer;
 
-transition:.25s;
+-webkit-appearance:none;
+appearance:none;
+
+box-shadow:none;
 
 }
 
@@ -1202,6 +1207,12 @@ transform:scale(.96);
 .arrow{
 
 font-size:11px;
+
+margin-left:3px;
+
+color:#111;
+
+transition:.25s;
 
 }
 
