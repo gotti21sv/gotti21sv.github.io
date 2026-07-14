@@ -251,7 +251,7 @@ position:absolute;
 
 top:34px;
 
-left:24px;
+left:22px;
 
 display:flex;
 
@@ -281,17 +281,27 @@ transform:scale(.88);
 
 }
 
-.hero-socials svg{
+.hero-socials img{
 
-width:34px;
+width:36px;
 
-height:34px;
+height:36px;
 
 display:block;
 
-filter:
+object-fit:contain;
 
-drop-shadow(0 0 2px rgba(255,255,255,.45));
+transition:.25s ease;
+
+-webkit-user-drag:none;
+
+user-select:none;
+
+}
+
+.hero-socials a:active img{
+
+transform:scale(.9);
 
 }
 
