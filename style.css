@@ -904,3 +904,86 @@ height:20px;
 }
 
 }
+/* =========================================
+   GRID MODES
+========================================= */
+
+.catalog{
+
+transition:.45s ease;
+
+}
+
+/* ---------- 1 товар ---------- */
+
+.catalog.view-1{
+
+grid-template-columns:1fr;
+
+}
+
+/* ---------- 4 товара ---------- */
+
+.catalog.view-4{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+/* ---------- 12 ---------- */
+
+.catalog.view-12{
+
+grid-template-columns:repeat(3,1fr);
+
+gap:16px;
+
+}
+
+.catalog.view-12 .product img{
+
+margin-bottom:8px;
+
+}
+
+.catalog.view-12 .product h2{
+
+font-size:12px;
+
+line-height:1.2;
+
+margin-bottom:3px;
+
+}
+
+.catalog.view-12 .product p{
+
+font-size:12px;
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:768px){
+
+.catalog.view-1{
+
+grid-template-columns:1fr;
+
+}
+
+.catalog.view-4{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.catalog.view-12{
+
+grid-template-columns:repeat(3,1fr);
+
+gap:12px;
+
+}
+
+}
