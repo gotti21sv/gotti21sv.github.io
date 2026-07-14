@@ -367,10 +367,10 @@ will-change:transform,opacity;
 
 .hero-socials a:last-child img{
 
-width:41px;
+width:45px;
 
-height:41px;
+height:45px;
 
-transform:translateX(-2px);
+transform:translateX(-8px);
 
 }
