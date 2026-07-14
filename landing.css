@@ -507,6 +507,9 @@ inset 0 1px rgba(255,255,255,.45);
 
 transition:.25s ease;
 
+position:relative;
+
+overflow:hidden;
 }
 
 .shop-now:hover{
@@ -790,5 +793,59 @@ height:28px;
 flex-shrink:0;
 
 fill:currentColor;
+
+}
+/* ======================================
+   SHOP NOW CLICK EFFECT
+====================================== */
+
+.shop-now::after{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:70%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.75),
+transparent
+);
+
+transform:skewX(-20deg);
+
+}
+
+.shop-now.loading{
+
+transform:scale(.95);
+
+box-shadow:
+
+0 0 30px rgba(0,0,0,.12);
+
+}
+
+.shop-now.loading::after{
+
+animation:buttonFlash .7s ease;
+
+}
+
+@keyframes buttonFlash{
+
+100%{
+
+left:180%;
+
+}
 
 }
