@@ -46,10 +46,10 @@ background:#fff;
 
 display:block;
 
+width:170px;
 height:auto;
 
 user-select:none;
-
 -webkit-user-drag:none;
 
 }
