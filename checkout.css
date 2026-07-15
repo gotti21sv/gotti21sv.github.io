@@ -38,7 +38,7 @@ font-family:"Manrope",sans-serif;
     max-width:390px;
     margin:auto;
     padding:0 18px 30px;
-    margin-top:-18px;
+    margin-top:-28px;
     opacity:0;
 transform:translateY(16px);
 animation:pageIn .65s cubic-bezier(.22,.61,.36,1) forwards;
