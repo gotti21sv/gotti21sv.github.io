@@ -38,7 +38,7 @@ font-family:"Manrope",sans-serif;
     max-width:390px;
     margin:auto;
     padding:0 18px 30px;
-    margin-top:-38px;
+    margin-top:-18px;
     opacity:0;
 transform:translateY(16px);
 animation:pageIn .65s cubic-bezier(.22,.61,.36,1) forwards;
@@ -49,25 +49,14 @@ animation:pageIn .65s cubic-bezier(.22,.61,.36,1) forwards;
 /* ================================================= */
 
 .back{
-
-position:absolute;
-
-left:28px;
-
-top:36px;
-
-font-size:48px;
-
-font-weight:300;
-
-line-height:1;
-
-color:#111;
-
-text-decoration:none;
-
--webkit-tap-highlight-color:transparent;
-
+    position:absolute;
+    left:14px;
+    top:28px;
+    font-size:32px;
+    font-weight:300;
+    color:#111;
+    text-decoration:none;
+    line-height:1;
 }
 
 .back:hover{
