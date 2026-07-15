@@ -49,10 +49,24 @@ animation:pageIn .65s cubic-bezier(.22,.61,.36,1) forwards;
 /* ================================================= */
 
 .back{
-    font-size:28px;
-    color:#111;
-    text-decoration:none;
-    margin-right:10px;
+
+position:absolute;
+
+left:18px;
+top:22px;
+
+font-size:34px;
+
+font-weight:300;
+
+color:#111;
+
+text-decoration:none;
+
+line-height:1;
+
+-webkit-tap-highlight-color:transparent;
+
 }
 
 .back:hover{
