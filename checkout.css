@@ -52,18 +52,19 @@ animation:pageIn .65s cubic-bezier(.22,.61,.36,1) forwards;
 
 position:absolute;
 
-left:18px;
-top:22px;
+left:28px;
 
-font-size:34px;
+top:36px;
+
+font-size:48px;
 
 font-weight:300;
+
+line-height:1;
 
 color:#111;
 
 text-decoration:none;
-
-line-height:1;
 
 -webkit-tap-highlight-color:transparent;
 
