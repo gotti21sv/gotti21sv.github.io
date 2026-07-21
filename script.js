@@ -243,12 +243,8 @@ function updatePrices(){
 
 updatePrices();
 
-currencyButton.addEventListener("click", (e) => {
-
-    e.stopPropagation();
-
+currencyButton.addEventListener("click", () => {
     currencyMenu.classList.toggle("show");
-
 });
 
 currencyOptions.forEach(option=>{
