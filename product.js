@@ -111,12 +111,12 @@ priceEl.innerHTML = `<span style="color:#d00;font-weight:700;">${euroPrices[id]}
 if(product.oldPrice){
 
 priceEl.innerHTML = `
-<span style="text-decoration:line-through;color:#888;font-size:17px;margin-right:8px;">
-${product.oldPrice}
+<span style="color:#d00;font-size:24px;font-weight:700;margin-right:8px;">
+${product.price}
 </span>
 
-<span style="color:#d00;font-size:24px;font-weight:700;">
-${product.price}
+<span style="text-decoration:line-through;color:#888;font-size:17px;">
+${product.oldPrice}
 </span>
 `;
 
