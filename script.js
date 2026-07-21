@@ -243,10 +243,13 @@ function updatePrices(){
 
 updatePrices();
 
-currencyButton.addEventListener("click",()=>{
+currencyButton.addEventListener("click", () => {
+    console.log("CLICK");
+    alert(currencyMenu.className);
 
     currencyMenu.classList.toggle("show");
 
+    alert(currencyMenu.className);
 });
 
 currencyOptions.forEach(option=>{
