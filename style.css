@@ -1382,11 +1382,13 @@ background:#a31919;
 
 color:#fff;
 
-padding:8px 18px;
+padding:4px 10px;
 
-font-size:18px;
+font-size:11px;
 
-font-weight:400;
+font-weight:500;
+
+letter-spacing:.3px;
 
 z-index:50;
 
@@ -1412,17 +1414,17 @@ flex-wrap:wrap;
 
 .new-price{
 
-font-size:22px;
-
-color:#fff;
+font-size:15px;
 
 font-weight:500;
+
+color:#111;
 
 }
 
 .old-price{
 
-font-size:19px;
+font-size:14px;
 
 color:#8c8c8c;
 
