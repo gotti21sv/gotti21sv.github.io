@@ -1356,13 +1356,9 @@ margin-top:6px;
 }
 
 .new-price{
-
-font-size:20px;
-
-font-weight:500;
-
-color:white;
-
+    font-size:22px;
+    font-weight:500;
+    color:#111;
 }
 
 .old-price{
