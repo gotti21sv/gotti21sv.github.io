@@ -4,7 +4,8 @@ const products = {
 
 "black-hoodie":{
 name:"BLACK HOODIE",
-price:"₴1,700.00 UAH",
+price:"₴1,600.00 UAH",
+oldPrice:"₴1,800.00 UAH",
 images:[
 "8C130B78-B7E7-443F-9AE8-439ABEDD649B.png"
 ]
@@ -12,7 +13,8 @@ images:[
 
 "18-hoodie":{
 name:"HOODIE «18+»",
-price:"₴2,000.00 UAH",
+price:"₴1,750.00 UAH",
+oldPrice:"₴2,000.00 UAH",
 images:[
 "5B6F7A08-C316-4A87-A4C5-1B3A0E911F03.jpeg"
 ]
@@ -20,7 +22,8 @@ images:[
 
 "pink-hoodie":{
 name:"HOODIE PINK",
-price:"₴1,800.00 UAH",
+price:"₴1,600.00 UAH",
+oldPrice:"₴1,800.00 UAH",
 images:[
 "27B780A1-FD3E-4162-BDE7-489782C64396.png"
 ]
@@ -28,7 +31,8 @@ images:[
 
 "cross-shirt":{
 name:"T-SHIRT BLACK",
-price:"₴1,000.00 UAH",
+price:"₴900.00 UAH",
+oldPrice:"₴1,000.00 UAH",
 images:[
 "261898D7-7E97-45C3-A30E-37091EA36423.png"
 ]
@@ -36,7 +40,8 @@ images:[
 
 "black-shorts":{
 name:"DOUBLEWAIST SHORTS",
-price:"₴1,400.00 UAH",
+price:"₴1,250.00 UAH",
+oldPrice:"₴1,400.00 UAH",
 images:[
 "F00B8C5C-0ADE-494C-869D-DAE50880EE70.png"
 ]
@@ -44,7 +49,8 @@ images:[
 
 "18-longsleeve":{
 name:"LONGSLEEVE «18+»",
-price:"₴1,300.00 UAH",
+price:"₴1,150.00 UAH",
+oldPrice:"₴1,300.00 UAH",
 images:[
 "FAB8E75D-6289-4ED5-BA9B-A2CBF6FB108C.png"
 ]
@@ -82,24 +88,45 @@ nameEl.textContent = product.name;
 
 const euroPrices = {
 
-"cross-shirt":"€20",
+"cross-shirt":"€18",
 
-"black-hoodie":"€34",
+"black-hoodie":"€32",
 
-"black-shorts":"€28",
+"black-shorts":"€25",
 
-"pink-hoodie":"€36",
+"pink-hoodie":"€32",
 
-"18-hoodie":"€40",
+"18-hoodie":"€35",
 
-"18-longsleeve":"€26"
+"18-longsleeve":"€23"
 
 };
 
-priceEl.textContent =
-currency==="EUR"
-? euroPrices[id]
-: product.price;
+if(currency==="EUR"){
+
+priceEl.innerHTML = `<span style="color:#d00;font-weight:700;">${euroPrices[id]}</span>`;
+
+}else{
+
+if(product.oldPrice){
+
+priceEl.innerHTML = `
+<span style="text-decoration:line-through;color:#888;font-size:17px;margin-right:8px;">
+${product.oldPrice}
+</span>
+
+<span style="color:#d00;font-size:24px;font-weight:700;">
+${product.price}
+</span>
+`;
+
+}else{
+
+priceEl.textContent = product.price;
+
+}
+
+}
 
 /* ---------------- CHANGE IMAGE ---------------- */
 
