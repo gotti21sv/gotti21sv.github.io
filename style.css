@@ -1380,19 +1380,21 @@ flex-wrap:nowrap;
 
 }
 
+.price{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:2px;
+}
+
 .new-price{
-
-font-size:15px;
-font-weight:600;
-color:#111;
-
+    font-size:18px;
+    font-weight:700;
+    color:#000;
 }
 
 .old-price{
-
-font-size:13px;
-font-weight:400;
-color:#8c8c8c;
-text-decoration:line-through;
-
+    font-size:14px;
+    color:#8a8a8a;
+    text-decoration:line-through;
 }
