@@ -151,22 +151,50 @@ catalog.style.pointerEvents="";
    CURRENCY
 ========================================== */
 
-const pricesUAH = {
-    "cross-shirt":"₴1,000.00 UAH",
-    "black-hoodie":"₴1,700.00 UAH",
-    "black-shorts":"₴1,400.00 UAH",
-    "pink-hoodie":"₴1,800.00 UAH",
-    "18-hoodie":"₴2,000.00 UAH",
-    "18-longsleeve":"₴1,300.00 UAH"
-};
+const prices = {
 
-const pricesEUR = {
-    "cross-shirt":"€20",
-    "black-hoodie":"€34",
-    "black-shorts":"€28",
-    "pink-hoodie":"€36",
-    "18-hoodie":"€40",
-    "18-longsleeve":"€26"
+"cross-shirt":{
+oldUAH:"₴1,000.00 UAH",
+newUAH:"₴900.00 UAH",
+oldEUR:"€20",
+newEUR:"€18"
+},
+
+"black-hoodie":{
+oldUAH:"₴1,800.00 UAH",
+newUAH:"₴1,600.00 UAH",
+oldEUR:"€36",
+newEUR:"€32"
+},
+
+"black-shorts":{
+oldUAH:"₴1,400.00 UAH",
+newUAH:"₴1,250.00 UAH",
+oldEUR:"€28",
+newEUR:"€25"
+},
+
+"pink-hoodie":{
+oldUAH:"₴1,800.00 UAH",
+newUAH:"₴1,600.00 UAH",
+oldEUR:"€36",
+newEUR:"€32"
+},
+
+"18-hoodie":{
+oldUAH:"₴2,000.00 UAH",
+newUAH:"₴1,750.00 UAH",
+oldEUR:"€40",
+newEUR:"€35"
+},
+
+"18-longsleeve":{
+oldUAH:"₴1,300.00 UAH",
+newUAH:"₴1,150.00 UAH",
+oldEUR:"€26",
+newEUR:"€23"
+}
+
 };
 
 const currencyButton = document.getElementById("currencyButton");
@@ -194,13 +222,23 @@ document.querySelectorAll(".product p").forEach(price=>{
 
         if(currency==="UAH"){
 
-            price.textContent = pricesUAH[id];
+    const item = prices[id];
 
-        }else{
+if(currency==="UAH"){
 
-            price.textContent = pricesEUR[id];
+price.innerHTML=`
+<span class="new-price">${item.newUAH}</span>
+<span class="old-price">${item.oldUAH}</span>
+`;
 
-        }
+}else{
+
+price.innerHTML=`
+<span class="new-price">${item.newEUR}</span>
+<span class="old-price">${item.oldEUR}</span>
+`;
+
+}
 
     });
 
