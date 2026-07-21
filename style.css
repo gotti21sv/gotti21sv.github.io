@@ -1343,33 +1343,6 @@ background:#f7f7f7;
     z-index:10;
 }
 
-.price{
-
-display:flex;
-
-align-items:center;
-
-gap:8px;
-
-margin-top:6px;
-
-}
-
-.new-price{
-    font-size:22px;
-    font-weight:500;
-    color:#111;
-}
-
-.old-price{
-
-font-size:18px;
-
-color:#9b9b9b;
-
-text-decoration:line-through;
-
-}
 .sale-tag{
 
 position:absolute;
@@ -1403,31 +1376,25 @@ position:relative;
 .product p{
 
 display:flex;
-
 align-items:center;
-
-gap:8px;
-
-flex-wrap:wrap;
+gap:6px;
+flex-wrap:nowrap;
 
 }
 
 .new-price{
 
 font-size:15px;
-
-font-weight:500;
-
+font-weight:600;
 color:#111;
 
 }
 
 .old-price{
 
-font-size:14px;
-
+font-size:13px;
+font-weight:400;
 color:#8c8c8c;
-
 text-decoration:line-through;
 
 }
