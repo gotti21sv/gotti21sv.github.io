@@ -208,10 +208,12 @@ function updatePrices(){
 
         if(currency==="UAH"){
 
-            price.innerHTML = `
-                <span class="new-price">${item.newUAH}</span>
-                <span class="old-price">${item.oldUAH}</span>
-            `;
+card.innerHTML = `
+<div class="price">
+    <div class="new-price">${product.price}</div>
+    <div class="old-price">${product.oldPrice}</div>
+</div>
+`;
 
         }else{
 
