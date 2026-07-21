@@ -1321,3 +1321,56 @@ transition:.2s;
 background:#f7f7f7;
 
 }
+.product{
+    position:relative;
+}
+
+.sale-tag{
+    position:absolute;
+    left:0;
+    bottom:82px;
+
+    background:#b51d1d;
+
+    color:white;
+
+    padding:8px 18px;
+
+    font-size:18px;
+
+    font-weight:400;
+
+    z-index:10;
+}
+
+.price{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+margin-top:6px;
+
+}
+
+.new-price{
+
+font-size:20px;
+
+font-weight:500;
+
+color:white;
+
+}
+
+.old-price{
+
+font-size:18px;
+
+color:#9b9b9b;
+
+text-decoration:line-through;
+
+}
