@@ -27,15 +27,17 @@ overflow-x:hidden;
 /* ---------------- HEADER ---------------- */
 
 .header{
+
 display:flex;
-align-items:flex-start;
 justify-content:flex-start;
+align-items:flex-start;
 
-padding:10px 18px 0;
+padding:8px 16px 0;
 
-margin:0;
+height:60px;
 
 background:#fff;
+
 }
 
 .logo{
@@ -142,7 +144,8 @@ transform .22s ease;
 
 .logo{
 
-width:165px;
+width:120px;
+margin:0;
 
 }
 
@@ -806,16 +809,16 @@ transform:translateY(0) scale(1);
 .view-switch{
 
 display:flex;
-
 justify-content:flex-end;
+align-items:flex-start;
 
-align-items:center;
+padding:0 16px;
 
-margin-top:-58px;
+margin-top:-85px;
+margin-bottom:6px;
 
-margin-bottom:8px;
-
-padding:0 20px;
+position:relative;
+z-index:20;
 
 }
 
@@ -884,16 +887,6 @@ transform:scale(.92);
 }
 
 @media(max-width:768px){
-
-.view-switch{
-
-padding:0 16px;
-
-margin:4px auto 22px;
-
-gap:10px;
-
-}
 
 .view-btn{
 
