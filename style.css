@@ -28,8 +28,10 @@ overflow-x:hidden;
 
 .header{
 display:flex;
-justify-content:flex-start;
-align-items:flex-start;
+justify-content:center;
+align-items:center;
+
+position:relative;
 
 padding:8px 16px 0;
 
@@ -46,8 +48,7 @@ display:block;
 width:130px;
 height:auto;
 
-margin-left:-16px;   /* двигай еще левее */
-margin-right:auto;
+margin:0 auto;
 
 user-select:none;
 -webkit-user-drag:none;
@@ -1391,4 +1392,38 @@ color:#c92a2a;
     font-size:14px;
     color:#8a8a8a;
     text-decoration:line-through;
+}
+.back-btn{
+position:absolute;
+
+left:16px;
+top:50%;
+
+transform:translateY(-50%);
+
+width:30px;
+height:30px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-decoration:none;
+color:#111;
+}
+
+.back-btn svg{
+width:24px;
+height:24px;
+
+stroke:currentColor;
+stroke-width:1.5;
+stroke-linecap:round;
+stroke-linejoin:round;
+fill:none;
+transition:.25s;
+}
+
+.back-btn:hover svg{
+opacity:.55;
 }
