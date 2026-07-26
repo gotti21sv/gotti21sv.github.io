@@ -53,6 +53,8 @@ background:#fff;
 
     user-select:none;
     -webkit-user-drag:none;
+    
+    pointer-events:none;
 }
 
 /* ---------------- SHOP ---------------- */
@@ -1406,8 +1408,8 @@ flex-wrap:nowrap;
 
     transform:translateY(-70%);
 
-    width:30px;
-    height:30px;
+    width:34px;
+    height:34px;
 
     display:flex;
     align-items:center;
@@ -1415,6 +1417,10 @@ flex-wrap:nowrap;
 
     text-decoration:none;
     color:#111;
+
+    z-index:9999;
+
+    cursor:pointer;
 }
 
 .back-btn svg{
