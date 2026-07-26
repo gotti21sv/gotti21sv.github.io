@@ -819,7 +819,7 @@ padding:0 16px;
 margin-top:0;
 margin-bottom:-18px;
 
-transform:translateY(-34px);
+transform:translateY(-26px);
 
 position:relative;
 z-index:50;
@@ -1394,22 +1394,22 @@ color:#c92a2a;
     text-decoration:line-through;
 }
 .back-btn{
-position:absolute;
+    position:absolute;
 
-left:16px;
-top:50%;
+    left:22px;
+    top:50%;
 
-transform:translateY(-50%);
+    transform:translateY(-58%);
 
-width:30px;
-height:30px;
+    width:30px;
+    height:30px;
 
-display:flex;
-align-items:center;
-justify-content:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-text-decoration:none;
-color:#111;
+    text-decoration:none;
+    color:#111;
 }
 
 .back-btn svg{
