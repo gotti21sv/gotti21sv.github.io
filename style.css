@@ -1375,23 +1375,23 @@ flex-wrap:nowrap;
 
 .price{
     display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:2px;
+    flex-direction:row;
+    align-items:center;
+    gap:10px;
+    flex-wrap:nowrap;
 }
 
 .new-price{
-
-font-weight:500;
-
-color:#c92a2a;
-
+    font-weight:500;
+    color:#c92a2a;
+    white-space:nowrap;
 }
 
 .old-price{
     font-size:14px;
     color:#8a8a8a;
     text-decoration:line-through;
+    white-space:nowrap;
 }
 .back-btn{
     position:absolute;
