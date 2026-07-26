@@ -27,9 +27,8 @@ overflow-x:hidden;
 /* ---------------- HEADER ---------------- */
 
 .header{
-
 display:flex;
-justify-content:space-between;
+justify-content:flex-end;
 align-items:flex-start;
 
 padding:8px 16px 0;
