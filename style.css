@@ -217,33 +217,37 @@ display:block;
 
 .back{
 
-position:absolute;
+    position:absolute;
 
-left:18px;
-top:50%;
+    left:28px;
+    top:42%;
 
-transform:translateY(-50%);
+    transform:translateY(-50%);
 
-font-size:34px;
+    font-size:32px;
 
-font-weight:300;
+    font-weight:300;
 
-transition:.25s;
+    transition:.25s;
 
-color:#111 !important;
-text-decoration:none !important;
--webkit-tap-highlight-color:transparent;
+    color:#111 !important;
+    text-decoration:none !important;
+    -webkit-tap-highlight-color:transparent;
+
+    z-index:999;
+}
 
 .back:visited{
-color:#111 !important;
+    color:#111 !important;
 }
 
 .back:hover{
-color:#111 !important;
+    color:#111 !important;
+    opacity:.55;
 }
 
 .back:active{
-color:#111 !important;
+    color:#111 !important;
 }
 
 }
