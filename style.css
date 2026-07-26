@@ -28,7 +28,7 @@ overflow-x:hidden;
 
 .header{
 display:flex;
-justify-content:flex-end;
+justify-content:flex-start;
 align-items:flex-start;
 
 padding:8px 16px 0;
@@ -38,17 +38,16 @@ height:auto;
 margin-bottom:-38px;
 
 background:#fff;
-
 }
 
 .logo{
-
 display:block;
 
 width:130px;
 height:auto;
 
-margin-right:0;
+margin-left:-16px;   /* двигай еще левее */
+margin-right:auto;
 
 user-select:none;
 -webkit-user-drag:none;
