@@ -43,15 +43,16 @@ background:#fff;
 }
 
 .logo{
-display:block;
+    display:block;
 
-width:156px;
-height:auto;
+    width:156px;
+    height:auto;
 
-margin:0 auto;
+    position:relative;
+    left:-10%;
 
-user-select:none;
--webkit-user-drag:none;
+    user-select:none;
+    -webkit-user-drag:none;
 }
 
 /* ---------------- SHOP ---------------- */
@@ -1397,7 +1398,7 @@ flex-wrap:nowrap;
     position:absolute;
 
     left:28px;
-    top:50%;
+    top:38%;
 
     transform:translateY(-70%);
 
