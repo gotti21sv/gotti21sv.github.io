@@ -1401,3 +1401,42 @@ opacity:.55;
 .label{
     display:none;
 }
+.checkout-note{
+
+    margin-top:22px;
+
+    text-align:center;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    color:#777;
+
+}
+
+.checkout-note p{
+
+    margin:4px 0;
+
+}
+
+.checkout-note a{
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+.checkout-note a:hover{
+
+    opacity:.65;
+
+}
