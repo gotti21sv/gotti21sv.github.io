@@ -855,3 +855,44 @@ text-decoration:none;
 opacity:.6;
 
 }
+.checkout-note{
+
+    margin-top:32px;
+
+    text-align:center;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:11px;
+
+    font-weight:400;
+
+    line-height:1.9;
+
+    color:#b8b8b8;
+
+}
+
+.checkout-note p{
+
+    margin:10px 0;
+
+    white-space:nowrap;
+
+}
+
+.checkout-note a{
+
+    color:#a8a8a8;
+
+    text-decoration:none;
+
+    font-weight:400;
+
+}
+
+.checkout-note a:hover{
+
+    color:#888;
+
+}
