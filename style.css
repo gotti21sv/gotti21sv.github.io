@@ -351,32 +351,14 @@ margin-bottom:36px;
 
 .options{
 
-display:flex;
+display:block;
 
-justify-content:space-between;
-
-gap:26px;
-
-margin-bottom:38px;
+margin-bottom:34px;
 
 }
 
 .option{
-
-flex:1;
-
-}
-
-.label{
-
-font-size:15px;
-
-font-weight:500;
-
-color:#8a8a8a;
-
-margin-bottom:8px;
-
+width:100%;
 }
 
 /* SIZE */
@@ -384,100 +366,64 @@ margin-bottom:8px;
 #sizeSelect{
 
 width:100%;
+height:64px;
 
-height:46px;
+padding:0 22px;
 
-padding:0 12px;
-
-border:1px solid #ececec;
-
-border-radius:12px;
+border:2px solid #111;
+border-radius:0;
 
 background:#fff;
 
-font-size:16px;
-
 font-family:"Manrope",sans-serif;
+font-size:20px;
+font-weight:500;
 
-outline:none;
+color:#111;
 
-}
+text-align:center;
+text-align-last:center;
 
-/* QUANTITY */
-
-.quantity{
-
-width:100%;
-
-height:46px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-padding:0 14px;
-
-border:1px solid #ececec;
-
-border-radius:12px;
-
-}
-
-.quantity button{
-
-border:none;
-
-background:none;
-
-font-size:22px;
-
-font-weight:300;
+appearance:none;
+-webkit-appearance:none;
 
 cursor:pointer;
 
-color:#444;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
 
-}
+background-repeat:no-repeat;
+background-position:right 20px center;
+background-size:18px;
 
-#count{
-
-font-size:17px;
-
-font-weight:500;
-
-color:#222;
+outline:none;
 
 }
 
 /* BUY */
 
 .buy-wrap{
-
-display:flex;
-
-justify-content:center;
-
+width:100%;
 }
 
 #buyButton{
 
-width:72%;
+width:100%;
 
-height:50px;
+height:64px;
 
 border:none;
 
-border-radius:14px;
+border-radius:16px;
 
 background:#222;
 
 color:#fff;
 
-font-size:15px;
+font-family:"Manrope",sans-serif;
 
-font-weight:600;
+font-size:20px;
+
+font-weight:500;
 
 letter-spacing:2px;
 
