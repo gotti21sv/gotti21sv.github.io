@@ -79,10 +79,7 @@ const priceEl = document.getElementById("productPrice");
 
 const sizeSelect = document.getElementById("sizeSelect");
 
-const count = document.getElementById("count");
-
 let currentImage = 0;
-let quantity = 1;
 
 nameEl.textContent = product.name;
 
@@ -221,28 +218,6 @@ showImage((currentImage + 1) % product.images.length);
 if(endX > viewerStartX + 50){
 
 showImage((currentImage - 1 + product.images.length) % product.images.length);
-
-}
-
-});
-
-/* ---------------- QUANTITY ---------------- */
-
-document.getElementById("plus").addEventListener("click",()=>{
-
-quantity++;
-
-count.textContent = quantity;
-
-});
-
-document.getElementById("minus").addEventListener("click",()=>{
-
-if(quantity > 1){
-
-quantity--;
-
-count.textContent = quantity;
 
 }
 
