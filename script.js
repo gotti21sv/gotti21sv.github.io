@@ -201,43 +201,43 @@ function updatePrices(){
     document.querySelectorAll(".product").forEach(product=>{
 
         const id = product.dataset.id;
-        const price = product.querySelector("p");
         const item = prices[id];
 
         if(!item) return;
 
-        if(currency==="UAH"){
+        const newPrice = product.querySelector(".new-price");
+        const oldPrice = product.querySelector(".old-price");
 
-card.innerHTML = `
-<div class="price">
-    <div class="new-price">${product.price}</div>
-    <div class="old-price">${product.oldPrice}</div>
-</div>
-`;
+        if(currency === "UAH"){
+
+            if(newPrice){
+                newPrice.textContent = item.oldUAH;
+            }
 
         }else{
 
-            price.innerHTML = `
-                <span class="new-price">${item.newEUR}</span>
-                <span class="old-price">${item.oldEUR}</span>
-            `;
+            if(newPrice){
+                newPrice.textContent = item.oldEUR;
+            }
 
         }
 
-        if(!product.querySelector(".sale-tag")){
+        /* Убираем старую зачёркнутую цену */
+        if(oldPrice){
+            oldPrice.style.display = "none";
+        }
 
-            const sale = document.createElement("div");
-            sale.className = "sale-tag";
-            sale.textContent = "SALE";
+        /* Убираем SALE */
+        const saleTag = product.querySelector(".sale-tag");
 
-            product.appendChild(sale);
-
+        if(saleTag){
+            saleTag.style.display = "none";
         }
 
     });
 
     currencyText.textContent =
-        currency==="UAH"
+        currency === "UAH"
         ? "UKRAINE 🇺🇦"
         : "EUROPE 🇪🇺";
 
