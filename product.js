@@ -4,7 +4,7 @@ const products = {
 
 "black-hoodie":{
 name:"BLACK HOODIE",
-price:"1800.00 UAH",
+price:"₴1800.00",
 images:[
 "8C130B78-B7E7-443F-9AE8-439ABEDD649B.png"
 ]
@@ -12,7 +12,7 @@ images:[
 
 "18-hoodie":{
 name:"HOODIE «18+»",
-price:"2000.00 UAH",
+price:"₴2000.00",
 images:[
 "5B6F7A08-C316-4A87-A4C5-1B3A0E911F03.jpeg"
 ]
@@ -20,7 +20,7 @@ images:[
 
 "pink-hoodie":{
 name:"HOODIE PINK",
-price:"1800.00 UAH",
+price:"₴1800.00",
 images:[
 "27B780A1-FD3E-4162-BDE7-489782C64396.png"
 ]
@@ -28,7 +28,7 @@ images:[
 
 "cross-shirt":{
 name:"T-SHIRT BLACK",
-price:"1000.00 UAH",
+price:"₴1000.00",
 images:[
 "261898D7-7E97-45C3-A30E-37091EA36423.png"
 ]
@@ -36,7 +36,7 @@ images:[
 
 "black-shorts":{
 name:"DOUBLEWAIST SHORTS",
-price:"1400.00 UAH",
+price:"₴1400.00",
 images:[
 "F00B8C5C-0ADE-494C-869D-DAE50880EE70.png"
 ]
@@ -44,7 +44,7 @@ images:[
 
 "18-longsleeve":{
 name:"LONGSLEEVE «18+»",
-price:"1300.00 UAH",
+price:"₴1300.00",
 images:[
 "FAB8E75D-6289-4ED5-BA9B-A2CBF6FB108C.png"
 ]
