@@ -62,7 +62,7 @@ if (!products[id]) {
 }
 const product = products[id];
 
-const currency = localStorage.getItem("currency") || "UAH";
+const currency = "UAH";
 
 const image = document.getElementById("productImage");
 const viewer = document.getElementById("viewer");
@@ -76,22 +76,6 @@ const sizeSelect = document.getElementById("sizeSelect");
 let currentImage = 0;
 
 nameEl.textContent = product.name;
-
-const euroPrices = {
-
-"cross-shirt":"€18",
-
-"black-hoodie":"€32",
-
-"black-shorts":"€25",
-
-"pink-hoodie":"€32",
-
-"18-hoodie":"€35",
-
-"18-longsleeve":"€23"
-
-};
 
 priceEl.textContent = product.price;
 
@@ -205,26 +189,7 @@ const name = encodeURIComponent(product.name);
 
 const size = encodeURIComponent(sizeSelect.value);
 
-const euroPrices = {
-
-"cross-shirt":"€20",
-
-"black-hoodie":"€34",
-
-"black-shorts":"€28",
-
-"pink-hoodie":"€36",
-
-"18-hoodie":"€40",
-
-"18-longsleeve":"€26"
-
-};
-
-const currentPrice =
-currency==="EUR"
-? euroPrices[id]
-: product.price;
+const currentPrice = product.price;
 
 const price = encodeURIComponent(currentPrice);
 
