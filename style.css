@@ -1444,10 +1444,3 @@ opacity:.55;
 /* ==========================================
    PRODUCT SEPARATORS
 ========================================== */
-
-.product{
-    border-top:1px solid #d6d6d6;
-    border-left:1px solid #d6d6d6;
-    padding:12px;
-    box-sizing:border-box;
-}
