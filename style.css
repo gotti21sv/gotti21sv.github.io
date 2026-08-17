@@ -335,11 +335,13 @@ margin-bottom:10px;
 
 #productPrice{
 
-font-size:22px;
+font-size:20px;
 
 font-weight:300;
 
 color:#777;
+
+letter-spacing:0.15px;
 
 margin-bottom:36px;
 
@@ -630,7 +632,13 @@ font-size:26px;
 
 #productPrice{
 
-font-size:19px;
+font-size:18px;
+
+font-weight:300;
+
+color:#777;
+
+letter-spacing:0.15px;
 
 margin-bottom:28px;
 
