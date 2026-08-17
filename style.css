@@ -1340,9 +1340,10 @@ flex-wrap:nowrap;
 }
 
 .new-price{
-    font-weight:600;
-    color:#c92a2a;
+    font-weight:400;
+    color:#333;
     white-space:nowrap;
+    letter-spacing:.2px;
 }
 
 .old-price{
@@ -1439,4 +1440,14 @@ opacity:.55;
 
     opacity:.65;
 
+}
+/* ==========================================
+   PRODUCT SEPARATORS
+========================================== */
+
+.product{
+    border-top:1px solid #d6d6d6;
+    border-left:1px solid #d6d6d6;
+    padding:12px;
+    box-sizing:border-box;
 }
