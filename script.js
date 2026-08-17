@@ -113,41 +113,6 @@ catalog.classList.add("view-4");
    PRICES
 ========================================== */
 
-const prices = {
-
-    "cross-shirt": "₴1,000.00",
-
-    "black-hoodie": "₴1,800.00",
-
-    "black-shorts": "₴1,400.00",
-
-    "pink-hoodie": "₴1,800.00",
-
-    "18-hoodie": "₴2,000.00",
-
-    "18-longsleeve": "₴1,300.00"
-
-};
-
-document.querySelectorAll(".product").forEach(product => {
-
-    const id = product.dataset.id;
-
-    if (!prices[id]) return;
-
-    const newPrice = product.querySelector(".new-price");
-    const oldPrice = product.querySelector(".old-price");
-
-    if (newPrice) {
-        newPrice.textContent = prices[id];
-    }
-
-    if (oldPrice) {
-        oldPrice.style.display = "none";
-    }
-
-});
-
 /* ==========================================
    CURRENCY
 ========================================== */
@@ -278,3 +243,6 @@ document.addEventListener("click",(e)=>{
     if(!e.target.closest(".currency-switch")){
 
         currencyMenu.classList.remove("show");
+
+    }
+});
