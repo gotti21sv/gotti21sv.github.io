@@ -120,33 +120,33 @@ catalog.classList.add("view-4");
 const prices = {
 
     "cross-shirt": {
-        oldUAH: "1000.00 UAH",
-        newUAH: "1000.00 UAH"
+        oldUAH: "₴1000.00",
+        newUAH: "₴1000.00"
     },
 
     "black-hoodie": {
-        oldUAH: "1800.00 UAH",
-        newUAH: "1800.00 UAH"
+        oldUAH: "₴1800.00",
+        newUAH: "₴1800.00"
     },
 
     "black-shorts": {
-        oldUAH: "1400.00 UAH",
-        newUAH: "1400.00 UAH"
+        oldUAH: "₴1400.00",
+        newUAH: "₴1400.00"
     },
 
     "pink-hoodie": {
-        oldUAH: "1800.00 UAH",
-        newUAH: "1800.00 UAH"
+        oldUAH: "₴1800.00",
+        newUAH: "₴1800.00"
     },
 
     "18-hoodie": {
-        oldUAH: "2000.00 UAH",
-        newUAH: "2000.00 UAH"
+        oldUAH: "₴2000.00",
+        newUAH: "₴2000.00"
     },
 
     "18-longsleeve": {
-        oldUAH: "1300.00 UAH",
-        newUAH: "1300.00 UAH"
+        oldUAH: "₴1300.00",
+        newUAH: "₴1300.00"
     }
 
 };
