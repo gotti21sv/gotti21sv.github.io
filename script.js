@@ -1,235 +1,107 @@
 const products = document.querySelectorAll(".product");
+const catalog = document.querySelector(".catalog");
+const buttons = document.querySelectorAll(".view-btn");
+
 
 /* ==========================================
-   Ждём полной загрузки страницы
+   ПОКАЗ ТОВАРОВ
 ========================================== */
 
 window.addEventListener("load", () => {
 
-    const images = document.images;
+    products.forEach((card, index) => {
 
-    let loaded = 0;
-
-    function reveal(){
-
-        products.forEach((card,index)=>{
-
-            setTimeout(()=>{
-
-                card.classList.add("show");
-
-            },index*45);
-
-        });
-
-    }
-
-    if(images.length===0){
-
-        setTimeout(reveal,120);
-
-        return;
-
-    }
-
-    for(const img of images){
-
-        if(img.complete){
-
-            loaded++;
-
-        }else{
-
-            img.onload=()=>{
-
-                loaded++;
-
-                if(loaded===images.length){
-
-                    setTimeout(reveal,120);
-
-                }
-
-            };
-
-        }
-
-    }
-
-    if(loaded===images.length){
-
-        setTimeout(reveal,120);
-
-    }
-
-});
-
-/* ==========================================
-   Переход
-========================================== */
-
-products.forEach(card=>{
-
-    card.addEventListener("click",()=>{
-
-        const id=card.dataset.id;
-
-        card.style.transform="scale(.985)";
-
-        setTimeout(()=>{
-
-            document.body.style.opacity="0";
-            document.body.style.transition=".35s ease";
-
-        },70);
-
-        setTimeout(()=>{
-
-            location.href="product.html?id="+id;
-
-        },420);
+        setTimeout(() => {
+            card.classList.add("show");
+        }, index * 45);
 
     });
 
 });
 
-/* =========================================
-   VIEW SWITCH
-========================================= */
-
-const catalog = document.querySelector(".catalog");
-const buttons = document.querySelectorAll(".view-btn");
-
-buttons.forEach(btn=>btn.classList.remove("active"));
-
-document
-.querySelector('[data-view="4"]')
-.classList.add("active");
-
-catalog.classList.remove("view-1","view-12");
-catalog.classList.add("view-4");
 
 /* ==========================================
-   PRICES
+   ПЕРЕХОД В КАРТОЧКУ ТОВАРА
 ========================================== */
 
-/* ==========================================
-   CURRENCY
-========================================== */
+products.forEach(card => {
 
-const prices = {
+    card.addEventListener("click", () => {
 
-    "cross-shirt": {
-        oldUAH: "₴1,000.00",
-        newUAH: "₴1,000.00"
-    },
+        const id = card.dataset.id;
 
-    "black-hoodie": {
-        oldUAH: "₴1,800.00",
-        newUAH: "₴1,800.00"
-    },
+        card.style.transform = "scale(.985)";
 
-    "black-shorts": {
-        oldUAH: "₴1,400.00",
-        newUAH: "₴1,400.00"
-    },
+        setTimeout(() => {
 
-    "pink-hoodie": {
-        oldUAH: "₴1,800.00",
-        newUAH: "₴1,800.00"
-    },
+            document.body.style.opacity = "0";
+            document.body.style.transition = ".35s ease";
 
-    "18-hoodie": {
-        oldUAH: "₴2,000.00",
-        newUAH: "₴2,000.00"
-    },
+        }, 70);
 
-    "18-longsleeve": {
-        oldUAH: "₴1,300.00",
-        newUAH: "₴1,300.00"
-    }
+        setTimeout(() => {
 
-};
+            location.href = "product.html?id=" + id;
 
-const currencyButton = document.getElementById("currencyButton");
-const currencyMenu = document.getElementById("currencyMenu");
-const currencyText = document.getElementById("currencyText");
-const currencyOptions = document.querySelectorAll(".currency-option");
-
-let currency = localStorage.getItem("currency") || "UAH";
-function updatePrices(){
-
-    document.querySelectorAll(".product").forEach(product=>{
-
-        const id = product.dataset.id;
-        const item = prices[id];
-
-        if(!item) return;
-
-        const newPrice = product.querySelector(".new-price");
-        const oldPrice = product.querySelector(".old-price");
-
-        if(currency === "UAH"){
-
-            if(newPrice){
-                newPrice.textContent = item.oldUAH;
-            }
-
-        }else{
-
-            if(newPrice){
-                newPrice.textContent = item.oldEUR;
-            }
-
-        }
-
-        /* Убираем старую зачёркнутую цену */
-        if(oldPrice){
-            oldPrice.style.display = "none";
-        }
-
-        /* Убираем SALE */
-        const saleTag = product.querySelector(".sale-tag");
-
-        if(saleTag){
-            saleTag.style.display = "none";
-        }
+        }, 420);
 
     });
 
-    currencyText.textContent =
-        currency === "UAH"
-        ? "UKRAINE 🇺🇦"
-        : "EUROPE 🇪🇺";
+});
+
+
+/* ==========================================
+   ПЕРЕКЛЮЧЕНИЕ ВИДА ТОВАРОВ
+========================================== */
+
+function setView(view) {
+
+    catalog.classList.remove(
+        "view-1",
+        "view-4",
+        "view-12"
+    );
+
+    catalog.classList.add("view-" + view);
+
+    buttons.forEach(button => {
+
+        button.classList.remove("active");
+
+    });
+
+    const activeButton =
+        document.querySelector('[data-view="' + view + '"]');
+
+    if (activeButton) {
+        activeButton.classList.add("active");
+    }
 
 }
 
-updatePrices();
 
-currencyButton.addEventListener("click", () => {
-    currencyMenu.classList.toggle("show");
-});
+/* ==========================================
+   КНОПКИ 1 / 4 / 9
+========================================== */
 
-currencyOptions.forEach(option=>{
+buttons.forEach(button => {
 
-    option.addEventListener("click",()=>{
+    button.addEventListener("click", (event) => {
 
-        currency = option.dataset.currency;
+        event.stopPropagation();
 
-        localStorage.setItem("currency",currency);
+        const view = button.dataset.view;
 
-        updatePrices();
-
-        currencyMenu.classList.remove("show");
+        setView(view);
 
     });
 
 });
 
-document.addEventListener("click",(e)=>{
 
-    if(!e.target.closest(".currency-switch")){
+/* ==========================================
+   СТАРТОВЫЙ ВИД
+   1 ТОВАР НА ЭКРАНЕ
+========================================== */
 
-        currencyMenu.classList.remove("show");
-  }
-});
+setView("1");
