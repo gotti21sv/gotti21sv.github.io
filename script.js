@@ -109,34 +109,42 @@ document
 catalog.classList.remove("view-1","view-12");
 catalog.classList.add("view-4");
 
-buttons.forEach(button=>{
+/* ==========================================
+   PRICES
+========================================== */
 
-    button.addEventListener("click",()=>{
+const prices = {
 
-        if(button.classList.contains("active")) return;
+    "cross-shirt": "₴1,000.00",
 
-        buttons.forEach(b=>b.classList.remove("active"));
+    "black-hoodie": "₴1,800.00",
 
-        button.classList.add("active");
+    "black-shorts": "₴1,400.00",
 
-        catalog.classList.add("switching");
-        catalog.style.pointerEvents="none";
+    "pink-hoodie": "₴1,800.00",
 
-        setTimeout(()=>{
+    "18-hoodie": "₴2,000.00",
 
-            catalog.classList.remove("view-1","view-4","view-12");
-            catalog.classList.add("view-"+button.dataset.view);
+    "18-longsleeve": "₴1,300.00"
 
-            setTimeout(()=>{
+};
 
-                catalog.classList.remove("switching");
-                catalog.style.pointerEvents="";
+document.querySelectorAll(".product").forEach(product => {
 
-            },120);
+    const id = product.dataset.id;
 
-        },180);
+    if (!prices[id]) return;
 
-    });
+    const newPrice = product.querySelector(".new-price");
+    const oldPrice = product.querySelector(".old-price");
+
+    if (newPrice) {
+        newPrice.textContent = prices[id];
+    }
+
+    if (oldPrice) {
+        oldPrice.style.display = "none";
+    }
 
 });
 
