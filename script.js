@@ -278,7 +278,3 @@ document.addEventListener("click",(e)=>{
     if(!e.target.closest(".currency-switch")){
 
         currencyMenu.classList.remove("show");
-
-    }
-
-});
