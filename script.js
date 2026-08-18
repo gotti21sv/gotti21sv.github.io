@@ -105,3 +105,7 @@ buttons.forEach(button => {
 ========================================== */
 
 setView("1");
+
+document.querySelectorAll(".old-price").forEach(el => {
+    el.remove();
+});
