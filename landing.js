@@ -33,7 +33,7 @@ shop.addEventListener("click",(e)=>{
 
     setTimeout(()=>{
 
-        location.href="https://gotti21sv.yoshp.com/";
+location.href="shop.html";
 
     },700);
 
